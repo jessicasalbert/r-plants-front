@@ -1,0 +1,14 @@
+[
+    {
+        "id": 1,
+        "image": "https://www.houseplant411.com/wp-content/uploads/d3f338ccc34e2a122a7162f7990e2449.jpg",
+        "name": "African Violet",
+        "pet_friendly": true,
+        "light": "African Violet plants do best and flower more in bright indirect light, close to an east-facing window is ideal. When the light is too low, the leaves turn dark green, lose their plump appearance, and the plant produces very few flowers. The leaves turn a pale yellow-green and the flowers fade quickly when there is too much light.",
+        "water": "Allow the top 1-2 inches of soil to dry out before watering. Avoid using water that has passed through a softener or water containing chlorine or fluorine. Always water African Violet houseplants from the bottom to prevent water getting on the leaves. Remove any excess water that is still in the saucer after 15 minutes.",
+        "fertilizer": "Special fertilizer for African Violet plants is available wherever plants are sold. In a pinch, you can use any balanced, soluble, houseplant food diluted to 1/2 the recommended strength. Feed African Violets monthly when the plant is actively growing. Over-fertilizing causes leaf tip burn, poor flower production, leaf cracks, and may even kill an African Violet plant.",
+        "temperature": "These plants do well in temperatures of 75°-80°F (23.9°-26.7C) during the day and about 10° cooler at night. Keep African Violet plants away from cold drafts and heating vents.",
+        "humidity": "High humidity is preferable, but African Violets easily adapt to basic household humidity."
+    }
+
+]
