@@ -4,7 +4,7 @@ export class DetailedPlant extends Component {
     render() {
         return (
             <div>
-                <h3>PLANT</h3>
+                <h3>{this.props.plant.name}</h3>
             </div>
         )
     }
