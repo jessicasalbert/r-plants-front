@@ -29,9 +29,17 @@ export class PlantsContainer extends Component {
                             let id = parseInt(routerProps.match.params.id)
                             let plant;
                             if (this.state.plants.length > 0) {
-                                plant = this.state.plants.filter( plant => plant.id === id)
-                                return <DetailedPlant key={plant.id} plant={plant}/>
+                                plant = this.state.plants.find( plant => plant.id === id)
                             }
+                            return (
+                                <>
+                                {
+                                    this.state.plants.length > 0 ? 
+                                    <DetailedPlant key={plant.id} plant={plant}/> :
+                                    <h1>Loading</h1>
+                                }
+                                </>
+                            )
                         }}/>
                         <Route path="/plants" render={() => {
                             return (
