@@ -1,5 +1,5 @@
-import './App.css';
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import './App.css'
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom"
 import StoreFront from './components/StoreFront/StoreFront'
 
 function App() {
@@ -11,7 +11,7 @@ function App() {
       </Switch>
       </div>
     </Router>
-  );
+  )
 }
 
-export default App;
+export default App
