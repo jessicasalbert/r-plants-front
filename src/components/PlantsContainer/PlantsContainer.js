@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import {Route} from 'react-router-dom'
 import Plant from '../Plant/Plant'
 import PlantContainerStyle from './PlantContainerStyle'
 
@@ -10,6 +11,11 @@ export class PlantsContainer extends Component {
     }
 
     render() {
+        // when to render plants
+            // right time to render the "index" == /plants
+
+        //when to render a single plant
+            // "show" ==/plants/:id
         return (
             <PlantContainerStyle>
                 {this.renderPlants()}

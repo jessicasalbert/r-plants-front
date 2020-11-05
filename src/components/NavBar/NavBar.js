@@ -8,6 +8,7 @@ export class NavBar extends Component {
         return (
             <NavStyle>
                 <NavLink to="/">Home</NavLink>
+                <NavLink to="/plants">Shop</NavLink>
                 <NavLink to="/cart">Cart</NavLink>
                 Hello from the NavBar
             </NavStyle>

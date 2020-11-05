@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import {PlantStyle, PlantImage} from './PlantSyle'
+import { Link } from 'react-router-dom';
 
 export class Plant extends Component {
 
@@ -9,7 +10,7 @@ export class Plant extends Component {
     render() {
         return (
             <PlantStyle>
-                {this.props.plant.name}
+                <Link to={`plants/${this.props.plant.id}`}>{this.props.plant.name}</Link>
                 <PlantImage src={this.props.plant.image}></PlantImage>
                 <button onClick={this.localClickHandler}> Add to cart </button>
             </PlantStyle>

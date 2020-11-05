@@ -23,7 +23,6 @@ export class StoreFront extends Component {
         return (
             <>
                 <PlantsContainer plants={this.state.plants} addToCart={this.props.addToCart}/>
-                
             </>
         )
     }
