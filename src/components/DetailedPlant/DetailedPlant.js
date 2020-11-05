@@ -1,11 +1,17 @@
 import React, { Component } from 'react'
+import {Header, Section} from './DetailedPlantStyle'
 
 export class DetailedPlant extends Component {
+    localClickHandler = () => {
+        this.props.addToCart(this.props.plant)
+    }
     render() {
         return (
-            <div>
-                <h3>{this.props.plant.name}</h3>
-            </div>
+            <Section>
+                <Header>{this.props.plant.name}</Header>
+                <img src={this.props.plant.image}/>
+                <button onClick={this.localClickHandler}> Add to cart </button>
+            </Section>
         )
     }
 }

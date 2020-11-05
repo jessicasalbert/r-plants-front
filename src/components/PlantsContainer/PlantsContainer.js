@@ -17,6 +17,7 @@ export class PlantsContainer extends Component {
     }
 
     render() {
+        console.log(this.props.addToCart)
         // when to render plants
             // right time to render the "index" == /plant
 
@@ -35,7 +36,7 @@ export class PlantsContainer extends Component {
                             <>
                             {
                                 this.state.plants.length > 0 ? 
-                                <DetailedPlant key={plant.id} plant={plant}/> :
+                                <DetailedPlant key={plant.id} plant={plant} addToCart={this.props.addToCart}/> :
                                 <h1>Loading</h1>
                             }
                             </>
