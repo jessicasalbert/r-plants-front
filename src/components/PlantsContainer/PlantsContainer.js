@@ -31,8 +31,6 @@ export class PlantsContainer extends Component {
                             if (this.state.plants.length > 0) {
                                 plant = this.state.plants.filter( plant => plant.id === id)
                                 return <DetailedPlant key={plant.id} plant={plant}/>
-                            } else {
-                                return <h1>Loading</h1>
                             }
                         }}/>
                         <Route path="/plants" render={() => {
