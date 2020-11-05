@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
-import FilterSearch from '../components/FilterSearch'
-import PlantsContainer from './PlantsContainer'
+import PlantsContainer from '../PlantsContainer/PlantsContainer'
 
 export class StoreFront extends Component {
     render() {

@@ -4,8 +4,7 @@ export class PlantsContainer extends Component {
     render() {
         return (
             <div>
-                <FilterSearch />
-                {/* render plant components */}
+                <h1>Hello World</h1>
             </div>
         )
     }

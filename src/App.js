@@ -1,13 +1,14 @@
 import './App.css';
-import { BrowserRouter as Router, Route, Switch } from "react-router";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import StoreFront from './containers/StoreFront/StoreFront'
 
 function App() {
   return (
     <Router>
       <div>
       <Switch>
-        <Route />
-        <Route />
+        <Route path="/" component={StoreFront}>
+        </Route>
       </Switch>
       </div>
     </Router>
