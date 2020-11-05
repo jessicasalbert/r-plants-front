@@ -1,7 +1,6 @@
 import styled from 'styled-components'
 
 const PlantStyle = styled.div`
-    margin: auto;
     padding: 10px;
     transition: 0.3s;
     &:hover {
@@ -9,7 +8,6 @@ const PlantStyle = styled.div`
     }
     width: 175px;
     height: 200px;
-    border: 1px black solid;
 `   
 
 const PlantImage = styled.img`

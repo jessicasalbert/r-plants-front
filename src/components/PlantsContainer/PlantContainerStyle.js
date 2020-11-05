@@ -5,6 +5,7 @@ const PlantContainerStyle = styled.section`
     flex-flow: row wrap;
     flex-direction: row;
     align-content: flex-start;
+    padding: 10px;
 `
 
 export default PlantContainerStyle
