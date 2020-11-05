@@ -1,3 +1,12 @@
 * {
     margin: 0;
 }
+
+div.horses {
+    color:rgba(57, 54, 38, 1); 
+    color:rgba(149, 176, 113, 1);
+    color:rgba(100, 114, 97, 1);
+    color:rgba(147, 141, 123, 1);
+    color:rgba(181, 181, 161, 1);
+    color:rgba(239, 234, 225, 1);    
+}
