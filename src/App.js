@@ -1,11 +1,13 @@
 import './App.css';
+import { Route, Switch } from "react-router";
 
 function App() {
   return (
     <div>
-      <NavBar />
-      <StoreFront />
-      <Footer />
+    <Switch>
+      <Route />
+      <Route />
+    </Switch>
     </div>
   );
 }
