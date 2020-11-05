@@ -1,7 +1,10 @@
 import styled from 'styled-components'
 
 const PlantStyle = styled.div`
+    background-color: rgba(255, 255, 255, 0.75);
+    border-radius: 10px;
     padding: 10px;
+    margin: 10px;
     transition: 0.3s;
     width: 175px;
     height: 175px;
