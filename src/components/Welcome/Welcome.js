@@ -1,9 +1,10 @@
 import React from 'react'
+import WelcomeStyle from './WelcomeStyle'
 
 export default function Welcome() {
     return (
-        <div>
+        <WelcomeStyle>
             <h1>WELCOME</h1>
-        </div>
+        </WelcomeStyle>
     )
 }

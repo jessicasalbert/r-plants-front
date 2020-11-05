@@ -3,11 +3,16 @@ import Plant from '../Plant/Plant'
 import PlantContainerStyle from './PlantContainerStyle'
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom"
 import DetailedPlant from '../DetailedPlant/DetailedPlant'
+import {plants} from '../../db'
 
 export class PlantsContainer extends Component {
 
+    state = {
+        plants: plants
+    }
+
     renderPlants = () => {
-        let plants = this.props.plants
+        let plants = this.state.plants
         return plants.map(plant => <Plant plant={plant} addToCart={this.props.addToCart} key={plant.id}/>)
     }
 

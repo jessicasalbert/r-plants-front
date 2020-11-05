@@ -3,14 +3,8 @@ import PlantsContainer from '../PlantsContainer/PlantsContainer'
 import NavBar from '../NavBar/NavBar'
 import Welcome from "../Welcome/Welcome"
 import Footer from '../Footer/Footer'
-import {plants} from '../../db'
 
 export class StoreFront extends Component {
-
-    state = {
-        plants: plants,
-        cart: []
-    }
 
     // componentDidMount() {
     //     fetch()
@@ -24,7 +18,7 @@ export class StoreFront extends Component {
         return (
             <>
                 <Welcome />
-                <PlantsContainer plants={this.state.plants} addToCart={this.props.addToCart}/>
+                {/* <PlantsContainer plants={this.state.plants} addToCart={this.props.addToCart}/> */}
             </>
         )
     }

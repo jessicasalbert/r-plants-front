@@ -25,8 +25,8 @@ class App extends React.Component {
         <NavBar/>
         <Switch>
           <Route path="/cart" render={() => (<Cart cart={this.state.cart}/>)}/>
-          {/* <Route path="/plants" render={() => (<StoreFront addToCart={this.addToCart}/>)}/> */}
-          <Route path="/" render={() => (<StoreFront addToCart={this.addToCart}/>)}/>
+          <Route path="/plants" render={() => <PlantsContainer addToCart={this.addToCart} />}/>
+          <Route path="/" render={() => (<StoreFront />)}/>
         </Switch>
         </div>
       </Router>
