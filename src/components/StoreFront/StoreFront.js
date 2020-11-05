@@ -19,7 +19,7 @@ export class StoreFront extends Component {
     // }
 
     render() {
-        console.log(this.state.plants)
+        // console.log(this.state.plants)
         return (
             <>
                 <PlantsContainer plants={this.state.plants} addToCart={this.props.addToCart}/>
