@@ -24,23 +24,27 @@ export class PlantsContainer extends Component {
             // "show" ==/plants/:id
         return (
             <>
-                <Router>
                     <Switch>
                         <Route path="/plants/:id" render={(routerProps) =>  {
                             let id = parseInt(routerProps.match.params.id)
                             let plant;
-                            if (this.props.plants.length > 0) {
-                                plant = this.props.plants.filter( plant => plant.id === id)
+                            if (this.state.plants.length > 0) {
+                                plant = this.state.plants.filter( plant => plant.id === id)
                                 return <DetailedPlant key={plant.id} plant={plant}/>
                             } else {
                                 return <h1>Loading</h1>
                             }
                         }}/>
-                        <PlantContainerStyle>
-                            {this.renderPlants()}
-                        </PlantContainerStyle>
+                        <Route path="/plants" render={() => {
+                            return (
+                            <>
+                            <PlantContainerStyle>
+                                {this.renderPlants()}
+                            </PlantContainerStyle>
+                            </>
+                            )
+                        }}/>
                     </Switch>
-                </Router>
             </>
         )
     }

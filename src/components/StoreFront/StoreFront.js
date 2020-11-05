@@ -18,7 +18,7 @@ export class StoreFront extends Component {
         return (
             <>
                 <Welcome />
-                {/* <PlantsContainer plants={this.state.plants} addToCart={this.props.addToCart}/> */}
+                <PlantsContainer />
             </>
         )
     }
