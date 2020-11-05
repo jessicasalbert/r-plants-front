@@ -22,9 +22,8 @@ export class StoreFront extends Component {
         console.log(this.state.plants)
         return (
             <>
-                <NavBar />
-                <PlantsContainer plants={this.state.plants}/>
-                <Footer />
+                <PlantsContainer plants={this.state.plants} addToCart={this.props.addToCart}/>
+                
             </>
         )
     }

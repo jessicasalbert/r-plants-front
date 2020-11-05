@@ -6,7 +6,7 @@ export class PlantsContainer extends Component {
 
     renderPlants = () => {
         let plants = this.props.plants
-        return plants.map(plant => <Plant plant={plant} key={plant.id}/>)
+        return plants.map(plant => <Plant plant={plant} addToCart={this.props.addToCart} key={plant.id}/>)
     }
 
     render() {
