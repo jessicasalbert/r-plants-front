@@ -9,6 +9,214 @@
         "fertilizer": "Special fertilizer for African Violet plants is available wherever plants are sold. In a pinch, you can use any balanced, soluble, houseplant food diluted to 1/2 the recommended strength. Feed African Violets monthly when the plant is actively growing. Over-fertilizing causes leaf tip burn, poor flower production, leaf cracks, and may even kill an African Violet plant.",
         "temperature": "These plants do well in temperatures of 75°-80°F (23.9°-26.7C) during the day and about 10° cooler at night. Keep African Violet plants away from cold drafts and heating vents.",
         "humidity": "High humidity is preferable, but African Violets easily adapt to basic household humidity."
+    },
+    {
+        "id": 2,
+        "image": "",
+        "name": "",
+        "pet_friendly": true,
+        "light": "",
+        "water": "",
+        "fertilizer": "",
+        "temperature": "",
+        "humidity": ""
+    },
+    {
+        "id": 3,
+        "image": "",
+        "name": "",
+        "pet_friendly": true,
+        "light": "",
+        "water": "",
+        "fertilizer": "",
+        "temperature": "",
+        "humidity": ""
+    },
+    {
+        "id": 4,
+        "image": "",
+        "name": "",
+        "pet_friendly": true,
+        "light": "",
+        "water": "",
+        "fertilizer": "",
+        "temperature": "",
+        "humidity": ""
+    },
+    {
+        "id": 5,
+        "image": "",
+        "name": "",
+        "pet_friendly": true,
+        "light": "",
+        "water": "",
+        "fertilizer": "",
+        "temperature": "",
+        "humidity": ""
+    },
+    {
+        "id": 6,
+        "image": "",
+        "name": "",
+        "pet_friendly": true,
+        "light": "",
+        "water": "",
+        "fertilizer": "",
+        "temperature": "",
+        "humidity": ""
+    },
+    {
+        "id": 7,
+        "image": "",
+        "name": "",
+        "pet_friendly": true,
+        "light": "",
+        "water": "",
+        "fertilizer": "",
+        "temperature": "",
+        "humidity": ""
+    },
+    {
+        "id": 8,
+        "image": "",
+        "name": "",
+        "pet_friendly": true,
+        "light": "",
+        "water": "",
+        "fertilizer": "",
+        "temperature": "",
+        "humidity": ""
+    },
+    {
+        "id": 9,
+        "image": "",
+        "name": "",
+        "pet_friendly": true,
+        "light": "",
+        "water": "",
+        "fertilizer": "",
+        "temperature": "",
+        "humidity": ""
+    },
+    {
+        "id": 10,
+        "image": "",
+        "name": "",
+        "pet_friendly": true,
+        "light": "",
+        "water": "",
+        "fertilizer": "",
+        "temperature": "",
+        "humidity": ""
+    },
+    {
+        "id": 11,
+        "image": "",
+        "name": "",
+        "pet_friendly": true,
+        "light": "",
+        "water": "",
+        "fertilizer": "",
+        "temperature": "",
+        "humidity": ""
+    },
+    {
+        "id": 12,
+        "image": "",
+        "name": "",
+        "pet_friendly": true,
+        "light": "",
+        "water": "",
+        "fertilizer": "",
+        "temperature": "",
+        "humidity": ""
+    },
+    {
+        "id": 13,
+        "image": "",
+        "name": "",
+        "pet_friendly": true,
+        "light": "",
+        "water": "",
+        "fertilizer": "",
+        "temperature": "",
+        "humidity": ""
+    },
+    {
+        "id": 14,
+        "image": "",
+        "name": "",
+        "pet_friendly": true,
+        "light": "",
+        "water": "",
+        "fertilizer": "",
+        "temperature": "",
+        "humidity": ""
+    },
+    {
+        "id": 15,
+        "image": "",
+        "name": "",
+        "pet_friendly": true,
+        "light": "",
+        "water": "",
+        "fertilizer": "",
+        "temperature": "",
+        "humidity": ""
+    },
+    {
+        "id": 16,
+        "image": "",
+        "name": "",
+        "pet_friendly": true,
+        "light": "",
+        "water": "",
+        "fertilizer": "",
+        "temperature": "",
+        "humidity": ""
+    },
+    {
+        "id": 17,
+        "image": "",
+        "name": "",
+        "pet_friendly": true,
+        "light": "",
+        "water": "",
+        "fertilizer": "",
+        "temperature": "",
+        "humidity": ""
+    },
+    {
+        "id": 18,
+        "image": "",
+        "name": "",
+        "pet_friendly": true,
+        "light": "",
+        "water": "",
+        "fertilizer": "",
+        "temperature": "",
+        "humidity": ""
+    },
+    {
+        "id": 19,
+        "image": "",
+        "name": "",
+        "pet_friendly": true,
+        "light": "",
+        "water": "",
+        "fertilizer": "",
+        "temperature": "",
+        "humidity": ""
+    },
+    {
+        "id": 20,
+        "image": "",
+        "name": "",
+        "pet_friendly": true,
+        "light": "",
+        "water": "",
+        "fertilizer": "",
+        "temperature": "",
+        "humidity": ""
     }
-
 ]
