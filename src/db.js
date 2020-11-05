@@ -1,4 +1,4 @@
-[
+export const plants = [
     {
         "id": 1,
         "image": "https://www.houseplant411.com/wp-content/uploads/d3f338ccc34e2a122a7162f7990e2449.jpg",

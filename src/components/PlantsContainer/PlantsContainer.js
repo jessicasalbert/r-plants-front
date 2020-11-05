@@ -1,12 +1,19 @@
 import React, { Component } from 'react'
+import Plant from '../Plant/Plant'
+import PlantContainerStyle from './PlantContainerStyle'
 
 export class PlantsContainer extends Component {
+
+    renderPlants = () => {
+        let plants = this.props.plants
+        return plants.map(plant => <Plant plant={plant} key={plant.id}/>)
+    }
+
     render() {
         return (
-            <div>
-                {/* render plants */}
-                Hello from the Plants Container
-            </div>
+            <PlantContainerStyle>
+                {this.renderPlants()}
+            </PlantContainerStyle>
         )
     }
 }

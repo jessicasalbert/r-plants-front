@@ -1,11 +1,12 @@
 import React, { Component } from 'react'
+import PlantStyle from './PlantSyle'
 
 export class Plant extends Component {
     render() {
         return (
-            <div>
-                <h2>{/* plant name */}</h2>
-            </div>
+            <PlantStyle>
+                {this.props.plant.name}
+            </PlantStyle>
         )
     }
 }
