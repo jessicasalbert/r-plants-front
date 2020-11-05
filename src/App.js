@@ -21,11 +21,12 @@ class App extends React.Component {
   render() {
     return (
       <Router>
-        <div>
         <NavBar/>
+        <Switch>
+          <Route path="/plants" component={PlantsContainer}/>
           <Route path="/cart" render={() => (<Cart cart={this.state.cart}/>)}/>
           <Route path="/" render={() => (<StoreFront />)}/>
-        </div>
+        </Switch>
       </Router>
     )
   }
