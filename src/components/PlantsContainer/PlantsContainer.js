@@ -24,33 +24,33 @@ export class PlantsContainer extends Component {
             // "show" ==/plants/:id
         return (
             <>
-                    <Switch>
-                        <Route path="/plants/:id" render={(routerProps) =>  {
-                            let id = parseInt(routerProps.match.params.id)
-                            let plant;
-                            if (this.state.plants.length > 0) {
-                                plant = this.state.plants.find( plant => plant.id === id)
-                            }
-                            return (
-                                <>
-                                {
-                                    this.state.plants.length > 0 ? 
-                                    <DetailedPlant key={plant.id} plant={plant}/> :
-                                    <h1>Loading</h1>
-                                }
-                                </>
-                            )
-                        }}/>
-                        <Route path="/plants" render={() => {
-                            return (
+                <Switch>
+                    <Route path="/plants/:id" render={(routerProps) =>  {
+                        let id = parseInt(routerProps.match.params.id)
+                        let plant;
+                        if (this.state.plants.length > 0) {
+                            plant = this.state.plants.find( plant => plant.id === id)
+                        }
+                        return (
                             <>
-                            <PlantContainerStyle>
-                                {this.renderPlants()}
-                            </PlantContainerStyle>
+                            {
+                                this.state.plants.length > 0 ? 
+                                <DetailedPlant key={plant.id} plant={plant}/> :
+                                <h1>Loading</h1>
+                            }
                             </>
-                            )
-                        }}/>
-                    </Switch>
+                        )
+                    }}/>
+                    <Route path="/plants" render={() => {
+                        return (
+                        <>
+                        <PlantContainerStyle>
+                            {this.renderPlants()}
+                        </PlantContainerStyle>
+                        </>
+                        )
+                    }}/>
+                </Switch>
             </>
         )
     }
