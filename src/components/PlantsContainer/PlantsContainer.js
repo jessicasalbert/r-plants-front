@@ -32,7 +32,7 @@ export class PlantsContainer extends Component {
                             }
                         }}/>
                         <PlantContainerStyle>
-                            <Route path="/plants" render={() => (this.renderPlants())}/>
+                            {this.renderPlants()}
                         </PlantContainerStyle>
                     </Switch>
                 </Router>

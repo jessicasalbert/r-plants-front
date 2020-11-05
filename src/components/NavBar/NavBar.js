@@ -10,7 +10,6 @@ export class NavBar extends Component {
                 <NavLink to="/">Home</NavLink>
                 <NavLink to="/plants">Shop</NavLink>
                 <NavLink to="/cart">Cart</NavLink>
-                Hello from the NavBar
             </NavStyle>
         )
     }
