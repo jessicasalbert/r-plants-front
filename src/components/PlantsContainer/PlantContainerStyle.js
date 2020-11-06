@@ -6,6 +6,7 @@ const PlantContainerStyle = styled.section`
     flex-direction: row;
     align-content: flex-start;
     padding: 10px;
+    margin: 10px;
 `
 
 export default PlantContainerStyle

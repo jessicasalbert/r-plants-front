@@ -1,16 +1,22 @@
 import styled from 'styled-components'
 
 const Page = styled.section`
-    
+    margin: 10px;
 
 `
 
-const Header = styled.h1`
-    color: #647261;
-`
+
 
 const Details = styled.section`
-    
+    h1 {
+        color: red;
+    }
+    h2 {
+        color: blue;
+    }
+  
+    margin: auto;
+    text-align: center;
 `
 
 const TopDetails = styled.section`
@@ -23,13 +29,22 @@ const TopDetails = styled.section`
 `
 
 const Photo = styled.section`
-    background-color: rgba(147, 141, 123, 0.5);
+img {
+    max-width: 50vw;
+};
+background-color: rgba(147, 141, 123, 0.5);
 `
 
 const BottomDetails = styled.section`
- 
+    font-size: 20px;
+    margin: 10px;
+    padding: 10px;
+  
+`
+
+const PetFriendly = styled.img`
+    width: 25px
 `
 
 
-
-export {Header, TopDetails, BottomDetails, Page, Details, Photo}
+export {TopDetails, PetFriendly, BottomDetails, Page, Details, Photo}

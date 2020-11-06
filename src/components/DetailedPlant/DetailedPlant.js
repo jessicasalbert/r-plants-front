@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import {Header, Page, TopDetails, Details, Photo, BottomDetails} from './DetailedPlantStyle'
+import {Page, TopDetails, Details, Photo, BottomDetails, PetFriendly} from './DetailedPlantStyle'
 
 export class DetailedPlant extends Component {
     localClickHandler = () => {
@@ -13,14 +13,18 @@ export class DetailedPlant extends Component {
                     <img src={this.props.plant.image}/>
                 </Photo>
                 
-                <Details>
-                    <Header>{this.props.plant.name}</Header>
-                    <h2>{this.props.plant.scientific}</h2>
-                    <>
-                    {this.props.plant.pet_friendly ? <h3>Pet friendly!</h3> : null}
-                    </>
-                    <button onClick={this.localClickHandler}> Add to cart </button>
-                </Details>
+                    <Details>
+                        
+
+                        <h1>{this.props.plant.name}</h1>
+                        <h2>{this.props.plant.scientific}</h2>
+                    
+                            {this.props.plant.pet_friendly ? 
+                            <PetFriendly src="https://www.svgrepo.com/show/133518/pet-friendly.svg"/> 
+                            : null}
+            
+                        <button onClick={this.localClickHandler}> Add to cart </button>
+                    </Details>
                 </TopDetails>
                 <BottomDetails>
                     <p>{this.props.plant.light}</p>
