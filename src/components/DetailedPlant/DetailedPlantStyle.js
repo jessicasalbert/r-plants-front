@@ -27,7 +27,7 @@ const Photo = styled.section`
 `
 
 const BottomDetails = styled.section`
- 
+
 `
 
 

@@ -14,7 +14,7 @@ export class DetailedPlant extends Component {
                 </Photo>
                 
                 <Details>
-                    <Header>{this.props.plant.name}</Header>
+                    <h1>{this.props.plant.name}</h1>
                     <h2>{this.props.plant.scientific}</h2>
                     <>
                     {this.props.plant.pet_friendly ? <h3>Pet friendly!</h3> : null}

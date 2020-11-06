@@ -6,6 +6,12 @@ html {
     background-color: rgba(239, 234, 225, 0.7); 
 }
 
+a {
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+}
+
 div.horses {
     color:rgba(57, 54, 38, 1); 
     color:rgba(149, 176, 113, 1);

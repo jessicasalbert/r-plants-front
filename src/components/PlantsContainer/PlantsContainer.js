@@ -17,12 +17,7 @@ export class PlantsContainer extends Component {
     }
 
     render() {
-        console.log(this.props.addToCart)
-        // when to render plants
-            // right time to render the "index" == /plant
-
-        //when to render a single plant
-            // "show" ==/plants/:id
+        // console.log(this.props.addToCart)
         return (
             <>
                 <Switch>

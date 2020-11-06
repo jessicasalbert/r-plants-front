@@ -7,12 +7,12 @@ export class Plant extends Component {
     
     render() {
         return (
-            <>
+            <NavLink to={`/plants/${this.props.plant.id}`}>
             <PlantStyle>
-            <NavLink to={`/plants/${this.props.plant.id}`}>{this.props.plant.name}</NavLink>
+                <h3>{this.props.plant.name}</h3>
                 <PlantImage src={this.props.plant.image}></PlantImage>
             </PlantStyle>
-            </>
+            </NavLink>
         )
     }
 }
