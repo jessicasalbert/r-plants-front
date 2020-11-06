@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Redirect } from 'react-router-dom'
 import PlantsContainer from '../PlantsContainer/PlantsContainer'
 import NavBar from '../NavBar/NavBar'
 import Welcome from "../Welcome/Welcome"
