@@ -18,6 +18,7 @@ export const plants = [
         "image": "https://cdn.shopify.com/s/files/1/2528/3612/products/1-Snake-Zeylanica-4MAIN_946x946.jpg?v=1584599929",
         "image2": "https://cdn.shopify.com/s/files/1/2528/3612/products/1-Snake-Zeylanica-4DETAIL_946x946.jpg?v=1603862341",
         "price": "9.99",
+        "prices" : { "S": 9.99, "M": 12.99, "L": 14.99},
         "name": "Sansevieria Plant",
         "scientific": "Sansevieria Trifasciata",
         "pet_friendly": true,
