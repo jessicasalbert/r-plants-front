@@ -8,8 +8,10 @@ const Page = styled.section`
 
 
 const Details = styled.section`
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:400,900|Roboto')
     h1 {
         color: red;
+        font-family: 'Montserrat', sans-serif;
     }
     h2 {
         color: blue;
@@ -17,6 +19,8 @@ const Details = styled.section`
   
     margin: auto;
     text-align: center;
+    
+    }
 `
 
 const TopDetails = styled.section`
@@ -30,7 +34,7 @@ const TopDetails = styled.section`
 
 const Photo = styled.section`
 img {
-    max-width: 50vw;
+    width: 50vw;;
 };
 background-color: rgba(147, 141, 123, 0.5);
 `
