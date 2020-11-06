@@ -12,7 +12,10 @@ class App extends React.Component {
     cart: []
   }
 
-  addToCart = (item) => {
+  addToCart = (item, size, quantity) => {
+    console.log(size, quantity)
+    item['size'] = size
+    item['quantity'] = quantity
     this.setState((prev) => ({
       cart: [...prev.cart, item]
     }))

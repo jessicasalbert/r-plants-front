@@ -1,19 +1,27 @@
 import React, { Component } from 'react'
-import {Page, TopDetails, Details, Photo, BottomDetails, PetFriendly} from './DetailedPlantStyle'
+import {Page, TopDetails, Details, Photo, BottomDetails} from './DetailedPlantStyle'
 
 export class DetailedPlant extends Component {
 
     state = {
-        clicked: false
+        clicked: false,
+        quantity: 2,
+        size: "M",
+        careInstructions: false
     }
 
 
-    localClickHandler = () => {
-        this.props.addToCart(this.props.plant)
+    localAddToCart = () => {
+        this.props.addToCart(this.props.plant, this.state.size, this.state.quantity)
     }
 
     imageFlipHandler = () => {
         this.setState((prev) => ({ clicked: !prev.clicked}))
+    }
+
+    showCareInstructions = () => {
+        this.setState((prev) => ({ careInstructions: !prev.careInstructions}))
+        
     }
 
     render() {
@@ -31,16 +39,26 @@ export class DetailedPlant extends Component {
                         <h2>{this.props.plant.scientific}</h2>
                     
                             {this.props.plant.pet_friendly ? 
-                            <PetFriendly src="https://www.svgrepo.com/show/133518/pet-friendly.svg"/> 
+                            <div>
+                                <img src="https://www.svgrepo.com/show/133518/pet-friendly.svg"/>
+                                <p>Pet-friendly!</p>
+                            </div>
                             : null}
             
-                        <button onClick={this.localClickHandler}> Add to cart </button>
+                        <button onClick={this.localAddToCart}> Add to cart </button>
                     </Details>
                 </TopDetails>
                 <BottomDetails>
-                    <p>{this.props.plant.light}</p>
-                    <p>{this.props.plant.water}</p>
-                    <p>{this.props.plant.temperature}</p>
+                    <h2 onClick={this.showCareInstructions}>Care Instructions</h2>
+                    {this.state.careInstructions ? 
+                    <>
+                        <h5>Light</h5>
+                        <p>{this.props.plant.light}</p>
+                        <h5>Water</h5>
+                        <p>{this.props.plant.water}</p>
+                        <h5>Temperature</h5>
+                        <p>{this.props.plant.temperature}</p>
+                    </> : null}
                 </BottomDetails>
 
             </Page>
