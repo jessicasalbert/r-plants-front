@@ -2,6 +2,8 @@ export const plants = [
     {
         "id": 1,
         "image": "https://www.houseplant411.com/wp-content/uploads/d3f338ccc34e2a122a7162f7990e2449.jpg",
+        "image2": "",
+        "price": "",
         "name": "African Violet",
         "scientific": "Saintpaulia Ionantha",
         "pet_friendly": true,
@@ -14,6 +16,8 @@ export const plants = [
     {
         "id": 2,
         "image": "http://mobileimages.lowes.com/product/converted/022532/022532712879.jpg?size=pdhi",
+        "image2": "",
+        "price": "",
         "name": "Sansevieria Plant",
         "scientific": "Sansevieria Trifasciata",
         "pet_friendly": true,
@@ -26,6 +30,8 @@ export const plants = [
     {
         "id": 3,
         "image": "https://www.houseplant411.com/wp-content/uploads/0a01c7ef588084588b61f5ee042588c8-300x289.jpg",
+        "image2": "",
+        "price": "",
         "name": "ZZ Plant",
         "scientific": "Zamioculcas Zamiifolia",
         "pet_friendly": false,
@@ -38,6 +44,8 @@ export const plants = [
     {
         "id": 4,
         "image": "http://mobileimages.lowes.com/product/converted/022532/022532077954.jpg?size=pdhi",
+        "image2": "",
+        "price": "",
         "name": "Neon Pothos ",
         "scientific": "Epipremnum Aureum",
         "pet_friendly": true,
@@ -50,6 +58,8 @@ export const plants = [
     {
         "id": 5,
         "image": "http://mobileimages.lowes.com/product/converted/100169/1001698774.jpg?size=pdhi",
+        "image2": "",
+        "price": "",
         "name": "Swiss Cheese Plant",
         "scientific": "Monstera Deliciosa",
         "pet_friendly": true,
@@ -62,6 +72,8 @@ export const plants = [
     {
         "id": 6,
         "image": "http://mobileimages.lowes.com/product/converted/715869/715869481067.jpg?size=pdhi",
+        "image2": "",
+        "price": "",
         "name": "Calathea Plant",
         "scientific": "Calathea Ornata Lineata",
         "pet_friendly": true,
@@ -74,6 +86,8 @@ export const plants = [
     {
         "id": 7,
         "image": "https://www.houseplant411.com/wp-content/uploads/strstr_grande.jpg",
+        "image2": "",
+        "price": "",
         "name": "Tricolor Stromanthe",
         "scientific": "Stromanthe Sanguinea",
         "pet_friendly": true,
@@ -86,6 +100,8 @@ export const plants = [
     {
         "id": 8,
         "image": "https://images.homedepot-static.com/productImages/6e6b03fa-3507-4ed5-b6e6-2e2caf786760/svn/costa-farms-house-plants-10aglo-64_145.jpg",
+        "image2": "",
+        "price": "",
         "name": "Dumb Cane Plant",
         "scientific": "Dieffenbachia Compacta",
         "pet_friendly": false,
@@ -98,6 +114,8 @@ export const plants = [
     {
         "id": 9,
         "image": "http://mobileimages.lowes.com/product/converted/022532/022532352303.jpg?size=pdhi",
+        "image2": "",
+        "price": "",
         "name": "Chinese Money Plant",
         "scientific": "Pilea Peperomioides",
         "pet_friendly": true,
@@ -110,6 +128,8 @@ export const plants = [
     {
         "id": 10,
         "image": "https://cdn.shopify.com/s/files/1/0253/6701/9565/articles/Chain-of-Hearts_large_c671a94c-78a7-4f32-87fc-1f88ab808bf2_800x800.png?v=1570211807",
+        "image2": "",
+        "price": "",
         "name": "Chain of Hearts",
         "scientific": "Ceropegia Woodii",
         "pet_friendly": true,
@@ -122,6 +142,8 @@ export const plants = [
     {
         "id": 11,
         "image": "https://www.ourhouseplants.com/imgs-content/Senecio-herreianus-houseplant.jpg",
+        "image2": "",
+        "price": "",
         "name": "String of Pearls",
         "scientific": "Senecio Rowleyanus",
         "pet_friendly": false,
@@ -134,6 +156,8 @@ export const plants = [
     {
         "id": 12,
         "image": "http://mobileimages.lowes.com/product/converted/813175/813175026566.jpg?size=pdhi",
+        "image2": "",
+        "price": "",
         "name": "Umbrella Plant",
         "scientific": "Schefflera Actinophylla",
         "pet_friendly": true,
@@ -146,6 +170,8 @@ export const plants = [
     {
         "id": 13,
         "image": "http://mobileimages.lowes.com/product/converted/022532/022532211617.jpg?size=pdhi",
+        "image2": "",
+        "price": "",
         "name": "English Ivy",
         "scientific": "Hedera Helix",
         "pet_friendly": false,
@@ -158,6 +184,8 @@ export const plants = [
     {
         "id": 14,
         "image": "https://cdn11.bigcommerce.com/s-z5056gh7wx/images/stencil/1280x1280/products/169/460/wandering_jew__76148.1552082965.jpg?c=2",
+        "image2": "",
+        "price": "",
         "name": "Wandering Jew Plant",
         "scientific": "Tradescantia Zebrina",
         "pet_friendly": true,
@@ -170,6 +198,8 @@ export const plants = [
     {
         "id": 15,
         "image": "https://www.trees.com/sites/default/files/field/image/Bamboo-Palm-Chamaedorea-Seifrizii.jpg",
+        "image2": "",
+        "price": "",
         "name": "Bamboo Palm",
         "scientific": "Chamaedorea Seifrizii",
         "pet_friendly": true,
@@ -182,6 +212,8 @@ export const plants = [
     {
         "id": 16,
         "image": "https://www.logees.com/media/catalog/product/cache/1/thumbnail/60x/9df78eab33525d08d6e5fb8d27136e95/R/1/R1180-2-large.jpg",
+        "image2": "",
+        "price": "",
         "name": "Coffee Plant",
         "scientific": "Coffea Arabica",
         "pet_friendly": false,
@@ -194,6 +226,8 @@ export const plants = [
     {
         "id": 17,
         "image": "https://images-na.ssl-images-amazon.com/images/I/8136axoqopL._AC_SL1500_.jpg",
+        "image2": "",
+        "price": "",
         "name": "Fiddle Leaf Fig Plant",
         "scientific": "Ficus Lyrata",
         "pet_friendly": true,
@@ -206,6 +240,8 @@ export const plants = [
     {
         "id": 18,
         "image": "https://plantingman.com/wp-content/uploads/2017/02/Hibiscus-plant.jpg",
+        "image2": "",
+        "price": "",
         "name": "Hibiscus Plant",
         "scientific": "Hibiscus Trionum",
         "pet_friendly": true,
@@ -218,6 +254,8 @@ export const plants = [
     {
         "id": 19,
         "image": "https://www.houseplant411.com/wp-content/uploads/82f981f441dff5e83462c48c41935aae.jpg",
+        "image2": "",
+        "price": "",
         "name": "Miniature Rose Bush Plant",
         "scientific": "R. Chinensis Minima",
         "pet_friendly": true,
@@ -230,6 +268,8 @@ export const plants = [
     {
         "id": 20,
         "image": "https://www.houseplant411.com/wp-content/uploads/0cea2ee2-8f95-452a-98de-70b839eda458.jpg",
+        "image2": "",
+        "price": "",
         "name": "Poinsettia Plant",
         "scientific": "Euphorbiaceae Pulcherrima",
         "pet_friendly": false,

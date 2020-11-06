@@ -14,7 +14,8 @@ const PlantStyle = styled.div`
 `   
 
 const PlantImage = styled.img`
-    max-width: 100px;
+    max-width: 10vw;
+    width: 10vw;
     display: block;
 `
 
