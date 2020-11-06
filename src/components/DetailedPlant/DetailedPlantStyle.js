@@ -8,13 +8,18 @@ const Page = styled.section`
 
 
 const Details = styled.section`
-    @import url('https://fonts.googleapis.com/css2?family=Montserrat:400,900|Roboto')
+    
     h1 {
-        color: red;
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:400,900|Roboto');
+        color: rgba(57, 54, 38, 1);
         font-family: 'Montserrat', sans-serif;
+        font-size: 3.5em;
+        display: inline-block;
+
     }
     h2 {
-        color: blue;
+        color: rgba(100, 114, 97, 1);
+        font-size: 2em;
     }
   
     margin: auto;
@@ -24,19 +29,22 @@ const Details = styled.section`
 `
 
 const TopDetails = styled.section`
-    border: 2px black solid;
+    width: 100vw;
     display: flex;
     flex-flow: row wrap;
     flex-direction: row;
     align-content: flex-start;
-    background-color: rgba(100, 114, 97, 0.3)
+    margin: auto;
+
 `
 
 const Photo = styled.section`
-img {
-    width: 50vw;;
-};
-background-color: rgba(147, 141, 123, 0.5);
+    img {
+        width: 50vw;
+        border: 1px solid rgba(100, 114, 97, 1)
+    };
+    margin: auto;
+    align-content: center;
 `
 
 const BottomDetails = styled.section`

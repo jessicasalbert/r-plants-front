@@ -2,15 +2,26 @@ import React, { Component } from 'react'
 import {Page, TopDetails, Details, Photo, BottomDetails, PetFriendly} from './DetailedPlantStyle'
 
 export class DetailedPlant extends Component {
+
+    state = {
+        clicked: false
+    }
+
+
     localClickHandler = () => {
         this.props.addToCart(this.props.plant)
     }
+
+    imageFlipHandler = () => {
+        this.setState((prev) => ({ clicked: !prev.clicked}))
+    }
+
     render() {
         return (
             <Page>
                 <TopDetails>
                 <Photo>
-                    <img src={this.props.plant.image}/>
+                    <img onClick={this.imageFlipHandler} src={this.state.clicked ? this.props.plant.image2 : this.props.plant.image}/>
                 </Photo>
                 
                     <Details>
