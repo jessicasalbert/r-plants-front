@@ -21,7 +21,7 @@ class App extends React.Component {
   render() {
     return (
       <Router>
-        <NavBar/>
+        <NavBar cart={this.state.cart}/>
         <Switch>
           <Route path="/plants" render={() => (<PlantsContainer addToCart={this.addToCart}/>)}/>
           <Route path="/cart" render={() => (<Cart cart={this.state.cart}/>)}/>
