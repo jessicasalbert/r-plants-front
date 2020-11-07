@@ -13,7 +13,7 @@ class Navbar2 extends React.Component {
                 <NavMenu>
                 <NavLink to="/plants" activeStyle>Shop</NavLink>
                 <NavLink to="/profile" activeStyle>Profile</NavLink>
-                <NavLink to="/cart" activeStyle>Cart({this.props.cart.length})</NavLink>
+                <NavLink to="/cart" activeStyle>Cart({this.props.cart.length > 0 ? <b> {this.props.cart.length} </b> : 0})</NavLink>
                 </NavMenu>
                 <NavBtn>
                 <NavBtnLink to="/" onClick={this.props.logoutHandler} activeStyle>Sign Out</NavBtnLink>
@@ -27,7 +27,7 @@ class Navbar2 extends React.Component {
                 <NavLink to="/plants" activeStyle>Shop</NavLink>
                 <NavLink to="/signup" activeStyle>Signup</NavLink>
                 {/* <NavLink to="/login" activeStyle>Login</NavLink> */}
-                <NavLink to="/cart" activeStyle>Cart(<b> {this.props.cart.length} </b>)</NavLink>
+                <NavLink to="/cart" activeStyle>Cart({this.props.cart.length > 0 ? <b> {this.props.cart.length} </b> : 0})</NavLink>
                 </NavMenu>
                 <NavBtn>
                 <NavBtnLink to='/login'>Sign In</NavBtnLink>
