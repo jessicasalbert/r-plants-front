@@ -24,7 +24,6 @@ export class PlantsContainer extends Component {
     }
 
     render() {
-        // console.log(this.props.addToCart)
         return (
             <>
                 <Switch>
