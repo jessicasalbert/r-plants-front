@@ -1,4 +1,4 @@
-export const plants = [
+const plants = [
     {
         "id": 1,
         "image": "https://cdn.shopify.com/s/files/1/2528/3612/products/1-Anthurium-Pink-4MAIN_946x946.jpg?v=1584589471",
@@ -279,5 +279,27 @@ export const plants = [
         "fertilizer": "Fertilize a Poinsettia Plant monthly in the spring and summer after the plant has finished blooming.",
         "temperature": "Temperature is a very important factor in Poinsettia Plant care. Poinsettia Plants last longer and look better when the temperature is between 65-70 degrees during the day and around 60 degrees at night. Temperatures that are too hot or too cold damage Poinsettia Plant leaves and may cause leaf drop.",
         "humidity": "A Poinsettia Plant does well in basic household humidity."
+    }
+]
+
+
+export const coordinates = [
+    {
+        "id": 1,
+        "name": "plant1",
+        "latitude": "-6.3690",
+        "longitude": "34.8888"
+    },
+    {
+        "id": 2,
+        "name": "plant2",
+        "latitude": "9.0820",
+        "longitude": "8.6753"
+    },
+    {
+        "id": 3,
+        "name": "plant3",
+        "latitude": "-9.6457",
+        "longitude": "160.1562"
     }
 ]
