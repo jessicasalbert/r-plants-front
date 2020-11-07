@@ -16,6 +16,22 @@ class App extends React.Component {
     user: null
   }
 
+  signupHandler = userObj => {
+    let options = {
+      method: "POST",
+      headers: {
+        Accept: "application/json",
+        "content-type": "application/json"
+      },
+      body: JSON.stringify({user: userObj})
+    }
+
+    fetch("http://localhost:3000/api/v1/users", options)
+    .then(resp => resp.json())
+    .then(console.log)
+    .catch(console.log)
+  }
+
   addToCart = (item, size, quantity) => {
     console.log(size, quantity)
     item['size'] = size
@@ -32,7 +48,7 @@ class App extends React.Component {
         <Switch>
           <Route path="/plants" render={() => (<PlantsContainer addToCart={this.addToCart}/>)}/>
           <Route path="/cart" render={() => (<Cart cart={this.state.cart}/>)}/>
-          <Route path="/signup" render={() => (<SignUp />)}/>
+          <Route path="/signup" render={() => (<SignUp submitHandler={this.signupHandler}/>)}/>
           <Route path="/login" render={() => (<Login />)}/>
           <Route path="/profile" render={() => (<Profile />)}/>
           <Route path="/" render={() => (<StoreFront/>)}/>
