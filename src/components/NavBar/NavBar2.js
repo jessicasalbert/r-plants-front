@@ -31,7 +31,7 @@ class Navbar2 extends React.Component {
                 <NavLink to="/cart" activeStyle>Cart({this.props.cart.length})</NavLink>
                 </NavMenu>
                 <NavBtn>
-                <NavBtnLink to='/signin'>Sign In</NavBtnLink>
+                <NavBtnLink to='/login'>Sign In</NavBtnLink>
                 </NavBtn>
             </Nav>
             }
