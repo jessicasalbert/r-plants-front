@@ -25,7 +25,7 @@ class Navbar2 extends React.Component {
                 <Bars />
                 <NavMenu>
                 <NavLink to="/plants" activeStyle>Shop</NavLink>
-                <NavLink to="/signup" activeStyle>Signup</NavLink>
+                <NavLink to="/signup" activeStyle>Sign Up</NavLink>
                 {/* <NavLink to="/login" activeStyle>Login</NavLink> */}
                 <NavLink to="/cart" activeStyle>Cart({this.props.cart.length > 0 ? <b> {this.props.cart.length} </b> : 0})</NavLink>
                 </NavMenu>
