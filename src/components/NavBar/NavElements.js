@@ -14,6 +14,9 @@ position: sticky;
 `;
 
 export const NavLink = styled(Link)`
+    b {
+        color: red;
+    }
     color: #fff;
     display: flex;
     align-items: center;
