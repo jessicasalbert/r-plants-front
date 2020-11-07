@@ -18,6 +18,7 @@ class App extends React.Component {
 
   componentDidMount () {
     const token = localStorage.getItem("token")
+    const cart = localStorage.getItem("cart")
     if (token) {
       const options = {
         method: "GET",
@@ -30,6 +31,7 @@ class App extends React.Component {
     } else {
       this.props.history.push("/signup")
     }
+
   }
   
 
@@ -71,6 +73,14 @@ class App extends React.Component {
     this.setState((prev) => ({
       cart: [...prev.cart, item]
     }))
+
+  }
+
+  logoutHandler = () => {
+    localStorage.removeItem("token")
+    localStorage.removeItem("cart")
+    this.props.history.push("/login")
+    this.setState({ user: null })
   }
 
   render() {
@@ -78,7 +88,7 @@ class App extends React.Component {
     
     return (
       <div>
-        <NavBar user={this.state.user} cart={this.state.cart}/>
+        <NavBar user={this.state.user} cart={this.state.cart} logoutHandler={this.logoutHandler}/>
         <Switch>
           <Route path="/plants" render={() => (<PlantsContainer addToCart={this.addToCart}/>)}/>
           <Route path="/cart" render={() => (<Cart cart={this.state.cart}/>)}/>

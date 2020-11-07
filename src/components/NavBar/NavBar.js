@@ -4,6 +4,7 @@ import { NavLink } from 'react-router-dom'
 
 
 export class NavBar extends Component {
+
     render() {
         return (
                 <>
@@ -13,7 +14,7 @@ export class NavBar extends Component {
                     <NavLink to="/"><HomeButton>Home</HomeButton></NavLink>
                     <NavLink to="/plants"><HomeButton>Shop</HomeButton></NavLink>
                     <NavLink to="/profile"><HomeButton>Profile</HomeButton></NavLink>
-                    <NavLink to="/logout"><HomeButton>Logout</HomeButton></NavLink>
+                    <HomeButton onClick={this.props.logoutHandler}>Logout</HomeButton>
                     <NavLink to="/cart"><CartButton>Cart({this.props.cart.length})</CartButton></NavLink>
                     </NavStyle>
                     :
