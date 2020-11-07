@@ -16,7 +16,6 @@ export class MapView extends Component {
                             fillColor: "rgba(149, 176, 113, 1)",
                             fillOpacity: 1,
                         })}/>
-                        <Marker key="salt" position={["40.7628","-18.9800"]}/>
                 <TileLayer
                     url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                     attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'/>
