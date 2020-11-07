@@ -7,7 +7,7 @@ export class Cart extends Component {
         total: 0
     }
     renderCart = () => {
-        return this.props.cart.map(item => (<CartItem plant={item} />))
+        return this.props.cart.map(item => (<CartItem key={this.props.cart.indexOf(item)} plant={item} />))
     }
 
     render() {

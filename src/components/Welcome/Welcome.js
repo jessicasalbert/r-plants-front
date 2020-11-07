@@ -1,5 +1,5 @@
 import React from 'react'
-import MapCont from './Map'
+import MapView from './MapView'
 import About from './About'
 import LandingPhoto from './LandingPhoto'
 import {WelcomeStyle, BlockStyle} from './WelcomeStyle'
@@ -7,7 +7,7 @@ import {WelcomeStyle, BlockStyle} from './WelcomeStyle'
 export default function Welcome() {
     return (
         <WelcomeStyle>
-            <BlockStyle><MapCont/></BlockStyle>
+            <BlockStyle><MapView /></BlockStyle>
             <hr></hr>
             <BlockStyle><LandingPhoto /></BlockStyle>
             <hr></hr>

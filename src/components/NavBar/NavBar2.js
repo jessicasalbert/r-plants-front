@@ -8,26 +8,26 @@ class Navbar2 extends React.Component {
             {this.props.user 
             ? 
             <Nav>
-                <NavLink to="/" activeStyle>Home</NavLink>
+                <NavLink to="/">Home</NavLink>
                 <Bars />
                 <NavMenu>
-                <NavLink to="/plants" activeStyle>Shop</NavLink>
-                <NavLink to="/profile" activeStyle>Profile</NavLink>
-                <NavLink to="/cart" activeStyle>Cart({this.props.cart.length > 0 ? <b> {this.props.cart.length} </b> : 0})</NavLink>
+                <NavLink to="/plants">Shop</NavLink>
+                <NavLink to="/profile">Profile</NavLink>
+                <NavLink to="/cart">Cart({this.props.cart.length > 0 ? <b> {this.props.cart.length} </b> : 0})</NavLink>
                 </NavMenu>
                 <NavBtn>
-                <NavBtnLink to="/" onClick={this.props.logoutHandler} activeStyle>Sign Out</NavBtnLink>
+                <NavBtnLink to="/" onClick={this.props.logoutHandler}>Sign Out</NavBtnLink>
                 </NavBtn>
             </Nav>
                 :
             <Nav>
-                <NavLink to="/" activeStyle>Home</NavLink>
+                <NavLink to="/">Home</NavLink>
                 <Bars />
                 <NavMenu>
-                <NavLink to="/plants" activeStyle>Shop</NavLink>
-                <NavLink to="/signup" activeStyle>Sign Up</NavLink>
-                {/* <NavLink to="/login" activeStyle>Login</NavLink> */}
-                <NavLink to="/cart" activeStyle>Cart({this.props.cart.length > 0 ? <b> {this.props.cart.length} </b> : 0})</NavLink>
+                <NavLink to="/plants">Shop</NavLink>
+                <NavLink to="/signup">Sign Up</NavLink>
+                {/* <NavLink to="/login">Login</NavLink> */}
+                <NavLink to="/cart">Cart({this.props.cart.length > 0 ? <b> {this.props.cart.length} </b> : 0})</NavLink>
                 </NavMenu>
                 <NavBtn>
                 <NavBtnLink to='/login'>Sign In</NavBtnLink>
