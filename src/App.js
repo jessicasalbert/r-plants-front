@@ -18,7 +18,7 @@ class App extends React.Component {
 
   componentDidMount () {
     const token = localStorage.getItem("token")
-    const cart = localStorage.getItem("cart")
+    const localCart = JSON.parse(localStorage.getItem("cart"))
     if (token) {
       const options = {
         method: "GET",
@@ -27,11 +27,11 @@ class App extends React.Component {
         }
       fetch("http://localhost:3000/api/v1/profile", options)
       .then(res=>res.json())
-      .then(data=> this.setState({ user: data.user }))
+      .then(data=> this.setState({ user: data.user}))
     } else {
       this.props.history.push("/signup")
     }
-
+    this.setState( () => ({ cart: localCart ? localCart : [] }))
   }
   
 
@@ -72,7 +72,7 @@ class App extends React.Component {
   addToCart = (item) => {
     this.setState((prev) => ({
       cart: [...prev.cart, item]
-    }))
+    }), () => {localStorage.setItem("cart", JSON.stringify(this.state.cart))})
 
   }
 
@@ -80,11 +80,11 @@ class App extends React.Component {
     localStorage.removeItem("token")
     localStorage.removeItem("cart")
     this.props.history.push("/login")
-    this.setState({ user: null })
+    this.setState({ user: null, cart: [] })
   }
 
   render() {
-    console.log(this.state.user)
+    console.log(this.state.cart)
     
     return (
       <div>

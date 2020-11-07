@@ -15,6 +15,7 @@ export class PlantsContainer extends Component {
         fetch(`http://localhost:3000/api/v1/items`)
         .then(res => res.json())
         .then(res => this.setState({plants: res}))
+        .catch(console.log)
     }
 
 
