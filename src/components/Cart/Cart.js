@@ -11,10 +11,9 @@ export class Cart extends Component {
     }
 
     render() {
-        console.log(this.props.cart)
         return (
             <section className="footerpage">
-                {this.renderCart()}
+                {this.props.cart.length > 0 ? this.renderCart() : <h1>No items to display</h1>}
                 <Footer />
             </section>
         )

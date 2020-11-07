@@ -70,7 +70,6 @@ class App extends React.Component {
   }
 
   addToCart = (item, size) => {
-    console.log(item, size)
     item['size'] = size
     this.setState((prev) => ({
       cart: [...prev.cart, item]
@@ -86,8 +85,6 @@ class App extends React.Component {
   }
 
   render() {
-    console.log(this.state.cart)
-    
     return (
       <div>
         <NavBar2 user={this.state.user} cart={this.state.cart} logoutHandler={this.logoutHandler}/>

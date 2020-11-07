@@ -34,7 +34,6 @@ export class DetailedPlant extends Component {
     }
 
     render() {
-        console.log(this.state.size)
         return (
             <Page>
                 <TopDetails>
@@ -54,20 +53,12 @@ export class DetailedPlant extends Component {
                                 <p>Pet-friendly!</p>
                             </div>
                             : null}
-                        <h3>Price: {this.state.price}</h3>
-                        {/* <form>
-                            <input type="radio" >
-                            <input type="radio" >
-                            <input type="radio">
-                            {/*  */}
-                        {/* </form> */} 
+                        <h3>Price: ${this.state.price}</h3>
+                        
                         <form onSubmit={this.localAddToCart}>
-                            <input onChange={this.formEdit} type="radio" id="small" name="size" value="small" checked={this.state.size === "small"}/>
-                            <label for="small">Small</label>
-                            <input onChange={this.formEdit} type="radio" id="medium" name="size" value="medium" checked={this.state.size === "medium"}/>
-                            <label for="medium">Medium</label>
-                            <input onChange={this.formEdit} type="radio" id="large" name="size" value="large" checked = {this.state.size === "large"}/>
-                            <label for="large">Large</label>
+                            <label><input onChange={this.formEdit} type="radio" id="small" name="size" value="small" checked={this.state.size === "small"}/>Small</label>
+                            <label><input onChange={this.formEdit} type="radio" id="medium" name="size" value="medium" checked={this.state.size === "medium"}/>Medium</label>
+                            <label><input onChange={this.formEdit} type="radio" id="large" name="size" value="large" checked = {this.state.size === "large"}/>Large</label>
                             <button> Add to cart </button>
                         </form>
 
@@ -83,6 +74,10 @@ export class DetailedPlant extends Component {
                         <p>{this.props.plant.light}</p>
                         <h5>Water</h5>
                         <p>{this.props.plant.water}</p>
+                        <h5>Fertiizer</h5>
+                        <p>{this.props.plant.fertilizer}</p>
+                        <h5>Humidity</h5>
+                        <p>{this.props.plant.humidity}</p>
                         <h5>Temperature</h5>
                         <p>{this.props.plant.temperature}</p>
                     </> : null}
