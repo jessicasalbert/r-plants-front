@@ -16,6 +16,23 @@ class App extends React.Component {
     user: null
   }
 
+  componentDidMount () {
+    const token = localStorage.getItem("token")
+    if (token) {
+      const options = {
+        method: "GET",
+        headers: {
+          Authorization: `Bearer ${token}` }
+        }
+      fetch("http://localhost:3000/api/v1/profile", options)
+      .then(res=>res.json())
+      .then(data=> this.setState({ user: data.user }))
+    } else {
+      this.props.history.push("/signup")
+    }
+  }
+  
+
   signupHandler = userObj => {
     let options = {
       method: "POST",
@@ -43,7 +60,10 @@ class App extends React.Component {
     }
     fetch("http://localhost:3000/api/v1/login", options)
     .then(resp => resp.json())
-    .then(data => this.setState({ user: data.user }, () => this.props.history.push("/")))
+    .then(data => {
+      localStorage.setItem("token", data.jwt)
+      this.setState({ user: data.user }, () => this.props.history.push("/"))
+    })
     .catch(console.log)
   }
 
