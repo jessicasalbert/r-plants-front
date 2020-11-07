@@ -47,7 +47,7 @@ export class PlantsContainer extends Component {
                     <Route path="/plants" render={() => {
                         return (
                         <>
-                        <h1>Home > Houseplants</h1>
+                        <h1>Home ~ Houseplants</h1>
                         <PlantContainerStyle>
                             {this.renderPlants()}
                         </PlantContainerStyle>
