@@ -10,11 +10,11 @@ export class StoreFront extends Component {
 
     render() {
         return (
-            <>
+            <section className="footerpage">
                 <Welcome />
                 <PlantsContainer />
                 <Footer />
-            </>
+            </section>
         )
     }
 }

@@ -4,4 +4,8 @@ const WelcomeStyle = styled.h1`
     font-size: 150px;
 `
 
-export default WelcomeStyle
+const BlockStyle = styled.section`
+    height: 50vh;
+`
+
+export {WelcomeStyle, BlockStyle}

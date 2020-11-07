@@ -46,13 +46,13 @@ export class PlantsContainer extends Component {
                     }}/>
                     <Route path="/plants" render={() => {
                         return (
-                        <>
+                        <section className="footerpage">
                         <h1>Home ~ Houseplants</h1>
                         <PlantContainerStyle>
                             {this.renderPlants()}
                         </PlantContainerStyle>
                         <Footer />
-                        </>
+                        </section>
                         )
                     }}/>
                 </Switch>

@@ -56,14 +56,14 @@ class App extends React.Component {
   render() {
     
     return (
-      <div className="page">
+      <div>
         <NavBar user={this.state.user} cart={this.state.cart}/>
         <Switch>
           <Route path="/plants" render={() => (<PlantsContainer addToCart={this.addToCart}/>)}/>
           <Route path="/cart" render={() => (<Cart cart={this.state.cart}/>)}/>
           <Route path="/signup" render={() => (<SignUp submitHandler={this.signupHandler}/>)}/>
           <Route path="/login" render={() => (<Login submitHandler={this.loginHandler}/>)}/>
-          <Route path="/profile" render={() => (<Profile />)}/>
+          <Route path="/profile" render={() => (<Profile user={this.state.user}/>)}/>
           <Route path="/" render={() => (<StoreFront/>)}/>
         </Switch>
       </div>

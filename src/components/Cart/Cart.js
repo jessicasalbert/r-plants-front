@@ -13,10 +13,10 @@ export class Cart extends Component {
     render() {
         console.log(this.props.cart)
         return (
-            <>
+            <section className="footerpage">
                 {this.renderCart()}
                 <Footer />
-            </>
+            </section>
         )
     }
 }
