@@ -28,7 +28,22 @@ class App extends React.Component {
 
     fetch("http://localhost:3000/api/v1/users", options)
     .then(resp => resp.json())
-    .then(console.log)
+    .then(data => this.setState({ user: data.user }, () => this.props.history.push("/")))
+    .catch(console.log)
+  }
+
+  loginHandler = userInfo => {
+    let options = {
+      method: "POST",
+      headers: {
+        Accept: "application/json",
+        "content-type": "application/json"
+      },
+      body: JSON.stringify({user: userInfo})
+    }
+    fetch("http://localhost:3000/api/v1/login", options)
+    .then(resp => resp.json())
+    .then(data => this.setState({ user: data.user }, () => this.props.history.push("/")))
     .catch(console.log)
   }
 
@@ -41,6 +56,8 @@ class App extends React.Component {
   }
 
   render() {
+    
+    console.log(window.history)
     return (
       <Router>
         <NavBar user={this.state.user} cart={this.state.cart}/>
