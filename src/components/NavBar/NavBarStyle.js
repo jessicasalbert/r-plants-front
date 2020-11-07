@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-const NavStyle = styled.section`
+const NavStyle = styled.header`
     height: 80px;
     display: flex;
     align-items: center;
@@ -19,7 +19,6 @@ const HomeButton = styled.section`
 `
 
 const CartButton = styled.section`
-    position: absolute;
     display: inline-block;
     margin: auto;
     right: 0px;

@@ -3,6 +3,8 @@
 }
 
 html {
+    position: relative;
+    min-height: 100vh;
     background-color: rgba(239, 234, 225, 0.7); 
 }
 
@@ -10,6 +12,10 @@ a {
     cursor: pointer;
     text-decoration: none;
     color: inherit;
+}
+
+.footerpage {
+    padding-bottom: 30rem;
 }
 
 div.horses {

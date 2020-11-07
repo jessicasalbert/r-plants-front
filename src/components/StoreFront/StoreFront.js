@@ -7,20 +7,14 @@ import Footer from '../Footer/Footer'
 
 export class StoreFront extends Component {
 
-    // componentDidMount() {
-    //     fetch()
-    //     .then()
-    //     .then()
-    //     .catch()
-    // }
 
     render() {
-        // console.log(this.state.plants)
         return (
-            <>
+            <section className="footerpage">
                 <Welcome />
                 <PlantsContainer />
-            </>
+                <Footer />
+            </section>
         )
     }
 }

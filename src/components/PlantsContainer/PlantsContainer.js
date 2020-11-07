@@ -3,7 +3,7 @@ import Plant from '../Plant/Plant'
 import PlantContainerStyle from './PlantContainerStyle'
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom"
 import DetailedPlant from '../DetailedPlant/DetailedPlant'
-//import {plants} from '../../db'
+import Footer from '../Footer/Footer'
 
 export class PlantsContainer extends Component {
 
@@ -45,11 +45,13 @@ export class PlantsContainer extends Component {
                     }}/>
                     <Route path="/plants" render={() => {
                         return (
-                        <>
+                        <section className="footerpage">
+                        <h1>Home ~ Houseplants</h1>
                         <PlantContainerStyle>
                             {this.renderPlants()}
                         </PlantContainerStyle>
-                        </>
+                        <Footer />
+                        </section>
                         )
                     }}/>
                 </Switch>

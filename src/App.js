@@ -67,9 +67,7 @@ class App extends React.Component {
     .catch(console.log)
   }
 
-  addToCart = (item, size, quantity) => {
-    item['size'] = size
-    item['quantity'] = quantity
+  addToCart = (item) => {
     this.setState((prev) => ({
       cart: [...prev.cart, item]
     }))
@@ -79,7 +77,7 @@ class App extends React.Component {
     console.log(this.state.user)
     
     return (
-      <>
+      <div>
         <NavBar user={this.state.user} cart={this.state.cart}/>
         <Switch>
           <Route path="/plants" render={() => (<PlantsContainer addToCart={this.addToCart}/>)}/>
@@ -89,7 +87,7 @@ class App extends React.Component {
           <Route path="/profile" render={() => (<Profile user={this.state.user} /> )}/>
           <Route path="/" render={() => (<StoreFront/>)}/>
         </Switch>
-      </>
+      </div>
     )
   }
 }
