@@ -56,6 +56,7 @@ class App extends React.Component {
   }
 
   render() {
+    console.log(this.state.user)
     
     return (
       <>
@@ -65,7 +66,7 @@ class App extends React.Component {
           <Route path="/cart" render={() => (<Cart cart={this.state.cart}/>)}/>
           <Route path="/signup" render={() => (<SignUp submitHandler={this.signupHandler}/>)}/>
           <Route path="/login" render={() => (<Login submitHandler={this.loginHandler}/>)}/>
-          <Route path="/profile" render={() => (<Profile />)}/>
+          <Route path="/profile" render={() => (<Profile user={this.state.user} /> )}/>
           <Route path="/" render={() => (<StoreFront/>)}/>
         </Switch>
       </>
