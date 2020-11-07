@@ -1,11 +1,12 @@
 import React, { Component } from 'react'
+import FootStyle from './FooterStyle'
 
 export class Footer extends Component {
     render() {
         return (
-            <div>
+            <FootStyle>
                 Hello from the Footer
-            </div>
+            </FootStyle>
         )
     }
 }

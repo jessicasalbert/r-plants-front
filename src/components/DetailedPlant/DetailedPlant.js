@@ -5,14 +5,12 @@ export class DetailedPlant extends Component {
 
     state = {
         clicked: false,
-        quantity: 2,
-        size: "M",
         careInstructions: false
     }
 
 
     localAddToCart = () => {
-        this.props.addToCart(this.props.plant, this.state.size, this.state.quantity)
+        this.props.addToCart(this.props.plant)
     }
 
     imageFlipHandler = () => {

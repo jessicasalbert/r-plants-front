@@ -1,23 +1,22 @@
 import React, { Component } from 'react'
+import CartItem from '../CartItem/CartItem'
+import Footer from '../Footer/Footer'
 
 export class Cart extends Component {
-    renderCart = () => {
-    return this.props.cart.map(item => (
-    <>
-    <h1>{item.name}</h1>
-    <p>image</p>
-    <p>Price</p>
-    <select></select>
-    <hr></hr>
-    </>
-    ))
+    state = {
+        total: 0
     }
+    renderCart = () => {
+        return this.props.cart.map(item => (<CartItem plant={item} />))
+    }
+
     render() {
+        console.log(this.props.cart)
         return (
-            <div>
+            <>
                 {this.renderCart()}
-                <button>buy</button>
-            </div>
+                <Footer />
+            </>
         )
     }
 }

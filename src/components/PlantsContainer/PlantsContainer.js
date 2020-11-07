@@ -3,7 +3,7 @@ import Plant from '../Plant/Plant'
 import PlantContainerStyle from './PlantContainerStyle'
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom"
 import DetailedPlant from '../DetailedPlant/DetailedPlant'
-//import {plants} from '../../db'
+import Footer from '../Footer/Footer'
 
 export class PlantsContainer extends Component {
 
@@ -50,6 +50,7 @@ export class PlantsContainer extends Component {
                         <PlantContainerStyle>
                             {this.renderPlants()}
                         </PlantContainerStyle>
+                        <Footer />
                         </>
                         )
                     }}/>
