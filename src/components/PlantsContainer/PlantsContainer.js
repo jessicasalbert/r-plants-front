@@ -3,13 +3,20 @@ import Plant from '../Plant/Plant'
 import PlantContainerStyle from './PlantContainerStyle'
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom"
 import DetailedPlant from '../DetailedPlant/DetailedPlant'
-import {plants} from '../../db'
+//import {plants} from '../../db'
 
 export class PlantsContainer extends Component {
 
     state = {
-        plants: plants
+        plants: []
     }
+
+    componentDidMount() {
+        fetch(`http://localhost:3000/api/v1/items`)
+        .then(res => res.json())
+        .then(res => this.setState({plants: res}))
+    }
+
 
     renderPlants = () => {
         let plants = this.state.plants

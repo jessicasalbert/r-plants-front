@@ -33,7 +33,6 @@ class App extends React.Component {
   }
 
   addToCart = (item, size, quantity) => {
-    console.log(size, quantity)
     item['size'] = size
     item['quantity'] = quantity
     this.setState((prev) => ({
