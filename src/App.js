@@ -1,6 +1,6 @@
 import './App.css'
 import React from 'react'
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom"
+import { Route, Switch, withRouter } from "react-router-dom"
 import StoreFront from './components/StoreFront/StoreFront'
 import PlantsContainer from './components/PlantsContainer/PlantsContainer'
 import Footer from './components/Footer/Footer'
@@ -57,9 +57,8 @@ class App extends React.Component {
 
   render() {
     
-    console.log(window.history)
     return (
-      <Router>
+      <>
         <NavBar user={this.state.user} cart={this.state.cart}/>
         <Switch>
           <Route path="/plants" render={() => (<PlantsContainer addToCart={this.addToCart}/>)}/>
@@ -69,9 +68,9 @@ class App extends React.Component {
           <Route path="/profile" render={() => (<Profile />)}/>
           <Route path="/" render={() => (<StoreFront/>)}/>
         </Switch>
-      </Router>
+      </>
     )
   }
 }
 
-export default App
+export default withRouter(App)
