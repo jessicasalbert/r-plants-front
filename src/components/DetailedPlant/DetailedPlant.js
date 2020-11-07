@@ -62,12 +62,9 @@ export class DetailedPlant extends Component {
                             {/*  */}
                         {/* </form> */} 
                         <form onSubmit={this.localAddToCart}>
-                            <input onChange={this.formEdit} type="radio" id="small" name="size" value="small" checked={this.state.size === "small"}/>
-                            <label for="small">Small</label>
-                            <input onChange={this.formEdit} type="radio" id="medium" name="size" value="medium" checked={this.state.size === "medium"}/>
-                            <label for="medium">Medium</label>
-                            <input onChange={this.formEdit} type="radio" id="large" name="size" value="large" checked = {this.state.size === "large"}/>
-                            <label for="large">Large</label>
+                            <label><input onChange={this.formEdit} type="radio" id="small" name="size" value="small" checked={this.state.size === "small"}/>Small</label>
+                            <label><input onChange={this.formEdit} type="radio" id="medium" name="size" value="medium" checked={this.state.size === "medium"}/>Medium</label>
+                            <label><input onChange={this.formEdit} type="radio" id="large" name="size" value="large" checked = {this.state.size === "large"}/>Large</label>
                             <button> Add to cart </button>
                         </form>
 

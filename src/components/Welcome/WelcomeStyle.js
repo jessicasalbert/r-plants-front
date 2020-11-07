@@ -8,4 +8,8 @@ const BlockStyle = styled.section`
     height: 50vh;
 `
 
-export {WelcomeStyle, BlockStyle}
+const MapStyle = styled.div`
+
+`
+
+export {WelcomeStyle, BlockStyle, MapStyle}
