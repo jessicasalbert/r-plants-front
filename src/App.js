@@ -28,8 +28,17 @@ class App extends React.Component {
 
     fetch("http://localhost:3000/api/v1/users", options)
     .then(resp => resp.json())
-    .then(console.log)
+    .then(data => {
+      this.setState(() => ({user: data.user}))
+    })
     .catch(console.log)
+  }
+
+  loginHandler = userInfo => {
+    fetch("")
+    .then()
+    .then()
+    .catch()
   }
 
   addToCart = (item, size, quantity) => {
