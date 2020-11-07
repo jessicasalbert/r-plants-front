@@ -69,7 +69,9 @@ class App extends React.Component {
     .catch(console.log)
   }
 
-  addToCart = (item) => {
+  addToCart = (item, size) => {
+    console.log(item, size)
+    item['size'] = size
     this.setState((prev) => ({
       cart: [...prev.cart, item]
     }), () => {localStorage.setItem("cart", JSON.stringify(this.state.cart))})

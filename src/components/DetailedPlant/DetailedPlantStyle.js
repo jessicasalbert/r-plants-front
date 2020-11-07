@@ -45,11 +45,10 @@ const Details = styled.section`
         display: inline-block;
         border: none;
         transition: all 0.4s ease 0s;
-        bottom: 0;
-        position: absolute;
+  
     }
 
-    button:hover {
+    button:active {
         background: rgba(57, 54, 38, 1);
         letter-spacing: 1px;
         -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
@@ -62,6 +61,12 @@ const Details = styled.section`
     margin-right: auto;
     text-align: center;
     position: relative;
+    }
+
+    label {
+        padding-right: 10px;
+        padding-top: 10px;
+        padding-left: 2px;
     }
 `
 

@@ -5,12 +5,15 @@ export class DetailedPlant extends Component {
 
     state = {
         clicked: false,
-        careInstructions: false
+        careInstructions: false,
+        size: "small",
+        price: this.props.plant.price.small
     }
 
 
-    localAddToCart = () => {
-        this.props.addToCart(this.props.plant)
+    localAddToCart = (e) => {
+        e.preventDefault()
+        this.props.addToCart(this.props.plant, this.state.size)
     }
 
     imageFlipHandler = () => {
@@ -22,7 +25,16 @@ export class DetailedPlant extends Component {
         
     }
 
+    formEdit = (e) => {
+        const price = this.props.plant.price[e.target.value]
+        this.setState( () => ({
+            [e.target.name] : e.target.value,
+            price : price
+        }))
+    }
+
     render() {
+        console.log(this.state.size)
         return (
             <Page>
                 <TopDetails>
@@ -42,8 +54,25 @@ export class DetailedPlant extends Component {
                                 <p>Pet-friendly!</p>
                             </div>
                             : null}
-            
-                        <button onClick={this.localAddToCart}> Add to cart </button>
+                        <h3>Price: {this.state.price}</h3>
+                        {/* <form>
+                            <input type="radio" >
+                            <input type="radio" >
+                            <input type="radio">
+                            {/*  */}
+                        {/* </form> */} 
+                        <form onSubmit={this.localAddToCart}>
+                            <input onChange={this.formEdit} type="radio" id="small" name="size" value="small" checked={this.state.size === "small"}/>
+                            <label for="small">Small</label>
+                            <input onChange={this.formEdit} type="radio" id="medium" name="size" value="medium" checked={this.state.size === "medium"}/>
+                            <label for="medium">Medium</label>
+                            <input onChange={this.formEdit} type="radio" id="large" name="size" value="large" checked = {this.state.size === "large"}/>
+                            <label for="large">Large</label>
+                            <button> Add to cart </button>
+                        </form>
+
+
+                        
                     </Details>
                 </TopDetails>
                 <BottomDetails>
