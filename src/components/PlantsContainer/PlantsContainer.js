@@ -11,14 +11,11 @@ export class PlantsContainer extends Component {
         plants: []
     }
 
-    localAddPlantInfo = () => {
-        this.props.addPlantInfo(this.state.plants)
-    }
 
     componentDidMount() {
         fetch(`http://localhost:3000/api/v1/items`)
         .then(res => res.json())
-        .then(res => this.setState({plants: res}, () => (this.localAddPlantInfo)))
+        .then(res => this.setState({plants: res}))
         .catch(console.log)
     }
 

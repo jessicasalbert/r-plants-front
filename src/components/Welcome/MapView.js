@@ -16,6 +16,7 @@ class MapView extends React.Component {
     }
 
     render() {
+        console.log(this.props.plants)
         return (
             <MapStyle>
                 <MapContainer center={[40, -0]} zoom={1.75}>
@@ -31,12 +32,17 @@ class MapView extends React.Component {
                     url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                     attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'/>
                 
-                {coordinates.map(plant => (
+                
+                {this.props.plants ?
+                this.props.plants.map(plant => (
                     <>
                         <Marker icon={iconPlant} key={plant.id} position={[plant.latitude, plant.longitude]}>
-                        <Popup>{plant.name} <br /> Easily customizable.<br/><img src={plant.image}/></Popup></Marker>
+                        <Popup>{plant.name} <br/><img src={plant.image}/><br/><button>See more</button></Popup></Marker>
                     </>
-                ))}
+                ))
+                :
+                <h1>Loading</h1>
+            }
 
 
                 

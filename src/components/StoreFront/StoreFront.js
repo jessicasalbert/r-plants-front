@@ -11,8 +11,8 @@ export class StoreFront extends Component {
     render() {
         return (
             <section className="footerpage">
-                <Welcome />
-                <PlantsContainer />
+                <Welcome plants={this.props.plants}/>
+                {/* <PlantsContainer /> */}
                 <Footer />
             </section>
         )

@@ -13,7 +13,8 @@ import Profile from './components/Profile/Profile'
 class App extends React.Component {
   state = {
     cart: [],
-    user: null
+    user: null,
+    plants: null
   }
 
   componentDidMount () {
@@ -32,11 +33,16 @@ class App extends React.Component {
       this.props.history.push("/signup")
     }
     this.setState( () => ({ cart: localCart ? localCart : [] }))
+    
+   
+    fetch(`http://localhost:3000/api/v1/items`)
+    .then(res => res.json())
+    .then(res => this.setState({plants: res}))
+    .catch(console.log)
+  
   }
   
-  getPlantInfo = (plants) => {
-    this.setState(() => ({plants: plants}))
-  }
+  
 
   signupHandler = userObj => {
     let options = {
@@ -93,7 +99,7 @@ class App extends React.Component {
       <div>
         <NavBar2 user={this.state.user} cart={this.state.cart} logoutHandler={this.logoutHandler}/>
         <Switch>
-          <Route path="/plants" render={() => (<PlantsContainer addPlantInfo={this.getPlantInfo} addToCart={this.addToCart}/>)}/>
+          <Route path="/plants" render={() => (<PlantsContainer addToCart={this.addToCart}/>)}/>
           <Route path="/cart" render={() => (<Cart cart={this.state.cart}/>)}/>
           <Route path="/signup" render={() => (<SignUp submitHandler={this.signupHandler}/>)}/>
           <Route path="/login" render={() => (<Login submitHandler={this.loginHandler}/>)}/>

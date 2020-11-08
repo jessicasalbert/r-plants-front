@@ -4,10 +4,10 @@ import About from './About'
 import LandingPhoto from './LandingPhoto'
 import {WelcomeStyle, BlockStyle} from './WelcomeStyle'
 
-export default function Welcome() {
+export default function Welcome(props) {
     return (
         <WelcomeStyle>
-            <BlockStyle><MapView /></BlockStyle>
+            <BlockStyle><MapView plants={props.plants} /></BlockStyle>
             <hr></hr>
             <BlockStyle><LandingPhoto /></BlockStyle>
             <hr></hr>
