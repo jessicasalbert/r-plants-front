@@ -78,12 +78,27 @@ class App extends React.Component {
     .catch(console.log)
   }
 
+  
+ 
+
+
+
   addToCart = (item, size, quantity) => {
     item['size'] = size
     item['quantity'] = quantity
-    this.setState((prev) => ({
-      cart: [...prev.cart, item]
-    }), () => {localStorage.setItem("cart", JSON.stringify(this.state.cart))})
+    let index = this.state.cart.findIndex( cartItem => cartItem.size === size && cartItem.id === item.id)
+    if (index === -1) {
+      this.setState((prev) => ({
+        cart: [...prev.cart, item]
+      }), () => {localStorage.setItem("cart", JSON.stringify(this.state.cart))})
+    } else {
+      const newCart = [...this.state.cart]
+      newCart[index].quantity = parseInt(newCart[index].quantity) + parseInt(item.quantity)
+      this.setState(() => ({
+        cart: newCart
+      }), () => {localStorage.setItem("cart", JSON.stringify(this.state.cart))})
+    }
+    
 
   }
 

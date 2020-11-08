@@ -15,15 +15,18 @@ export class Cart extends Component {
         ]
     }
 
-    // setQuant = (item, quantity) => {
-    //     const index = this.state.items.findIndex( el => el.id === item.id )
-    //     if (index !== -1) {
-
-    //         const newItems = [...this.state.items]
-    //         newItems[index]['quantity'] = quantity
-    //         this.setState( () => ({ items: newItems} ), () => (localStorage.setItem("cart", JSON.stringify(this.state.cart))))
+    // consolidateCart = () => {
+    //     const newCart = [];
+    //     for (const item of this.props.cart) {
+    //         let index = newCart.findIndex( cartItem => cartItem.id === item.id && cartItem.size === item.size );
+    //         if (index !== -1) {
+    //             newCart[index].quantity = parseInt(newCart[index].quantity) + parseInt(item.quantity)
+    //             newCart[index].price = parseFloat(newCart[index].price) + parseFloat(item.price)
+    //         } else {
+    //             newCart.push(item)
+    //         }
     //     }
-        
+    //     return newCart
     // }
 
     renderCart = () => {
