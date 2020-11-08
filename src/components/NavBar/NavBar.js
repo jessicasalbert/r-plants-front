@@ -5,6 +5,7 @@ import { NavLink } from 'react-router-dom'
 
 export class NavBar extends Component {
 
+
     render() {
         return (
                 <>
