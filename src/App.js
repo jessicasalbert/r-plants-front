@@ -9,6 +9,7 @@ import Cart from './components/Cart/Cart'
 import SignUp from './components/SignUp/SignUp'
 import Login from './components/Login/Login'
 import Profile from './components/Profile/Profile'
+import Welcome from './components/Welcome/Welcome'
 
 class App extends React.Component {
   state = {
@@ -104,7 +105,7 @@ class App extends React.Component {
           <Route path="/signup" render={() => (<SignUp submitHandler={this.signupHandler}/>)}/>
           <Route path="/login" render={() => (<Login submitHandler={this.loginHandler}/>)}/>
           <Route path="/profile" render={() => (<Profile user={this.state.user} /> )}/>
-          <Route path="/" render={() => (<StoreFront plants={this.state.plants}/ >)}/>
+          <Route path="/" render={() => (<Welcome plants={this.state.plants}/ >)}/>
         </Switch>
       </div>
     )

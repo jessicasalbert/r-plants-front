@@ -4,7 +4,15 @@ import Footer from '../Footer/Footer'
 
 export class Cart extends Component {
     state = {
-        total: 0
+        items: [
+            // {
+            //     id:
+            //     name:
+            //     size: 
+            //     quantity:
+            // },
+            // {}
+        ]
     }
     renderCart = () => {
         return this.props.cart.map(item => (<CartItem key={this.props.cart.indexOf(item)} plant={item} />))
