@@ -10,7 +10,6 @@ const Page = styled.section`
 
 
 const Details = styled.section`
-    
     h1 {
         @import url('https://fonts.googleapis.com/css2?family=Montserrat:400,900|Roboto');
         color: rgba(57, 54, 38, 1);
@@ -81,10 +80,17 @@ const TopDetails = styled.section`
 `
 
 const Photo = styled.section`
+    position: relative;
+
     img {
         width: 50vw;
         border: 1px solid rgba(100, 114, 97, 1)
-    };
+    }
+
+    img:hover {
+        cursor: zoom-in;
+    }
+
     margin: auto;
     align-content: center;
 `
@@ -102,6 +108,7 @@ const BottomDetails = styled.section`
         font-size: 1.5rem;
         font-family: sans-serif;
     }
+
     font-size: 20px;
     margin: 10px;
     padding: 10px;
