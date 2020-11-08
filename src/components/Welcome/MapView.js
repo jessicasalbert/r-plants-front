@@ -34,7 +34,7 @@ class MapView extends React.Component {
                 {coordinates.map(plant => (
                     <>
                         <Marker icon={iconPlant} key={plant.id} position={[plant.latitude, plant.longitude]}>
-                        <Popup>{plant.name} <br /> Easily customizable.</Popup></Marker>
+                        <Popup>{plant.name} <br /> Easily customizable.<br/><img src={plant.image}/></Popup></Marker>
                     </>
                 ))}
 

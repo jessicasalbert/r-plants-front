@@ -3,6 +3,10 @@ import L from 'leaflet'
 
 const WelcomeStyle = styled.h1`
     font-size: 150px;
+
+    img {
+        width: 100px;
+    }
 `
 
 const BlockStyle = styled.section`
