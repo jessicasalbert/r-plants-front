@@ -19,7 +19,7 @@ class MapView extends React.Component {
         console.log(this.props.plants)
         return (
             <MapStyle>
-                <MapContainer center={[40, -0]} zoom={1.75}>
+                <MapContainer center={[30, -15]} maxZoom={3.5} minZoom={1.75}  zoom={2}>
                     <GeoJSON
                         data={worldGeoJSON}
                         style={() => ({

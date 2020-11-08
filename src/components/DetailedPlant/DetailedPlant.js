@@ -78,7 +78,7 @@ export class DetailedPlant extends Component {
                                     <option value="10">10</option>
                                 </select><br/><br/>
                             
-                            <button> Add to cart </button>
+                            <button><b>Add to cart</b></button>
                         </form>
 
 

@@ -1,10 +1,11 @@
 * {
     margin: 0;
+    font-family: 'Merriweather', sans-serif;
 }
 
 html {
     position: relative;
-    min-height: 95vh;
+    min-height: 100vh;
     background-color: rgba(239, 234, 225, 0.7); 
 }
 

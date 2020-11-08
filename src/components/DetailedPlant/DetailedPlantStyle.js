@@ -35,27 +35,27 @@ const Details = styled.section`
     }
 
     button {
-        color: #fff !important;
-        text-transform: uppercase;
+        color: #fff;
+        font-size: 1rem;
         text-decoration: none;
-        background: rgba(100, 114, 97, 1);
+        background: rgba(147, 141, 123, 1);
         padding: 20px;
-        border-radius: 50px;
+        border-radius: 8px;
         display: inline-block;
         border: none;
+        outline: none;
         transition: all 0.4s ease 0s;
-  
+        cursor: pointer;
     }
 
     button:active {
         background: rgba(57, 54, 38, 1);
-        letter-spacing: 1px;
+        letter-spacing: 0.5px;
         -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
         -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
         box-shadow: 5px 40px -10px rgba(0,0,0,0.57);
         transition: all 0.4s ease 0s;
     }
-  
     margin-left: auto;
     margin-right: auto;
     text-align: center;
@@ -66,6 +66,11 @@ const Details = styled.section`
         padding-right: 10px;
         padding-top: 10px;
         padding-left: 2px;
+    }
+
+    button:hover {
+        color: rgba(57, 54, 38, 1);
+        background: rgba(181, 181, 161, 1);
     }
 `
 

@@ -1,20 +1,21 @@
 import styled from 'styled-components'
 import L from 'leaflet'
 
+
 const WelcomeStyle = styled.h1`
     font-size: 150px;
-
-    img {
-        width: 100px;
-    }
 `
 
 const BlockStyle = styled.section`
     height: 50vh;
 `
 
-const MapStyle = styled.div`
+const LandingImg = styled.img`
 
+`
+
+const MapStyle = styled.div`
+    pointer-events: none;
 `
 
 const iconPlant = new L.Icon({
@@ -23,4 +24,4 @@ const iconPlant = new L.Icon({
     // className: 'leaflet-div-icon'
 })
 
-export {WelcomeStyle, BlockStyle, MapStyle, iconPlant}
+export {WelcomeStyle, BlockStyle, MapStyle, iconPlant, LandingImg}

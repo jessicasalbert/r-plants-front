@@ -7,34 +7,39 @@ export const Nav = styled.nav`
     height: 40px;
     display: flex;
     top: 0;
-    justify-content: space-between;
-    padding: 0.5rem calc((100vw - 1000px) / 2);
+    justify-content: flex-end;
+    padding: 0.5rem;
+    padding-right: 150px;
     z-index: 10;
     position: sticky;
 `
 
 export const NavLogo = styled(Link)`
+    img {
+        width: 40px;
+        height: 40px;
+    }
+    white-space: nowrap;
     color: rgba(57, 54, 38, 1);
-    justify-self: start;
-    margin-top: 5px;
-    margin-left: 0px;
+    position: absolute;
+    left: 0;
+    margin-top: 2px;
+    margin-left: 15px;
     cursor: pointer;
     text-decoration: none;
     font-size: 1.5rem;
     @media screen and (max-width: 768px) {
-        position: absolute;
-        margin-top: 0;
+        margin-top: 10px;
         top: 0;
         left: 0;
-        transform: translate(25%, 50%);
     }
 `
 
 export const NavLink = styled(Link)`
-    b {
+    color: #fff;
+    b.cart {
         color: red;
     }
-    color: #fff;
     display: flex;
     align-items: center;
     text-decoration: none;
@@ -45,17 +50,26 @@ export const NavLink = styled(Link)`
         color: rgba(57, 54, 38, 1);
     }
     &:hover {
+        b.cart {
+        color: red;
+        }
         background-color: rgba(100, 114, 97, 1);
         border-radius: 4px;
         transition: all 0.2s ease-out;
     }
     @media screen and (max-width: 768px) {
+        b.cart {
+        color: red;
+        }
         text-align: center;
         padding: 1.5rem;
         width: 100%;
         display: table;
 
         &:hover {
+            b.cart {
+        color: red;
+        }
             background: rgba(181, 181, 161, 1);
             border-radius: 0;
         }
@@ -75,7 +89,12 @@ export const NavLinkMobile = styled(Link)`
         text-decoration: none;
         color: #fff;
         font-size: 1.2rem;
-
+        &:active {
+            letter-spacing: 0.5px;
+            -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+            -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+            box-shadow: 5px 40px -10px rgba(0,0,0,0.57);
+        }
         &:hover {
             background: rgba(181, 181, 161, 1);
             color: rgba(57, 54, 38, 1);
@@ -154,10 +173,16 @@ export const NavMenu = styled.div`
 `
 
 export const NavItem = styled.li`
+    b.cart {
+        color: red;
+    }
     display: flex;
     align-items: center;
     height: 40px;
     @media screen and (max-width: 768px) {
+        b.cart {
+        color: red;
+        }
         height: 60px;
     }
 `
@@ -165,7 +190,8 @@ export const NavItem = styled.li`
 export const NavBtn = styled.nav`
     display: flex;
     align-items: center;
-    margin-right: 5px;
+    position: absolute;
+    right: 15px;
     @media screen and (max-width: 768px) {
         display: none;
     }
@@ -186,6 +212,12 @@ export const NavBtnLink = styled(Link)`
         transition: all 0.2s ease-in-out;
         background: rgba(181, 181, 161, 1);
         color: rgba(57, 54, 38, 1);
+    }
+    &:active {
+        letter-spacing: 0.5px;
+        -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+        -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+        box-shadow: 5px 40px -10px rgba(0,0,0,0.57);
     }
 `
 

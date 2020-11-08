@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 const LoginForm = styled.form`
     h2 {
-        padding-bottom: 60px;
+        padding-bottom: 30px;
     }
     margin: auto;
     display: flex;
@@ -17,8 +17,9 @@ const LoginForm = styled.form`
     @media screen and (max-width: 768px) {
         height: 20rem;
         width: 20rem;
+        text-align: center;
         h2 {
-        padding-bottom: 50px;
+        padding-bottom: 20px;
         }
     }
 `
@@ -39,6 +40,12 @@ const LoginButton = styled.button`
         transition: all 0.2s ease-in-out;
         background: rgba(181, 181, 161, 1);
         color: rgba(57, 54, 38, 1);
+    }
+    &:active {
+        letter-spacing: 0.5px;
+        -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+        -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+        box-shadow: 5px 40px -10px rgba(0,0,0,0.57);
     }
     @media screen and (max-width: 768px) {
         width: 60%;

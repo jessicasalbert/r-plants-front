@@ -22,7 +22,7 @@ export default class Login extends Component {
             <h2>Please log in to your account.</h2>
                 <UserInput type="text" name="username" placeholder="Username" value={this.state.username} onChange={this.changeHandler}></UserInput>
                 <UserInput type="password" name="password" placeholder="Password" value={this.state.password} onChange={this.changeHandler}></UserInput>
-                <LoginButton type="submit" value="Log In">Log In</LoginButton>
+                <LoginButton type="submit" value="Log In"><b>Log In</b></LoginButton>
             </LoginForm>
         )
     }
