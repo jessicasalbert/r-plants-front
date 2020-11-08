@@ -1,9 +1,6 @@
 import styled from 'styled-components'
 
-const LoginForm = styled.form`
-    h2 {
-        padding-bottom: 75px;
-    }
+const SignUpForm = styled.form`
     margin: auto;
     display: flex;
     flex-direction: column;
@@ -16,9 +13,9 @@ const LoginForm = styled.form`
     background-color: rgba(255,255,255,0.5);
 `
 
-const LoginButton = styled.button`
+const SignUpButton = styled.button`
     width: 33%;
-    margin: 5%;
+    margin: 3%;
 `
 
 const UserInput = styled.input`
@@ -26,4 +23,4 @@ const UserInput = styled.input`
     margin: 3%;
 `
 
-export {LoginForm, LoginButton, UserInput}
+export {SignUpForm, SignUpButton, UserInput}
