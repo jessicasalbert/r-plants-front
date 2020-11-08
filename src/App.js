@@ -1,7 +1,6 @@
 import './App.css'
 import React from 'react'
 import { Route, Switch, withRouter } from "react-router-dom"
-import StoreFront from './components/StoreFront/StoreFront'
 import PlantsContainer from './components/PlantsContainer/PlantsContainer'
 import NavBar from './components/NavBar/NavBar'
 import NavBar2 from './components/NavBar/NavBar2'
@@ -79,8 +78,9 @@ class App extends React.Component {
     .catch(console.log)
   }
 
-  addToCart = (item, size) => {
+  addToCart = (item, size, quantity) => {
     item['size'] = size
+    item['quantity'] = quantity
     this.setState((prev) => ({
       cart: [...prev.cart, item]
     }), () => {localStorage.setItem("cart", JSON.stringify(this.state.cart))})
@@ -95,7 +95,6 @@ class App extends React.Component {
   }
 
   render() {
-    console.log(this.state.plants)
     return (
       <div>
         <NavBar2 user={this.state.user} cart={this.state.cart} logoutHandler={this.logoutHandler}/>

@@ -7,13 +7,14 @@ export class DetailedPlant extends Component {
         clicked: false,
         careInstructions: false,
         size: "small",
-        price: this.props.plant.price.small
+        price: this.props.plant.price.small,
+        quantity: 1
     }
 
 
     localAddToCart = (e) => {
         e.preventDefault()
-        this.props.addToCart(this.props.plant, this.state.size)
+        this.props.addToCart(this.props.plant, this.state.size, this.state.quantity)
     }
 
     imageFlipHandler = () => {
@@ -31,6 +32,10 @@ export class DetailedPlant extends Component {
             [e.target.name] : e.target.value,
             price : price
         }))
+    }
+
+    quantityHandler = (e) => {
+        this.setState({ quantity: e.target.value })
     }
 
     render() {
@@ -52,13 +57,27 @@ export class DetailedPlant extends Component {
                                 <img src="https://www.svgrepo.com/show/133518/pet-friendly.svg"/>
                                 <p>Pet-friendly!</p>
                             </div>
-                            : null}
-                        <h3>Price: ${this.state.price}</h3>
+                            : null}<br/>
+                        <h3>Price: ${this.state.price}</h3><br/>
                         
                         <form onSubmit={this.localAddToCart}>
                             <label><input onChange={this.formEdit} type="radio" id="small" name="size" value="small" checked={this.state.size === "small"}/>Small</label>
                             <label><input onChange={this.formEdit} type="radio" id="medium" name="size" value="medium" checked={this.state.size === "medium"}/>Medium</label>
-                            <label><input onChange={this.formEdit} type="radio" id="large" name="size" value="large" checked = {this.state.size === "large"}/>Large</label>
+                            <label><input onChange={this.formEdit} type="radio" id="large" name="size" value="large" checked = {this.state.size === "large"}/>Large</label><br/><br/>
+                            <label for="quantity">Select a quantity:</label>
+                                <select onChange={this.quantityHandler} name="quantity" id="quantity"  value={this.state.quantity}>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                </select><br/><br/>
+                            
                             <button> Add to cart </button>
                         </form>
 
