@@ -13,12 +13,14 @@ class App extends React.Component {
   state = {
     cart: [],
     user: null,
-    plants: null
+    plants: null,
+    cartTotal: 0
   }
 
   componentDidMount () {
     const token = localStorage.getItem("token")
     const localCart = JSON.parse(localStorage.getItem("cart"))
+    const cartTotal = JSON.parse(localStorage.getItem("total"))
     if (token) {
       const options = {
         method: "GET",
@@ -31,7 +33,10 @@ class App extends React.Component {
     } else {
       this.props.history.push("/signup")
     }
-    this.setState( () => ({ cart: localCart ? localCart : [] }))
+    this.setState( () => (
+      { cart: localCart ? localCart : [] ,
+      cartTotal: cartTotal ? cartTotal : 0}
+      ))
     
     fetch(`http://localhost:3000/api/v1/items`)
     .then(res => res.json())
@@ -76,29 +81,52 @@ class App extends React.Component {
     .catch(console.log)
   }
 
-  addToCart = (item, size) => {
+
+
+
+  addToCart = (item, size, quantity) => {
     item['size'] = size
-    this.setState((prev) => ({
-      cart: [...prev.cart, item]
-    }), () => {localStorage.setItem("cart", JSON.stringify(this.state.cart))})
+    item['quantity'] = quantity
+    this.setState( (prev) => ({
+      cartTotal: prev.cartTotal + Math.round((((parseFloat(item.price[size]) * parseFloat(quantity))) + Number.EPSILON) * 100) / 100
+    }))
+    let index = this.state.cart.findIndex( cartItem => cartItem.size === size && cartItem.id === item.id)
+    if (index === -1) {
+      this.setState((prev) => ({
+        cart: [...prev.cart, item]
+      }), () => {
+        localStorage.setItem("cart", JSON.stringify(this.state.cart))
+        localStorage.setItem("total", JSON.stringify(this.state.cartTotal))
+      })
+    } else {
+      const newCart = [...this.state.cart]
+      newCart[index].quantity = parseInt(newCart[index].quantity) + parseInt(item.quantity)
+      this.setState(() => ({
+        cart: newCart
+      }), () => {
+        localStorage.setItem("cart", JSON.stringify(this.state.cart))
+        localStorage.setItem("total", JSON.stringify(this.state.cartTotal))
+      })
+    }
+    
 
   }
 
   logoutHandler = () => {
     localStorage.removeItem("token")
     localStorage.removeItem("cart")
+    localStorage.removeItem("total")
     this.props.history.push("/login")
-    this.setState({ user: null, cart: [] })
+    this.setState({ user: null, cart: [], cartTotal: 0 })
   }
 
   render() {
-    console.log(this.state.plants)
     return (
       <div>
         <NavBar user={this.state.user} cart={this.state.cart} logoutHandler={this.logoutHandler}/>
         <Switch>
           <Route path="/plants" render={() => (<PlantsContainer addToCart={this.addToCart}/>)}/>
-          <Route path="/cart" render={() => (<Cart cart={this.state.cart}/>)}/>
+          <Route path="/cart" render={() => (<Cart cart={this.state.cart} total={this.state.cartTotal}/>)}/>
           <Route path="/signup" render={() => (<SignUp submitHandler={this.signupHandler}/>)}/>
           <Route path="/login" render={() => (<Login submitHandler={this.loginHandler}/>)}/>
           <Route path="/profile" render={() => (<Profile user={this.state.user} /> )}/>
