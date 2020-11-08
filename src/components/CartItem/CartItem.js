@@ -11,8 +11,8 @@ export class CartItem extends Component {
             <CartCard>
                 <h4>{this.props.plant.name}</h4>
                 <CartImage src={this.props.plant.image}></CartImage>
-                <p>Size: {this.props.plant.size}</p>
-                <p>Price: {this.props.plant.price[this.props.plant.size]}</p>
+                <p>Size: {this.props.plant.size[0].toUpperCase() + this.props.plant.size.slice(1)}</p>
+                <p>Price: ${this.props.plant.price[this.props.plant.size]}</p>
                 <hr></hr>
             </CartCard>
         )

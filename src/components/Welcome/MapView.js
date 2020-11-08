@@ -1,9 +1,20 @@
 import React, { Component } from 'react'
 import {MapStyle, iconPlant} from './WelcomeStyle'
 import worldGeoJSON from 'geojson-world-map';
+import { coordinates } from '../../db'
 import { MapContainer, GeoJSON, Marker, Popup, TileLayer } from 'react-leaflet'
 
-export class MapView extends Component {
+class MapView extends React.Component {
+
+    
+    state = {
+        active: null
+    }
+
+    setActivePlant = (plant) => {
+        this.setState({ active: plant })
+    }
+
     render() {
         return (
             <MapStyle>
@@ -13,19 +24,27 @@ export class MapView extends Component {
                         style={() => ({
                             color: 'rgba(100, 114, 97, 1)',
                             weight: 0.7,
-                            fillColor: "rgba(149, 176, 113, 0.5)",
-                            fillOpacity: 1,
+                            fillColor: "rgba(149, 176, 113, 1)",
+                            fillOpacity: 0.3,
                         })}/>
-                        <Marker icon={iconPlant} key="salt" position={["40.7628","-18.9800"]}>
-                        <Popup>A pretty CSS3 popup. <br /> Easily customizable.</Popup></Marker>
-                        <Marker key="salt1" position={["40.7628","-18.9800"]}/>
                 <TileLayer
                     url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                     attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'/>
+                
+                {coordinates.map(plant => (
+                    <>
+                        <Marker icon={iconPlant} key={plant.id} position={[plant.latitude, plant.longitude]}>
+                        <Popup>{plant.name} <br /> Easily customizable.</Popup></Marker>
+                    </>
+                ))}
+
+
+                
                 </MapContainer>
             </MapStyle>
         )
     }
+    
 }
 
 export default MapView
