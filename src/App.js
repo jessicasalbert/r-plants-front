@@ -1,10 +1,8 @@
 import './App.css'
 import React from 'react'
 import { Route, Switch, withRouter } from "react-router-dom"
-import StoreFront from './components/StoreFront/StoreFront'
 import PlantsContainer from './components/PlantsContainer/PlantsContainer'
 import NavBar from './components/NavBar/NavBar'
-import NavBar2 from './components/NavBar/NavBar2'
 import Cart from './components/Cart/Cart'
 import SignUp from './components/SignUp/SignUp'
 import Login from './components/Login/Login'
@@ -35,7 +33,6 @@ class App extends React.Component {
     }
     this.setState( () => ({ cart: localCart ? localCart : [] }))
     
-   
     fetch(`http://localhost:3000/api/v1/items`)
     .then(res => res.json())
     .then(res => this.setState({plants: res}))
@@ -98,7 +95,7 @@ class App extends React.Component {
     console.log(this.state.plants)
     return (
       <div>
-        <NavBar2 user={this.state.user} cart={this.state.cart} logoutHandler={this.logoutHandler}/>
+        <NavBar user={this.state.user} cart={this.state.cart} logoutHandler={this.logoutHandler}/>
         <Switch>
           <Route path="/plants" render={() => (<PlantsContainer addToCart={this.addToCart}/>)}/>
           <Route path="/cart" render={() => (<Cart cart={this.state.cart}/>)}/>
