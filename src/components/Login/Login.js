@@ -4,9 +4,7 @@ import {LoginForm, LoginButton, UserInput} from './LoginStyle'
 export default class Login extends Component {
     state = {
         username: "",
-        password: "",
-        email: "",
-        name: ""
+        password: ""
     }
 
     changeHandler = e => {
