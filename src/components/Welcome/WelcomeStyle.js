@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import L from 'leaflet'
 
 const WelcomeStyle = styled.h1`
     font-size: 150px;
@@ -12,4 +13,10 @@ const MapStyle = styled.div`
 
 `
 
-export {WelcomeStyle, BlockStyle, MapStyle}
+const iconPlant = new L.Icon({
+    iconUrl: 'https://i.ibb.co/6FHrspB/redresize.png',
+    iconSize: [39.6, 45],
+    // className: 'leaflet-div-icon'
+})
+
+export {WelcomeStyle, BlockStyle, MapStyle, iconPlant}
