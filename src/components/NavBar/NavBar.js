@@ -36,6 +36,14 @@ class Navbar extends React.Component {
         }
     }
 
+    itemCount = () => {
+        let items = 0;
+        for (const item of this.props.cart) {
+            items += parseInt(item.quantity)
+        }
+        return items
+    }
+
 
     render() {
         console.log(this.state)
@@ -53,14 +61,14 @@ class Navbar extends React.Component {
                     <NavItem><NavLink onClick={this.closeMenu} to="/plants">Shop</NavLink></NavItem>
                     <NavItem><NavLink onClick={this.closeMenu} to="/profile">Profile</NavLink></NavItem>
                     <NavItem><NavLink onClick={this.closeMenuLogOut} to="/">Log Out</NavLink></NavItem>
-                    <NavItem><NavLinkMobile onClick={this.closeMenu} to="/cart">Checkout({this.props.cart.length > 0 ? <b> {this.props.cart.length} </b> : 0})</NavLinkMobile></NavItem>
+                    <NavItem><NavLinkMobile onClick={this.closeMenu} to="/cart">Checkout({this.props.cart.length > 0 ? <b> {this.itemCount()} </b> : 0})</NavLinkMobile></NavItem>
                     </NavMenu>
                 :
                     <NavMenu>
                     <NavItem><NavLink onClick={this.closeMenu} to="/plants">Shop</NavLink></NavItem>
                     <NavItem><NavLink onClick={this.closeMenu} to="/profile">Profile</NavLink></NavItem>
                     {/* <NavItem><NavLink onClick={this.closeMenu, this.props.logoutHandler} to="/">Log Out</NavLink></NavItem> */}
-                    <NavItem><NavLink onClick={this.closeMenu} to="/cart">Cart({this.props.cart.length > 0 ? <b> {this.props.cart.length} </b> : 0})</NavLink></NavItem>
+                    <NavItem><NavLink onClick={this.closeMenu} to="/cart">Cart({this.props.cart.length > 0 ? <b> {this.itemCount()} </b> : 0})</NavLink></NavItem>
                     </NavMenu>
                 }
                 <NavBtn>
@@ -78,14 +86,14 @@ class Navbar extends React.Component {
                     <NavItem><NavLink onClick={this.closeMenu} to="/plants">Shop</NavLink></NavItem>
                     <NavItem><NavLink onClick={this.closeMenu} to="/login">Log In</NavLink></NavItem>
                     <NavItem><NavLink onClick={this.closeMenu} to="/signup">Sign Up</NavLink></NavItem>
-                    <NavItem><NavLinkMobile onClick={this.closeMenu} to="/cart">Checkout({this.props.cart.length > 0 ? <b> {this.props.cart.length} </b> : 0})</NavLinkMobile></NavItem>
+                    <NavItem><NavLinkMobile onClick={this.closeMenu} to="/cart">Checkout({this.props.cart.length > 0 ? <b> {this.itemCount()}  </b> : 0})</NavLinkMobile></NavItem>
                     </NavMenu>
                 : 
                     <NavMenu>
                     <NavItem><NavLink onClick={this.closeMenu} to="/plants">Shop</NavLink></NavItem>
                     {/* <NavItem><NavLink onClick={this.closeMenu} to="/login">Log In</NavLink></NavItem> */}
                     <NavItem><NavLink onClick={this.closeMenu} to="/signup">Sign Up</NavLink></NavItem>
-                    <NavItem><NavLink onClick={this.closeMenu} to="/cart">Cart({this.props.cart.length > 0 ? <b> {this.props.cart.length} </b> : 0})</NavLink></NavItem>
+                    <NavItem><NavLink onClick={this.closeMenu} to="/cart">Cart({this.props.cart.length > 0 ? <b> {this.itemCount()}  </b> : 0})</NavLink></NavItem>
                     </NavMenu>
                 }
                 <NavBtn>
