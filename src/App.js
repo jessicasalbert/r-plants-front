@@ -88,7 +88,7 @@ class App extends React.Component {
     item['size'] = size
     item['quantity'] = quantity
     this.setState( (prev) => ({
-      cartTotal: prev.cartTotal + Math.round((((parseFloat(item.price[size]) * parseFloat(quantity))) + Number.EPSILON) * 100) / 100
+      cartTotal: Math.round((prev.cartTotal + ((parseFloat(item.price[size]) * parseFloat(quantity))) + Number.EPSILON) * 100) / 100
     }))
     let index = this.state.cart.findIndex( cartItem => cartItem.size === size && cartItem.id === item.id)
     if (index === -1) {
