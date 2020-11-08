@@ -1,10 +1,13 @@
 import React, { Component } from 'react'
 import {withRouter} from 'react-router-dom'
+import { SignUpForm, UserInput, SignUpButton } from './SignUpStyle'
 
 class SignUp extends Component {
     state = {
         username: "",
-        password: ""
+        password: "",
+        email: "",
+        name: ""
     }
 
     changeHandler = e => {
@@ -18,11 +21,14 @@ class SignUp extends Component {
 
     render() {
         return (
-            <form onSubmit={this.submitHandler}>
-                <input type="text" name="username" placeholder="Username" value={this.state.username} onChange={this.changeHandler} />
-                <input type="password" name="password" placeholder="Password" value={this.state.password} onChange={this.changeHandler} />
-                <input type="submit" value="Sign Up" />
-            </form>
+            <SignUpForm onSubmit={this.submitHandler}>
+                <h2>Welcome to RPlants !</h2>
+                <UserInput type="text" name="username" placeholder="Username" value={this.state.username} onChange={this.changeHandler} />
+                <UserInput type="password" name="password" placeholder="Password" value={this.state.password} onChange={this.changeHandler} />
+                <UserInput type="text" name="email" placeholder="Email" value={this.state.email} onChange={this.changeHandler} />
+                <UserInput type="text" name="name" placeholder="Full Name" value={this.state.name} onChange={this.changeHandler} />
+                <SignUpButton type="submit" value="Sign Up" >Sign Up</SignUpButton>
+            </SignUpForm>
         )
     }
 }
