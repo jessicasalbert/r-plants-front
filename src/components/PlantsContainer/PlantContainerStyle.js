@@ -20,4 +20,11 @@ const PlantContainerStyle = styled.section`
 }
 `
 
-export default PlantContainerStyle
+const FilterWrapper = styled.div`
+    display: flex;
+    flex-direction: row;
+    background-color: rgba(255, 255, 255, 0.8);
+    height: 30vh;
+`
+
+export {PlantContainerStyle, FilterWrapper}

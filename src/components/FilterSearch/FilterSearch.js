@@ -1,11 +1,14 @@
 import React, { Component } from 'react'
+import {SearchStyle} from './FilterSearchStyle'
 
 export class FilterSearch extends Component {
     render() {
         return (
-            <div>
-                
-            </div>
+            <>
+                <SearchStyle>
+                    
+                </SearchStyle>
+            </>
         )
     }
 }
