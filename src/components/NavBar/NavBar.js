@@ -52,7 +52,7 @@ class Navbar extends React.Component {
             {this.props.user 
             ? 
             <Nav>
-                <NavLogo onClick={this.closeMenu} to="/"><b><img src="https://i.ibb.co/6n2V1vN/navbar.png"/>r P l a n t s</b></NavLogo>
+                <NavLogo onClick={this.closeMenu} to="/"><b><img alt="rPlants" src="https://i.ibb.co/6n2V1vN/navbar.png"/>r P l a n t s</b></NavLogo>
                 <MenuIcon onClick={this.clickHandler}>
                     {this.state.clicked ? <Times /> : <Bars />}
                 </MenuIcon>
@@ -77,7 +77,7 @@ class Navbar extends React.Component {
             </Nav>
                 :
             <Nav>
-                <NavLogo onClick={this.closeMenu} to="/"><img src="https://i.ibb.co/6n2V1vN/navbar.png"/><b>r P l a n t s</b></NavLogo>
+                <NavLogo onClick={this.closeMenu} to="/"><img alt="rPlants" src="https://i.ibb.co/6n2V1vN/navbar.png"/><b>r P l a n t s</b></NavLogo>
                 <MenuIcon onClick={this.clickHandler}>
                     {this.state.clicked ? <Times /> : <Bars />}
                 </MenuIcon>

@@ -1,8 +1,7 @@
 import React, { Component } from 'react'
 import {FootStyle, FootText} from './FooterStyle'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {faLinkedin, faGithub, faTwitter, faInstagram
-} from "@fortawesome/free-brands-svg-icons";
+import {faLinkedin, faGithub} from "@fortawesome/free-brands-svg-icons";
 
 export class Footer extends Component {
     render() {

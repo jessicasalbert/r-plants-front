@@ -75,6 +75,8 @@ const TopWrapper = styled.section`
     }
     h1 span {
         background-color: rgba(255, 255, 255, 0.9);
+        border-radius: 8px;
+        box-shadow: 8px 8px 8px -6px rgba(0,0,0,.5);
         margin-left: 15px;
     }
     h3 {
@@ -82,6 +84,7 @@ const TopWrapper = styled.section`
     }
 
     h3 span {
+        box-shadow: 0px 8px 8px -6px rgba(0,0,0,.5);
         background-color: rgba(255, 255, 255, 0.9);
         margin-left: 15px;
     }
@@ -118,6 +121,7 @@ const LandingImg = styled.section`
 `
 
 const MapStyle = styled.div`
+    box-shadow: 0px 8px 8px -6px rgba(0,0,0,.5);
     position: absolute;
     left: 25vw;
     pointer-events: none;
