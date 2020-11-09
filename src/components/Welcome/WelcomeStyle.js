@@ -120,7 +120,7 @@ const MapStyle = styled.div`
     position: absolute;
     left: 25vw;
     pointer-events: none;
-    @media screen and (max-width: 700px) {
+    @media screen and (max-width: 926px) {
         left: 0;
     }
 `
