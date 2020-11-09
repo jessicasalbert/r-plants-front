@@ -1,7 +1,7 @@
 import React from 'react'
 import MapView from './MapView'
 import About from './About'
-import LandingPhoto from './LandingPhoto'
+import Footer from '../Footer/Footer'
 import {WelcomeStyle, TopWrapper, BottomWrapper, MapWrapper, StoreButton} from './WelcomeStyle'
 
 export default function Welcome(props) {
@@ -20,7 +20,7 @@ export default function Welcome(props) {
             <MapWrapper><MapView plants={props.plants} /></MapWrapper>
 
             <BottomWrapper><About /></BottomWrapper>
-
+            <section className="footerpage"><Footer /></section>
         </WelcomeStyle>
     )
 }

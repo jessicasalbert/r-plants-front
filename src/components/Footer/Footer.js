@@ -5,7 +5,7 @@ export class Footer extends Component {
     render() {
         return (
             <FootStyle>
-                Hello from the Footer
+                
             </FootStyle>
         )
     }
