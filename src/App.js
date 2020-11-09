@@ -4,6 +4,7 @@ import { Route, Switch, withRouter } from "react-router-dom"
 import PlantsContainer from './components/PlantsContainer/PlantsContainer'
 import NavBar from './components/NavBar/NavBar'
 import Cart from './components/Cart/Cart'
+import NewPlant from './components/NewPlant/NewPlant'
 import SignUp from './components/SignUp/SignUp'
 import Login from './components/Login/Login'
 import Profile from './components/Profile/Profile'
@@ -84,7 +85,25 @@ class App extends React.Component {
     .catch(console.log)
   }
 
+    addPlantHandler = newPlant => {
+    let options = {
+        method: "POST",
+        headers: {
+            Accept: "application/json",
+            "content-type": "application/json"
+        },
+        body: JSON.stringify({plant: newPlant})
+    }
 
+    fetch("http://localhost:3000/api/v1/plants", options)
+    .then(resp => resp.json())
+    .then(newest => {
+        this.setState({
+            plants: [...this.state.plants, newest]
+        })
+    })
+    .catch(console.log)
+    }
 
 
   addToCart = (item, size, quantity) => {
@@ -133,7 +152,8 @@ class App extends React.Component {
           <Route path="/signup" render={() => (<SignUp submitHandler={this.signupHandler}/>)}/>
           <Route path="/login" render={() => (<Login submitHandler={this.loginHandler}/>)}/>
           <Route path="/profile" render={() => (<Profile user={this.state.user} /> )}/>
-          <Route path="/" render={() => (<Welcome plants={this.state.plants}/ >)}/>
+          <Route path="/newplant" render={() => (<NewPlant submitHandler={this.addPlantHandler}/>)}/>
+          <Route path="/" render={() => (<Welcome plants={this.state.plants}/ > )}/>
         </Switch>
       </div>
     )

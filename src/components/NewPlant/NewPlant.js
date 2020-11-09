@@ -18,14 +18,17 @@ export class NewPlant extends Component {
         longitude: ""
     }
 
+
+
     changeHandler = e => {
         this.setState({
             [e.target.name] : e.target.value
         })
     }
 
-    submitHandler = () => {
-        
+    submitHandler = e => {
+        e.preventDefault()
+        this.props.submitHandler(this.state)
     }
 
 

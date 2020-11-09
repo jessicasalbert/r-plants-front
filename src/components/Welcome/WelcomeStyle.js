@@ -11,9 +11,12 @@ const WelcomeStyle = styled.div`
     background-position: top center;
     background-repeat: no-repeat;
     background-size: 100vw;
-    @media screen and (max-width: 768px) {
-
+    .footerpage {
+        padding-bottom: 18.7rem;
     }
+    @media screen and (max-width: 700px) {
+        background-size: 100vh;
+        }
     }
 `
 
@@ -28,7 +31,7 @@ const StoreButton = styled.button`
     position: absolute;
     margin-top: 75px;
     margin-left: 15px;
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 700px) {
         margin-top: 20px;
         width: 50vw;
         &:hover {
@@ -50,20 +53,21 @@ const StoreButton = styled.button`
 `
 
 const BottomWrapper = styled.section`
-    height: 50vh;
+    background-color: rgba(255, 255, 255, 0.6);
+    min-height: 50vh;
 `
 
 const TopWrapper = styled.section`
     background-color: rgba(255, 255, 255, 0.6);
     display: flex-column;
     align-items: center;
-    height: 50vh;
+    min-height: 50vh;
     text-align: inline;
     h1 {
         padding-top: 20px;
         font-size: 6.0em;
         color: rgba(57, 54, 38, 1);
-        @media screen and (max-width: 768px) {
+        @media screen and (max-width: 700px) {
             font-size: 4em;
             padding-top: 30px;
         }
@@ -93,7 +97,7 @@ const TopWrapper = styled.section`
         padding-top: 10px;
     }
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 700px) {
         section.fair-trade {
             padding-left: 10px;
             padding-top: 110px;
@@ -102,8 +106,8 @@ const TopWrapper = styled.section`
 `
 
 const MapWrapper = styled.section`
-    height: 50vh;
-    background-color: rgba(255, 255, 255, 0.7);
+    min-height: 50vh;
+    background-color: rgba(255, 255, 255, 0.6);
 `
 
 const LandingImg = styled.section`
@@ -114,7 +118,7 @@ const MapStyle = styled.div`
     position: absolute;
     left: 25vw;
     pointer-events: none;
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 700px) {
         left: 0;
     }
 `
