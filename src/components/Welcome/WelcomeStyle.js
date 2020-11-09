@@ -21,6 +21,7 @@ const WelcomeStyle = styled.div`
 `
 
 const StoreButton = styled.button`
+    box-shadow: 8px 8px 8px -6px rgba(0,0,0,.5);
     background-color: rgba(239, 234, 225, 0.9);
     height: 10vh;
     border-radius: 8px;
