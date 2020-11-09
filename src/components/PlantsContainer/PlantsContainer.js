@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import Plant from '../Plant/Plant'
 import FilterSearch from '../FilterSearch/FilterSearch'
 import {FilterWrapper, PlantContainerStyle} from './PlantContainerStyle'
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom"
+import { Route, Switch } from "react-router-dom"
 import DetailedPlant from '../DetailedPlant/DetailedPlant'
 import Footer from '../Footer/Footer'
 

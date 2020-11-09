@@ -66,4 +66,4 @@ const UserInput = styled.input`
     }
 `
 
-export {SignUpForm, SignUpButton, UserInput}
+export {SignUpForm, SignUpButton, UserInput }

@@ -43,7 +43,7 @@ export class DetailedPlant extends Component {
             <Page>
                 <TopDetails>
                 <Photo>
-                    <img onClick={this.imageFlipHandler} src={this.state.clicked ? this.props.plant.image2 : this.props.plant.image}/>
+                    <img alt={this.props.plant.name} onClick={this.imageFlipHandler} src={this.state.clicked ? this.props.plant.image2 : this.props.plant.image}/>
                 </Photo>
                 
                     <Details>
@@ -54,7 +54,7 @@ export class DetailedPlant extends Component {
                     
                             {this.props.plant.pet_friendly ? 
                             <div>
-                                <img src="https://www.svgrepo.com/show/133518/pet-friendly.svg"/>
+                                <img alt="plant friendliness" src="https://www.svgrepo.com/show/133518/pet-friendly.svg"/>
                                 <p>Pet-friendly!</p>
                             </div>
                             : null}<br/>
