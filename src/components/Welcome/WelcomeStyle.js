@@ -3,7 +3,9 @@ import L from 'leaflet'
 
 
 const WelcomeStyle = styled.div`
-    background-image: url('https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F34%2F2020%2F02%2Fsculptural-houseplants-intro-getty-0220.jpg&q=85');
+    ${'' /* background-image: url('https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F34%2F2020%2F02%2Fsculptural-houseplants-intro-getty-0220.jpg&q=85'); */}
+    ${'' /* background-image: url("https://i.ibb.co/SPJVwSs/Merged.png"); */}
+    background-image: url("https://i.ibb.co/DGPGqwx/palan2.png");
     background-attachment: fixed;
     background-size: cover;
     background-position: top center;
@@ -47,7 +49,7 @@ const BottomWrapper = styled.section`
 `
 
 const TopWrapper = styled.section`
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(255, 255, 255, 0.6);
     display: flex-column;
     align-items: center;
     height: 50vh;
@@ -96,7 +98,7 @@ const TopWrapper = styled.section`
 
 const MapWrapper = styled.section`
     height: 50vh;
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(255, 255, 255, 0.6);
 `
 
 const LandingImg = styled.section`

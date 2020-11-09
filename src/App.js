@@ -8,6 +8,7 @@ import SignUp from './components/SignUp/SignUp'
 import Login from './components/Login/Login'
 import Profile from './components/Profile/Profile'
 import Welcome from './components/Welcome/Welcome'
+import NewPlant from './components/NewPlant/NewPlant'
 
 class App extends React.Component {
   state = {
@@ -130,6 +131,7 @@ class App extends React.Component {
           <Route path="/signup" render={() => (<SignUp submitHandler={this.signupHandler}/>)}/>
           <Route path="/login" render={() => (<Login submitHandler={this.loginHandler}/>)}/>
           <Route path="/profile" render={() => (<Profile user={this.state.user} /> )}/>
+          <Route path="/newplant" render={() => (<NewPlant />)}/>
           <Route path="/" render={() => (<Welcome plants={this.state.plants}/ >)}/>
         </Switch>
       </div>
