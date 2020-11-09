@@ -21,6 +21,7 @@ export class Cart extends Component {
         const orderNumber = Math.round(Math.random() * 1000000).toString()
         const body = {
                     order_number: orderNumber,
+                    user_id: this.props.user.id,
                     total: this.props.total.toString()
             }
         console.log(body)
@@ -39,19 +40,20 @@ export class Cart extends Component {
         .then(res => {
             //console.log(res)
             for (const item of this.props.cart) {
-                this.postPurchases(item, this.props.user.id, res.id)
+                this.postPurchases(item, res.id)
             }
+            localStorage.removeItem("cart")
+            localStorage.removeItem("total")
         })
     }
 
 
-    postPurchases = (item, user, order) => {
+    postPurchases = (item, order) => {
         const body = {
             item_id: item.id,
             price: item.price[item.size],
             size: item.size,
             quantity: item.quantity,
-            user_id: user,
             order_id: order
         }
 
