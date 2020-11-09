@@ -20,9 +20,22 @@ a {
 }
 
 .leaflet-container {
-    width: 100%;
+    border-radius: 20px;
+    opacity: 0.7;
+    width: 50vw;
     height: 50vh;
     z-index: 0;
+}
+
+.leaflet-container img {
+    max-width: 80px;
+}
+
+@media screen and (max-width: 768px) {
+    .leaflet-container {    
+        width: 100vw;
+        height: 50vh;
+    }
 }
 
 div.horses {
@@ -32,4 +45,5 @@ div.horses {
     color:rgba(147, 141, 123, 1);
     color:rgba(181, 181, 161, 1);
     color:rgba(239, 234, 225, 1);    
+    color: rgba(248, 148, 25, 1);
 }

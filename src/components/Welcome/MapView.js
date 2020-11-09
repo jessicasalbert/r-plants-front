@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import {MapStyle, iconPlant} from './WelcomeStyle'
+import { MapStyle, iconPlant } from './WelcomeStyle'
 import worldGeoJSON from 'geojson-world-map';
 import { coordinates } from '../../db'
 import { MapContainer, GeoJSON, Marker, Popup, TileLayer } from 'react-leaflet'
