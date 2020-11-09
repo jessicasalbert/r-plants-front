@@ -28,11 +28,11 @@ const StoreButton = styled.button`
     border: none;
     cursor: pointer;
     outline: none;
-    position: absolute;
-    margin-top: 75px;
+    margin-top: 20px;
     margin-left: 15px;
     @media screen and (max-width: 700px) {
         margin-top: 20px;
+        height: 100px;
         width: 50vw;
         &:hover {
             color: rgba(255, 255, 255, 0.8);
@@ -94,13 +94,15 @@ const TopWrapper = styled.section`
     }
 
     section.fair-trade {
+        padding-bottom: 10px;
         padding-top: 10px;
     }
 
     @media screen and (max-width: 700px) {
         section.fair-trade {
             padding-left: 10px;
-            padding-top: 110px;
+            padding-top: 10px;
+            padding-bottom: 10px;
         }
     }
 `
