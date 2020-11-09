@@ -152,10 +152,10 @@ export const NavMenu = styled.div`
     justify-content: end;
     margin-left: 2rem;
     @media screen and (max-width: 768px) {
-        display: flex;
+        display: none;
         flex-direction: column;
         width: 100%;
-        height: 90vh;
+        height: 100vh;
         position: absolute;
         top: 56px;
         right: -120%;
@@ -163,6 +163,7 @@ export const NavMenu = styled.div`
         transition: all 0.5s ease;
 
         &.active {
+            display: flex;
             background: rgba(100, 114, 97, 0.9);
             right: 0;
             opacity: 1;

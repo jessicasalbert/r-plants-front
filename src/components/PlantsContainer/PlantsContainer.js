@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Plant from '../Plant/Plant'
-import PlantContainerStyle from './PlantContainerStyle'
+import FilterSearch from '../FilterSearch/FilterSearch'
+import {FilterWrapper, PlantContainerStyle} from './PlantContainerStyle'
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom"
 import DetailedPlant from '../DetailedPlant/DetailedPlant'
 import Footer from '../Footer/Footer'
@@ -48,6 +49,10 @@ export class PlantsContainer extends Component {
                     <Route path="/plants" render={() => {
                         return (
                         <section className="footerpage">
+                        <FilterWrapper>
+                            <h2>Filter by:</h2>
+                            <FilterSearch />
+                        </FilterWrapper>
                         <h1>Home ~ Houseplants</h1>
                         <PlantContainerStyle>
                             {this.renderPlants()}
