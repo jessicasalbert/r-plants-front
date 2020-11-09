@@ -92,10 +92,10 @@ class App extends React.Component {
             Accept: "application/json",
             "content-type": "application/json"
         },
-        body: JSON.stringify({plant: newPlant})
+        body: JSON.stringify({item: newPlant})
     }
 
-    fetch("http://localhost:3000/api/v1/plants", options)
+    fetch("http://localhost:3000/api/v1/items", options)
     .then(resp => resp.json())
     .then(newest => {
         this.setState({
