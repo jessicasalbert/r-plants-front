@@ -148,7 +148,7 @@ class App extends React.Component {
         <NavBar user={this.state.user} cart={this.state.cart} logoutHandler={this.logoutHandler}/>
         <Switch>
           <Route path="/plants" render={() => (<PlantsContainer addToCart={this.addToCart}/>)}/>
-          <Route path="/cart" render={() => (<Cart cart={this.state.cart} total={this.state.cartTotal} />)}/>
+          <Route path="/cart" render={() => (<Cart cart={this.state.cart} total={this.state.cartTotal} user={this.state.user} />)}/>
           <Route path="/signup" render={() => (<SignUp submitHandler={this.signupHandler}/>)}/>
           <Route path="/login" render={() => (<Login submitHandler={this.loginHandler}/>)}/>
           <Route path="/profile" render={() => (<Profile user={this.state.user} /> )}/>

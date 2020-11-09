@@ -36,12 +36,44 @@ export class Cart extends Component {
         }
         fetch('http://localhost:3000/api/v1/orders', options)
         .then(res => res.json())
-        .then(console.log)
+        .then(res => {
+            //console.log(res)
+            for (const item of this.props.cart) {
+                this.postPurchases(item, this.props.user.id, res.id)
+            }
+        })
     }
 
 
+    postPurchases = (item, user, order) => {
+        const body = {
+            item_id: item.id,
+            price: item.price[item.size],
+            size: item.size,
+            quantity: item.quantity,
+            user_id: user,
+            order_id: order
+        }
+
+        console.log(body)
+        const options = {
+            method: "POST",
+            headers: {
+                "content-type" : "application/json",
+                accepts: "application/json",
+                Authorization: `Bearer ${localStorage.getItem("token")}` 
+            },
+            body: JSON.stringify(body)
+        }
+        fetch('http://localhost:3000/api/v1/purchases', options)
+        .then(res => res.json())
+        .then(console.log)
+
+    }
+
 
     render() {
+        console.log(this.props.user ? this.props.user.id : "none")
         return (
             <>
                 <section className="footerpage">
