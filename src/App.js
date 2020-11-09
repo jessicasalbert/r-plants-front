@@ -8,7 +8,6 @@ import SignUp from './components/SignUp/SignUp'
 import Login from './components/Login/Login'
 import Profile from './components/Profile/Profile'
 import Welcome from './components/Welcome/Welcome'
-import NewPlant from './components/NewPlant/NewPlant'
 
 class App extends React.Component {
   state = {
@@ -32,7 +31,7 @@ class App extends React.Component {
       .then(res=>res.json())
       .then(data=> this.setState({ user: data.user}))
     } else {
-      this.props.history.push("/")
+      this.props.history.push("/signup")
     }
     this.setState( () => (
       { cart: localCart ? localCart : [] ,
@@ -60,7 +59,10 @@ class App extends React.Component {
 
     fetch("http://localhost:3000/api/v1/users", options)
     .then(resp => resp.json())
-    .then(data => this.setState({ user: data.user }, () => this.props.history.push("/")))
+    .then(data => {
+      this.setState({ user: data.user }, () => this.props.history.push("/"))
+      localStorage.setItem("token", data.jwt)
+    })
     .catch(console.log)
   }
 
@@ -127,11 +129,10 @@ class App extends React.Component {
         <NavBar user={this.state.user} cart={this.state.cart} logoutHandler={this.logoutHandler}/>
         <Switch>
           <Route path="/plants" render={() => (<PlantsContainer addToCart={this.addToCart}/>)}/>
-          <Route path="/cart" render={() => (<Cart cart={this.state.cart} total={this.state.cartTotal}/>)}/>
+          <Route path="/cart" render={() => (<Cart cart={this.state.cart} total={this.state.cartTotal} />)}/>
           <Route path="/signup" render={() => (<SignUp submitHandler={this.signupHandler}/>)}/>
           <Route path="/login" render={() => (<Login submitHandler={this.loginHandler}/>)}/>
           <Route path="/profile" render={() => (<Profile user={this.state.user} /> )}/>
-          <Route path="/newplant" render={() => (<NewPlant />)}/>
           <Route path="/" render={() => (<Welcome plants={this.state.plants}/ >)}/>
         </Switch>
       </div>
