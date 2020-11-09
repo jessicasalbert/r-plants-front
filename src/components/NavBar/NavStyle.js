@@ -3,7 +3,8 @@ import { NavLink as Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 export const Nav = styled.nav`
-    background-color: rgba(149, 176, 113, 0.6);
+    box-shadow: 0px 8px 8px -6px rgba(0,0,0,.5);
+    background-color: rgba(149, 176, 113, 0.7);
     height: 40px;
     display: flex;
     top: 0;
@@ -18,6 +19,9 @@ export const NavLogo = styled(Link)`
     img {
         width: 40px;
         height: 40px;
+    }
+    b {
+        
     }
     white-space: nowrap;
     color: rgba(57, 54, 38, 1);
@@ -79,6 +83,7 @@ export const NavLink = styled(Link)`
 export const NavLinkMobile = styled(Link)`
     display: none;
     @media screen and (max-width: 768px) {
+        box-shadow: 0px 8px 8px -6px rgba(0,0,0,.5);
         display: block;
         text-align: center;
         padding: 1.2rem;
@@ -189,6 +194,7 @@ export const NavItem = styled.li`
 `
 
 export const NavBtn = styled.nav`
+    box-shadow: 0px 8px 8px -6px rgba(0,0,0,.5);
     display: flex;
     align-items: center;
     position: absolute;

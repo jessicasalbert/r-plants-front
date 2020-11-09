@@ -4,6 +4,7 @@ const SignUpForm = styled.form`
     h2 {
         padding-bottom: 20px;
     }
+    box-shadow: 8px 8px 8px -6px rgba(0,0,0,.5);
     margin: auto;
     display: flex;
     flex-direction: column;
@@ -24,6 +25,7 @@ const SignUpForm = styled.form`
 `
 
 const SignUpButton = styled.button`
+    box-shadow: 0px 8px 8px -6px rgba(0,0,0,.5);
     border-radius: 4px;
     background: rgba(147, 141, 123, 1);
     color: #fff;
