@@ -11,6 +11,13 @@ html {
     background-color: rgba(239, 234, 225, 0.7); 
 }
 
+/* html.log-form {
+    position: relative;
+    min-height: 100vh;
+    min-width: 100vw;
+    background: rgba(255, 255, 255, 0.7); 
+} */
+
 a {
     cursor: pointer;
     text-decoration: none;

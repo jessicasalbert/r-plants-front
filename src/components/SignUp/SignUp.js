@@ -21,14 +21,14 @@ class SignUp extends Component {
 
     render() {
         return (
-            <SignUpForm onSubmit={this.submitHandler}>
-                <h2>Welcome to RPlants!</h2>
-                <UserInput type="text" name="username" placeholder="Username" value={this.state.username} onChange={this.changeHandler} />
-                <UserInput type="password" name="password" placeholder="Password" value={this.state.password} onChange={this.changeHandler} />
-                <UserInput type="text" name="email" placeholder="Email" value={this.state.email} onChange={this.changeHandler} />
-                <UserInput type="text" name="name" placeholder="Full Name" value={this.state.name} onChange={this.changeHandler} />
-                <SignUpButton type="submit" value="Sign Up" ><b>Sign Up</b></SignUpButton>
-            </SignUpForm>
+                <SignUpForm onSubmit={this.submitHandler}>
+                    <h2>Welcome to RPlants!</h2>
+                    <UserInput type="text" name="username" placeholder="Username" value={this.state.username} onChange={this.changeHandler} />
+                    <UserInput type="password" name="password" placeholder="Password" value={this.state.password} onChange={this.changeHandler} />
+                    <UserInput type="text" name="email" placeholder="Email" value={this.state.email} onChange={this.changeHandler} />
+                    <UserInput type="text" name="name" placeholder="Full Name" value={this.state.name} onChange={this.changeHandler} />
+                    <SignUpButton type="submit" value="Sign Up" ><b>Sign Up</b></SignUpButton>
+                </SignUpForm>
         )
     }
 }

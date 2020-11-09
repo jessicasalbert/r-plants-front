@@ -15,7 +15,7 @@ export class Footer extends Component {
                     <FontAwesomeIcon icon={faLinkedin} size="1x" /></a>
                     <br></br>
                     and
-                    Gabriel <a target="blank_" href="https://www.linkedin.com/in/gabrieljhicks/">
+                    Gabriel Hicks <a target="blank_" href="https://www.linkedin.com/in/gabrieljhicks/">
                     <FontAwesomeIcon icon={faLinkedin} size="1x" /></a>
                     <br></br>
                     Frontend: <a target="blank_" href="https://github.com/jessicasalbert/rplants-front"><FontAwesomeIcon icon={faGithub} size="1x" /></a> Backend: <a target="blank_" href="https://github.com/jessicasalbert/rplants-back"><FontAwesomeIcon icon={faGithub} size="1x" /></a>
