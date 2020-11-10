@@ -1,6 +1,6 @@
 * {
     margin: 0;
-    font-family: 'Merriweather', sans-serif;
+    font-family: 'Playfair', serif;
 }
 
 
@@ -30,7 +30,7 @@ a {
 
 .leaflet-container {
     border-radius: 20px;
-    opacity: 0.7;
+    opacity: 0.9;
     width: 50vw;
     height: 50vh;
     z-index: 0;

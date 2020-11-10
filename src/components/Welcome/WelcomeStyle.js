@@ -19,18 +19,27 @@ const WelcomeStyle = styled.div`
 `
 
 const StoreButton = styled.button`
-    box-shadow: 8px 8px 8px -6px rgba(0,0,0,.5);
+    opacity: 0.8;
+    box-shadow: 8px 8px 8px -6px rgba(0,0,0,.3);
     background-color: rgba(239, 234, 225, 0.9);
     height: 10vh;
     border-radius: 8px;
-    width: 400px;
+    width: 25vw;
     border: none;
     cursor: pointer;
     outline: none;
-    margin-top: 20px;
-    margin-left: 15px;
+    margin-bottom: 2vh;
+    margin-top: 0px;
+    margin-left: 38vw;
+    p.button-text {
+        opacity: 0.8;
+        font-size: 2rem;
+    }
     @media screen and (max-width: 700px) {
-        margin-top: 20px;
+        font-size: 20px;
+        margin-top: 0px;
+        margin-bottom: 3vh;
+        margin-left: 26vw;
         height: 100px;
         width: 50vw;
         &:hover {
@@ -58,32 +67,26 @@ const BottomWrapper = styled.section`
 
 const TopWrapper = styled.section`
     background-color: rgba(255, 255, 255, 0.6);
-    display: flex-column;
-    align-items: center;
     min-height: 50vh;
     text-align: inline;
-    h1 {
-        padding-top: 20px;
-        font-size: 6.0em;
-        color: rgba(57, 54, 38, 1);
-        @media screen and (max-width: 700px) {
-            font-size: 4em;
-            padding-top: 30px;
-        }
+    p {
+        font-size: 2vw;
     }
-    h1 span {
-        background-color: rgba(255, 255, 255, 0.9);
-        border-radius: 8px;
-        box-shadow: 8px 8px 8px -6px rgba(0,0,0,.5);
-        margin-left: 15px;
+    p span {
+        color: rgba(255, 255, 255, 1);
+        font-size: 20vw;
+        opacity: 1;
+        margin-left: 13vw;
+        margin-bottom: 0;
     }
     h3 {
-        padding-top: 5px;
+        text-align: center;
+        font-weight: normal;
+        font-size: 1.8rem;
+        opacity: 0.7;
     }
 
     h3 span {
-        box-shadow: 0px 8px 8px -6px rgba(0,0,0,.5);
-        background-color: rgba(255, 255, 255, 0.9);
         margin-left: 15px;
     }
 
@@ -111,7 +114,7 @@ const TopWrapper = styled.section`
 
 const MapWrapper = styled.section`
     min-height: 50vh;
-    background-color: rgba(255, 255, 255, 0.6);
+    background-color: rgba(100, 114, 97, 0.8);;
 `
 
 const LandingImg = styled.section`
