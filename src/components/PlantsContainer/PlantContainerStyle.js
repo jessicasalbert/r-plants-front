@@ -31,7 +31,7 @@ const StoreWrapper = styled.div`
     position: relative;
     top: 0;
     bottom: 0;
-    height: 1500px;
+    min-height: 100vh;
     width: 100vw;
     z-index: 0;
     background-image: url("https://i.ibb.co/Gd9hVxM/Final-2.png");

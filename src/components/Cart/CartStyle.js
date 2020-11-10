@@ -4,7 +4,7 @@ const CartWrapper = styled.div`
     position: relative;
     top: 0;
     bottom: 0;
-    height: 100vh;
+    ${'' /* height: 100vh; */}
     z-index: 0;
     background-image: url("https://i.ibb.co/Gd9hVxM/Final-2.png");
     background-attachment: fixed;
@@ -19,8 +19,12 @@ const CartWrapper = styled.div`
 `
 
 const CartStyle = styled.section`
-    height: 678px;
+    min-height: 100vh;
 `
 
-export {CartWrapper, CartStyle}
+const EmptyCart = styled.h1`
+    min-height: 100vh;
+`
+
+export {CartWrapper, CartStyle, EmptyCart}
 

@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import CartItem from '../CartItem/CartItem'
 import Footer from '../Footer/Footer'
 import { Link } from 'react-router-dom'
-import {CartWrapper, CartStyle} from './CartStyle'
+import {CartWrapper, CartStyle, EmptyCart} from './CartStyle'
 
 
 export class Cart extends Component {
@@ -37,7 +37,7 @@ export class Cart extends Component {
                     }
                     </>
                     : 
-                    <h1>No items to display</h1>}
+                    <EmptyCart>No items to display</EmptyCart>}
             </CartStyle>
             </CartWrapper>
             <Footer />
