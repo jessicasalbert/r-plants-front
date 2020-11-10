@@ -4,7 +4,36 @@ import CartItem from '../CartItem/CartItem'
 export class Checkout extends Component {
 
     state = {
-        clicked : false
+        clicked : false,
+        guestUserId: null
+    }
+
+    generateGuest = () => {
+        const user = {
+            name: "Guest",
+            username: "Guest" + Math.round(Math.random() * 1000000).toString(),
+            email: "Guest",
+            password: "guest"
+        }
+
+        let options = {
+            method: "POST",
+            headers: {
+              Accept: "application/json",
+              "content-type": "application/json"
+            },
+            body: JSON.stringify({user})
+          }
+      
+          fetch("http://localhost:3000/api/v1/users", options)
+          .then(resp => resp.json())
+          .then(data => {
+              console.log(data)
+            this.setState({ guestUserId: data.id })
+            localStorage.setItem("token", data.jwt)
+          })
+          .catch(console.log)
+        
     }
 
     purchaseHandler = (e) => {
@@ -12,10 +41,12 @@ export class Checkout extends Component {
         //for each item in cart, 
             //post request to purchases 
         e.preventDefault()
+    
         const orderNumber = Math.round(Math.random() * 1000000).toString()
+        const id = this.props.user? this.props.user.id : this.state.guestUserId
         const body = {
                     order_number: orderNumber,
-                    user_id: this.props.user.id,
+                    user_id: id,
                     total: this.props.total.toString()
             }
         console.log(body)
@@ -38,6 +69,9 @@ export class Checkout extends Component {
             }
             localStorage.removeItem("cart")
             localStorage.removeItem("total")
+            if (this.state.guestUserId) {
+                localStorage.removeItem("token")
+            }
         })
     }
 
@@ -72,7 +106,11 @@ export class Checkout extends Component {
     }
 
     clickHandler = () => {
+        if (!this.props.user) {
+            this.generateGuest()
+        }
         this.setState( (prev) => ({clicked: !prev.clicked}))
+        
     }
 
 
