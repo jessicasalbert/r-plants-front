@@ -10,13 +10,15 @@ import Login from './components/Login/Login'
 import Profile from './components/Profile/Profile'
 import Welcome from './components/Welcome/Welcome'
 import Checkout from './components/Checkout/Checkout'
+import Success from './components/Success/Success'
 
 class App extends React.Component {
   state = {
     cart: [],
     user: null,
     plants: null,
-    cartTotal: 0
+    cartTotal: 0, 
+    completedOrderNumber: null
   }
 
   componentDidMount () {
@@ -144,6 +146,17 @@ class App extends React.Component {
     this.setState({ user: null})
   }
 
+  redirectToWelcome = () => {
+    this.props.history.push("/")
+  }
+
+  redirectToSuccess = (order_number) => {
+    this.setState(() => ({ 
+      completedOrderNumber: order_number,
+      cart: []
+    }), this.props.history.push("/success"))
+  }
+
   logoutHandler = () => {
     localStorage.removeItem("token")
     localStorage.removeItem("cart")
@@ -163,8 +176,9 @@ class App extends React.Component {
           <Route path="/login" render={() => (<Login submitHandler={this.loginHandler}/>)}/>
           <Route path="/profile" render={() => (<Profile user={this.state.user} /> )}/>
           <Route path="/newplant" render={() => (<NewPlant submitHandler={this.addPlantHandler}/>)}/>
-          <Route path="/checkout" render={() => (<Checkout clearCart={this.clearCart} clearGuestUser={this.clearGuestUser} cart={this.state.cart} total={this.state.cartTotal} user={this.state.user}/>)}/>
-          <Route path="/" render={() => (<Welcome plants={this.state.plants}/ > )}/>
+          <Route path="/checkout" render={() => (<Checkout redirectToSuccess={this.redirectToSuccess} clearCart={this.clearCart} clearGuestUser={this.clearGuestUser} cart={this.state.cart} total={this.state.cartTotal} user={this.state.user}/>)}/>
+          <Route path="/success" render={() => (<Success order_number={this.state.completedOrderNumber} redirectToWelcome={this.redirectToWelcome}/> )}/>
+          <Route path="/" render={() => (<Welcome plants={this.state.plants}/> )}/>
         </Switch>
       </>
     )
