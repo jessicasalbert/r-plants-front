@@ -3,14 +3,9 @@
     font-family: 'Playfair', serif;
 }
 
-
-html {
-    position: relative;
-    min-height: 100vh;
-    min-width: 100vw;
-    background-color: rgba(239, 234, 225, 0.7); 
+body {
+    min-height: 100%;
 }
-
 
 a {
     cursor: pointer;

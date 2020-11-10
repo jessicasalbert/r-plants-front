@@ -1,7 +1,8 @@
 import styled from 'styled-components'
 
-const PlantContainerStyle = styled.section`
+const PlantContainerStyle = styled.div`
     display: flex;
+    ${'' /* background-color: rgba(0,255,255,1); */}
     flex-flow: row wrap;
     flex-direction: row;
     justify-content: center;
@@ -28,13 +29,10 @@ const FilterWrapper = styled.div`
 `
 
 const StoreWrapper = styled.div`
-    footer {
-        bottom: -300px;
-    }
     position: relative;
     top: 0;
     bottom: 0;
-    height: 100vh;
+    height: 100%;
     width: 100vw;
     z-index: 0;
     background-image: url("https://i.ibb.co/Gd9hVxM/Final-2.png");
