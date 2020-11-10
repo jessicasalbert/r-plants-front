@@ -9,7 +9,9 @@ import Footer from '../Footer/Footer'
 export class PlantsContainer extends Component {
 
     state = {
-        plants: []
+        plants: [],
+        filter: false,
+        search: ""
     }
 
 
@@ -20,10 +22,26 @@ export class PlantsContainer extends Component {
         .catch(console.log)
     }
 
+    filterPlants = () => {
+        let plants = this.state.plants
+        if (this.state.filter) {
+            plants = plants.filter( plant => plant.pet_friendly === true)
+        }
+        plants = plants.filter(plant => plant.name.includes(this.state.search))
+        return plants
+    }
+
+    filterClickHandler = () => {
+        this.setState( (prev) => ({ filter: !prev.filter}))
+    }
+
 
     renderPlants = () => {
-        let plants = this.state.plants
-        return plants.map(plant => <Plant plant={plant} addToCart={this.props.addToCart} key={plant.id}/>)
+        return this.filterPlants().map(plant => <Plant plant={plant} addToCart={this.props.addToCart} key={plant.id}/>)
+    }
+
+    searchHandler = (search) => {
+        this.setState( {search: search})
     }
 
     render() {
@@ -51,7 +69,7 @@ export class PlantsContainer extends Component {
                         <StoreWrapper>
                             <FilterWrapper>
                                 <h2>Filter by:</h2>
-                                <FilterSearch />
+                                <FilterSearch filter={this.filterClickHandler} search={this.searchHandler}/>
                             </FilterWrapper>
                             <h1>Home ~ Houseplants</h1>
                             <PlantContainerStyle>
