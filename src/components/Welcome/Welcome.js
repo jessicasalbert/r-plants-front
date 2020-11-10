@@ -7,6 +7,7 @@ import {WelcomeStyle, TopWrapper, BottomWrapper, MapWrapper, StoreButton} from '
 
 export default function Welcome(props) {
     return (
+        <>
         <WelcomeStyle>
             <TopWrapper>
                 <p><span>welcome</span></p>
@@ -22,7 +23,8 @@ export default function Welcome(props) {
             <MapWrapper><MapView plants={props.plants} /></MapWrapper>
 
             <BottomWrapper><About /></BottomWrapper>
-            <section className="footerpage"><Footer /></section>
         </WelcomeStyle>
+            <Footer />
+            </>
     )
 }

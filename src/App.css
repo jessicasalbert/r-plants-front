@@ -3,6 +3,10 @@
     font-family: 'Playfair', serif;
 }
 
+html {
+    min-height: 100%;
+}
+
 body {
     min-height: 100%;
 }

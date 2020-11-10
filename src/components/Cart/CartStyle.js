@@ -5,12 +5,11 @@ const CartWrapper = styled.div`
     top: 0;
     bottom: 0;
     height: 100vh;
-    width: 100vw;
     z-index: 0;
     background-image: url("https://i.ibb.co/Gd9hVxM/Final-2.png");
     background-attachment: fixed;
-    background-size: cover;
-    background-position: center;
+    background-size: contain;
+    background-position: top center;
     background-repeat: no-repeat;
     background-size: 100vw;
     @media screen and (max-width: 700px) {
@@ -19,5 +18,9 @@ const CartWrapper = styled.div`
     }
 `
 
-export default CartWrapper
+const CartStyle = styled.section`
+    height: 678px;
+`
+
+export {CartWrapper, CartStyle}
 

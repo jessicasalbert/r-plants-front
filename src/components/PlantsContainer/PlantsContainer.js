@@ -48,6 +48,7 @@ export class PlantsContainer extends Component {
                     }}/>
                     <Route path="/plants" render={() => {
                         return (
+                        <>
                         <StoreWrapper>
                             <FilterWrapper>
                                 <h2>Filter by:</h2>
@@ -57,8 +58,9 @@ export class PlantsContainer extends Component {
                             <PlantContainerStyle>
                                 {this.renderPlants()}
                             </PlantContainerStyle>
-                            <Footer />
                         </StoreWrapper>
+                        <Footer />
+                        </>
                         )
                     }}/>
                 </Switch>

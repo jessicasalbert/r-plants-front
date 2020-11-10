@@ -7,9 +7,7 @@ const PlantContainerStyle = styled.div`
     flex-direction: row;
     justify-content: center;
     align-content: flex-start;
-    margin: 10px;
     padding: 10px;
-    margin: 10px;
     @media (max-width: 900px) {
         flex-direction: row;
         align-content: flex-start;

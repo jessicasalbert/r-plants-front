@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import CartItem from '../CartItem/CartItem'
 import Footer from '../Footer/Footer'
 import { Link } from 'react-router-dom'
-import CartWrapper from './CartStyle'
+import {CartWrapper, CartStyle} from './CartStyle'
 
 
 export class Cart extends Component {
@@ -19,15 +19,13 @@ export class Cart extends Component {
         return (
             <>
             <CartWrapper>
+            <CartStyle>
                     {this.props.cart.length > 0 
-
                     ?
-
                     <> 
                     {this.renderCart()}
                     <h1>Total: ${this.props.total}</h1>
                     {/* <button onClick={this.purchaseHandler}>Purchase</button> */}
-
                     {
                         this.props.user ? 
                         <Link to="/checkout">Check out</Link>
@@ -38,10 +36,9 @@ export class Cart extends Component {
                         </>
                     }
                     </>
-
                     : 
-
                     <h1>No items to display</h1>}
+            </CartStyle>
             </CartWrapper>
             <Footer />
             </>
