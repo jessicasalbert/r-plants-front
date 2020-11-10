@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import CartItem from '../CartItem/CartItem'
+import {CartWrapper, CartStyle } from '../Cart/CartStyle'
 
 export class Checkout extends Component {
 
@@ -19,19 +20,19 @@ export class Checkout extends Component {
         let options = {
             method: "POST",
             headers: {
-              Accept: "application/json",
-              "content-type": "application/json"
+                Accept: "application/json",
+                "content-type": "application/json"
             },
             body: JSON.stringify({user})
-          }
-      
-          fetch("http://localhost:3000/api/v1/users", options)
-          .then(resp => resp.json())
-          .then(data => {
+        }
+
+        fetch("http://localhost:3000/api/v1/users", options)
+        .then(resp => resp.json())
+        .then(data => {
             this.setState({ guestUserId: data.user.id })
             localStorage.setItem("token", data.jwt)
-          })
-          .catch(console.log)
+        })
+        .catch(console.log)
         
     }
 
@@ -113,16 +114,21 @@ export class Checkout extends Component {
     render() {
         return (
             <>
-                {this.renderCart()}
-                <h1 onClick={this.clickHandler}>Enter Details</h1>
-                {this.state.clicked ? 
-                <form>
-                    <input type="number" placeholder="Enter CC"/>
-                    <input type="text" placeholder="Enter more info"/>
-                    <button onClick={this.purchaseHandler}>Purchase</button>
-                </form> 
-                : null
-                }
+            <CartWrapper>
+            <h4>Checkout</h4>
+                <CartStyle>
+                    {this.renderCart()}
+                    <h1 onClick={this.clickHandler}>Enter Details</h1>
+                    {this.state.clicked ? 
+                    <form>
+                        <input type="number" placeholder="Enter CC"/>
+                        <input type="text" placeholder="Enter more info"/>
+                        <button onClick={this.purchaseHandler}>Purchase</button>
+                    </form> 
+                    : null
+                    }
+                </CartStyle>
+            </CartWrapper>
             </>
         )
     }

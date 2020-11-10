@@ -52,7 +52,7 @@ class Navbar extends React.Component {
             {this.props.user 
             ? 
             <Nav>
-                <NavLogo onClick={this.closeMenu} to="/"><img alt="rPlants" src="https://i.ibb.co/6n2V1vN/navbar.png"/>r P l a n t s</NavLogo>
+                <NavLogo onClick={this.closeMenu} to="/"><img alt="rPlants" src="https://i.ibb.co/1rVy15N/Icon-plant.png"/></NavLogo>
                 <MenuIcon onClick={this.clickHandler}>
                     {this.state.clicked ? <Times /> : <Bars />}
                 </MenuIcon>
@@ -68,7 +68,7 @@ class Navbar extends React.Component {
                     <NavItem><NavLink onClick={this.closeMenu} to="/plants">Shop</NavLink></NavItem>
                     <NavItem><NavLink onClick={this.closeMenu} to="/profile">Profile</NavLink></NavItem>
                     {/* <NavItem><NavLink onClick={this.closeMenu, this.props.logoutHandler} to="/">Log Out</NavLink></NavItem> */}
-                    <NavItem><NavLink onClick={this.closeMenu} to="/cart">Cart({this.props.cart.length > 0 ? <b className="cart"> {this.itemCount()}</b>  : 0})</NavLink></NavItem>
+                    <NavItem><NavLink onClick={this.closeMenu} to="/cart">cart({this.props.cart.length > 0 ? <b className="cart"> {this.itemCount()}</b>  : 0})</NavLink></NavItem>
                     </NavMenu>
                 }
                 <NavBtn>
@@ -77,7 +77,7 @@ class Navbar extends React.Component {
             </Nav>
                 :
             <Nav>
-                <NavLogo onClick={this.closeMenu} to="/"><img alt="rPlants" src="https://i.ibb.co/6n2V1vN/navbar.png"/>r P l a n t s</NavLogo>
+                <NavLogo onClick={this.closeMenu} to="/"><img alt="rPlants" src="https://i.ibb.co/1rVy15N/Icon-plant.png"/></NavLogo>
                 <MenuIcon onClick={this.clickHandler}>
                     {this.state.clicked ? <Times /> : <Bars />}
                 </MenuIcon>

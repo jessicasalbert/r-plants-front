@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const PurchasesStyle = styled.div`
+export const PurchaseStyle = styled.section`
     .order {
         font-size: 25px;
     }

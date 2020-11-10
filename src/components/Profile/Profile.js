@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Redirect } from 'react-router-dom'
 import Purchases from '../../components/Purchases/Purchases'
+import {PurchaseWrapper} from './ProfileStyle'
 
 export class Profile extends Component {
 
@@ -41,7 +42,7 @@ export class Profile extends Component {
             <>
 
             {this.props.user ? 
-            <>
+            <PurchaseWrapper>
                 <h1>Order History for {this.props.user.name}</h1>
 
                 {this.state.orders.length > 0 ? 
@@ -55,7 +56,7 @@ export class Profile extends Component {
                 <table>  
                 {this.renderPurchases()}
                 </table>
-            </>
+            </PurchaseWrapper>
             :
             <Redirect to="/login"/>}
             

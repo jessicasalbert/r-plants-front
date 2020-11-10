@@ -17,7 +17,6 @@ export const Nav = styled.nav`
 
 export const NavLogo = styled(Link)`
     img {
-        width: 40px;
         height: 40px;
     }
     white-space: nowrap;

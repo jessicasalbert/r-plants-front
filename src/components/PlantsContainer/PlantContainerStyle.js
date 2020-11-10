@@ -27,7 +27,7 @@ const StoreWrapper = styled.div`
     min-height: 100vh;
     width: 100vw;
     z-index: 0;
-    background-image: url("https://i.ibb.co/Gd9hVxM/Final-2.png");
+    background-image: url("https://i.ibb.co/BVLGr4Z/Final-40.png");
     background-attachment: fixed;
     background-size: cover;
     background-position: center;

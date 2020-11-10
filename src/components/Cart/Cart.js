@@ -19,7 +19,8 @@ export class Cart extends Component {
         return (
             <>
             <CartWrapper>
-            <CartStyle>
+                <h4>Shopping Cart</h4>
+                <CartStyle>
                     {this.props.cart.length > 0 
                     ?
                     <> 
@@ -38,7 +39,7 @@ export class Cart extends Component {
                     </>
                     : 
                     <EmptyCart>No items to display</EmptyCart>}
-            </CartStyle>
+                </CartStyle>
             </CartWrapper>
             <Footer />
             </>
