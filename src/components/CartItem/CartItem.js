@@ -25,8 +25,6 @@ export class CartItem extends Component {
                 <p>Size: {this.props.plant.size[0].toUpperCase() + this.props.plant.size.slice(1)}</p>
                 <p>Quantity: {this.props.plant.quantity}</p>
                 <p>Price: ${this.props.plant.price[this.props.plant.size] * this.props.plant.quantity}</p>
-
-
                 <hr></hr>
             </CartCard>
         )

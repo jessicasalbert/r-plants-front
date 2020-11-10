@@ -7,9 +7,8 @@ const PlantContainerStyle = styled.div`
     flex-direction: row;
     justify-content: center;
     align-content: flex-start;
-    margin: 10px;
     padding: 10px;
-    margin: 10px;
+    height: 100%;
     @media (max-width: 900px) {
         flex-direction: row;
         align-content: flex-start;
@@ -22,17 +21,17 @@ const PlantContainerStyle = styled.div`
 `
 
 const FilterWrapper = styled.div`
-    display: flex;
-    flex-direction: row;
+    justify-content: center;
     background-color: rgba(255, 255, 255, 0.8);
-    height: 15vh;
+    height: 25px;
+    width: 600px;
 `
 
 const StoreWrapper = styled.div`
     position: relative;
     top: 0;
     bottom: 0;
-    height: 100%;
+    min-height: 100vh;
     width: 100vw;
     z-index: 0;
     background-image: url("https://i.ibb.co/Gd9hVxM/Final-2.png");

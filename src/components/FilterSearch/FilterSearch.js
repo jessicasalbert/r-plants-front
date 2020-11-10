@@ -9,8 +9,7 @@ export class FilterSearch extends Component {
         return (
             <>
                 <SearchStyle>
-                    <Filter filter={this.props.filter}/>
-                    <Search search={this.props.search}/>
+                    Search<Search search={this.props.search}/><Filter filter={this.props.filter}/>
                 </SearchStyle>
             </>
         )

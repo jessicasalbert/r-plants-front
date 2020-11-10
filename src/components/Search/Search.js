@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import SearchStyling from './SearchStyle'
 
 export class Search extends Component {
 
@@ -18,10 +19,9 @@ export class Search extends Component {
 
     render() {
         return (
-            <div>
-                Search me
-                <input onChange={this.localSearchHandler} type="text" name="search" value={this.state.search}/>
-            </div>
+            <>
+                <SearchStyling onChange={this.localSearchHandler} type="text" name="search" value={this.state.search}></SearchStyling>
+            </>
         )
     }
 }
