@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import FilterStyle from './FilterStyle'
 
 export class Filter extends Component {
 
@@ -16,10 +17,9 @@ export class Filter extends Component {
 
     render() {
         return (
-            <div onClick={this.props.filter}>
-                <p>Pet-Friendly:</p>
-                <img alt="pet friendliness" src={this.state.clicked ? "https://svgsilh.com/svg/155322.svg": "https://www.svgrepo.com/show/133518/pet-friendly.svg"}/>
-            </div>
+            <FilterStyle onClick={this.props.filter}>
+                Pet-Friendly: <img alt="pet friendliness" src={this.state.clicked ? "https://svgsilh.com/svg/155322.svg" : "https://www.svgrepo.com/show/133518/pet-friendly.svg"}/>
+            </FilterStyle>
         )
     }
 }
