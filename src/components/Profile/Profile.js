@@ -1,11 +1,13 @@
 import React, { Component } from 'react'
 import { Redirect } from 'react-router-dom'
+import Purchases from '../../components/Purchases/Purchases'
 
 export class Profile extends Component {
 
     state = {
         orders: [],
-        purchases: []
+        purchases: [],
+        clicked: null
     }
 
     componentDidMount() {
@@ -18,25 +20,16 @@ export class Profile extends Component {
         fetch(`http://localhost:3000/api/v1/users/${this.props.user.id}`, options)
         .then(res => res.json())
         .then(res => (this.setState({
-            orders: res.orders
-            //purchases: res.purchases
+            orders: res.orders,
+            // purchases: res.purchases
         })))
         //.then(console.log)
-
     }
+
 
     renderPurchases = () => {
         console.log(this.state.orders)
-        return this.state.orders.map( order => {
-            return(
-            <tr>
-                <td>{order.created_at}</td>
-                <td>{order.total}</td>
-                <td>{order.order_number}</td>
-                <td>{order.purchases[0].item_name}</td>
-
-            </tr>)
-        })
+        return this.state.orders.map( order =>  <Purchases order={order} />)
     }
 
     render() {
@@ -47,13 +40,8 @@ export class Profile extends Component {
             {this.props.user ? 
             <>
                 <h1>Order History for {this.props.user.name}</h1>
-                <table>
-                    <tr>
-                        <th>Date of purchase</th>
-                        <th>Total</th>
-                        <th>Order #</th>
-                    </tr>
-                    {this.renderPurchases()}
+                <table>  
+                {this.renderPurchases()}
                 </table>
             </>
             :
