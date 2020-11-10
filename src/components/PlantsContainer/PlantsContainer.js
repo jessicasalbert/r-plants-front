@@ -25,9 +25,10 @@ export class PlantsContainer extends Component {
     filterPlants = () => {
         let plants = this.state.plants
         if (this.state.filter) {
-            plants = plants.filter( plant => plant.pet_friendly === true)
+            plants = plants.filter( plant => plant.pet_friendly === true).filter(plant => plant.name.toLowerCase().includes(this.state.search.toLowerCase()))
+        } else {
+            plants = plants.filter(plant => plant.name.toLowerCase().includes(this.state.search.toLowerCase()))
         }
-        plants = plants.filter(plant => plant.name.includes(this.state.search))
         return plants
     }
 
