@@ -28,8 +28,7 @@ export class Checkout extends Component {
           fetch("http://localhost:3000/api/v1/users", options)
           .then(resp => resp.json())
           .then(data => {
-              console.log(data)
-            this.setState({ guestUserId: data.id })
+            this.setState({ guestUserId: data.user.id })
             localStorage.setItem("token", data.jwt)
           })
           .catch(console.log)
@@ -37,9 +36,7 @@ export class Checkout extends Component {
     }
 
     purchaseHandler = (e) => {
-        //post request to /orders 
-        //for each item in cart, 
-            //post request to purchases 
+
         e.preventDefault()
     
         const orderNumber = Math.round(Math.random() * 1000000).toString()
@@ -63,7 +60,6 @@ export class Checkout extends Component {
         fetch('http://localhost:3000/api/v1/orders', options)
         .then(res => res.json())
         .then(res => {
-            //console.log(res)
             for (const item of this.props.cart) {
                 this.postPurchases(item, res.id)
             }
@@ -71,7 +67,9 @@ export class Checkout extends Component {
             localStorage.removeItem("total")
             if (this.state.guestUserId) {
                 localStorage.removeItem("token")
+                this.props.clearGuestUser()
             }
+            this.props.clearCart()
         })
     }
 
@@ -84,8 +82,6 @@ export class Checkout extends Component {
             quantity: item.quantity,
             order_id: order
         }
-
-        console.log(body)
         const options = {
             method: "POST",
             headers: {
@@ -97,7 +93,7 @@ export class Checkout extends Component {
         }
         fetch('http://localhost:3000/api/v1/purchases', options)
         .then(res => res.json())
-        .then(console.log)
+        // .then(console.log)
 
     }
 

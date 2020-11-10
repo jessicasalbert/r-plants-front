@@ -131,8 +131,17 @@ class App extends React.Component {
         localStorage.setItem("total", JSON.stringify(this.state.cartTotal))
       })
     }
-    
+  }
 
+  clearCart = () => {
+    this.setState({
+      cart: [],
+      cartTotal: 0
+    })
+  }
+
+  clearGuestUser = () => {
+    this.setState({ user: null})
   }
 
   logoutHandler = () => {
@@ -154,7 +163,7 @@ class App extends React.Component {
           <Route path="/login" render={() => (<Login submitHandler={this.loginHandler}/>)}/>
           <Route path="/profile" render={() => (<Profile user={this.state.user} /> )}/>
           <Route path="/newplant" render={() => (<NewPlant submitHandler={this.addPlantHandler}/>)}/>
-          <Route path="/checkout" render={() => (<Checkout cart={this.state.cart} total={this.state.cartTotal} user={this.state.user}/>)}/>
+          <Route path="/checkout" render={() => (<Checkout clearCart={this.clearCart} clearGuestUser={this.clearGuestUser} cart={this.state.cart} total={this.state.cartTotal} user={this.state.user}/>)}/>
           <Route path="/" render={() => (<Welcome plants={this.state.plants}/ > )}/>
         </Switch>
       </div>
