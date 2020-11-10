@@ -1,11 +1,20 @@
 import React, { Component } from 'react'
 import CartItem from '../CartItem/CartItem'
+import { loadStripe } from '@stripe/stripe-js'
+import { Elements } from '@stripe/react-stripe-js'
+import { CardElement } from '@stripe/react-stripe-js'
+import { CardElementContainer } from './CheckoutStyle'
+import StripeCheckout from 'react-stripe-checkout';
 
 export class Checkout extends Component {
 
     state = {
         clicked : false,
         guestUserId: null
+    }
+
+    stripePromise = () => {
+        return loadStripe(process.env.PUBLISHABLE_KEY)
     }
 
     generateGuest = () => {
@@ -109,23 +118,38 @@ export class Checkout extends Component {
         
     }
 
+    handleToken = (token, addresses) => {
+        console.log({token, addresses})
+    }
+
 
     render() {
         return (
             <>
                 {this.renderCart()}
-                <h1 onClick={this.clickHandler}>Enter Details</h1>
-                {this.state.clicked ? 
-                <form>
-                    <input type="number" placeholder="Enter CC"/>
-                    <input type="text" placeholder="Enter more info"/>
-                    <button onClick={this.purchaseHandler}>Purchase</button>
-                </form> 
-                : null
-                }
+                
+                <StripeCheckout
+                stripeKey="pk_test_51Hm4N8JoLkskNX574EcbxBPK2nXQZQfCyOskJAJFVeXS6lt8rtPgxmDG3XPhZ5m0KHuUqHLkNz8Jq4rRDrNt8scv00l8gmEYJn"
+                token={this.handleToken}
+                />
+                
+
+               
             </>
         )
     }
 }
 
 export default Checkout
+
+
+{/* <h1 onClick={this.clickHandler}>Enter Details</h1>
+{this.state.clicked ? 
+<form>
+    <input type="number" placeholder="Enter CC"/>
+    <input type="text" placeholder="Enter more info"/>
+    
+    <button onClick={this.purchaseHandler}>Purchase</button>
+</form> 
+: null
+} */}

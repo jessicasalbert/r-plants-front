@@ -36,7 +36,7 @@ class MapView extends React.Component {
                 this.props.plants.map(plant => (
                     <>
                         <Marker icon={iconPlant} key={plant.id} position={[plant.latitude, plant.longitude]}>
-                        <Popup>{plant.name} <br/><img alt={plant.name} src={plant.image}/><br/><button>See more</button></Popup></Marker>
+                        <Popup>{plant.name} <br/><img alt={plant.name} src={plant.image}/><br/></Popup></Marker>
                     </>
                 ))
                 :
