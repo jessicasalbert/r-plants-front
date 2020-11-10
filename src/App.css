@@ -18,10 +18,6 @@ a {
     color: inherit;
 }
 
-.footerpage {
-    padding-bottom: 30rem;
-}
-
 .leaflet-container {
     border-radius: 20px;
     opacity: 0.9;

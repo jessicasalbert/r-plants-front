@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import CartItem from '../CartItem/CartItem'
 import Footer from '../Footer/Footer'
 import { Link } from 'react-router-dom'
+import CartWrapper from './CartStyle'
 
 
 export class Cart extends Component {
@@ -80,8 +81,11 @@ export class Cart extends Component {
         console.log(this.props.user ? this.props.user.id : "none")
         return (
             <>
-                <section className="footerpage">
-                    {this.props.cart.length > 0 ?
+            <CartWrapper>
+                    {this.props.cart.length > 0 
+
+                    ?
+
                     <> 
                     {this.renderCart()}
                     <h1>Total: ${this.props.total}</h1>
@@ -95,15 +99,14 @@ export class Cart extends Component {
                         <Link to="/signup">Sign Up</Link>
                         <Link to="/checkout">Check out as guest</Link>
                         </>
-
                     }
-
                     </>
 
-                    : <h1>No items to display</h1>}
-                    <Footer />
-                </section>
-                
+                    : 
+
+                    <h1>No items to display</h1>}
+            </CartWrapper>
+            <Footer />
             </>
         )
     }
