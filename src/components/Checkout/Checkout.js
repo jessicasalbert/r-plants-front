@@ -1,14 +1,14 @@
 import React, { Component } from 'react'
 import CartItem from '../CartItem/CartItem'
-<<<<<<< HEAD
+
 import { loadStripe } from '@stripe/stripe-js'
 import { Elements } from '@stripe/react-stripe-js'
 import { CardElement } from '@stripe/react-stripe-js'
 import { CardElementContainer } from './CheckoutStyle'
 import StripeCheckout from 'react-stripe-checkout';
-=======
+
 import {CartWrapper, CartStyle } from '../Cart/CartStyle'
->>>>>>> 5acba6dadbcad002097403c5b04b5dc7ea40fa21
+
 
 export class Checkout extends Component {
 
@@ -129,14 +129,7 @@ export class Checkout extends Component {
 
     render() {
         return (
-            
-<<<<<<< HEAD
-                
-                
-                
 
-               
-=======
             <CartWrapper>
             <h4>Checkout</h4>
                 <CartStyle>
@@ -157,8 +150,7 @@ export class Checkout extends Component {
                 
                 </CartStyle>
             </CartWrapper>
->>>>>>> 5acba6dadbcad002097403c5b04b5dc7ea40fa21
-            
+
         )
     }
 }
