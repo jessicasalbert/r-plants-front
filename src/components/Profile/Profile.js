@@ -33,6 +33,7 @@ export class Profile extends Component {
                 <td>{order.created_at}</td>
                 <td>{order.total}</td>
                 <td>{order.order_number}</td>
+                <td>{order.purchases[0].item_name}</td>
 
             </tr>)
         })
