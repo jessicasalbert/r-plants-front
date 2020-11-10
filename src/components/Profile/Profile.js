@@ -20,26 +20,38 @@ export class Profile extends Component {
         fetch(`http://localhost:3000/api/v1/users/${this.props.user.id}`, options)
         .then(res => res.json())
         .then(res => (this.setState({
-            orders: res.orders,
+            orders: res.orders.reverse(),
             // purchases: res.purchases
         })))
-        //.then(console.log)
+        .catch(console.log)
     }
 
 
     renderPurchases = () => {
-        console.log(this.state.orders)
-        return this.state.orders.map( order =>  <Purchases order={order} />)
+        return this.state.orders.slice(1).map( order =>  <Purchases order={order} />)
+    }
+    
+    renderLatestPurchase = () => {
+
     }
 
     render() {
-        // console.log(this.state)
+        console.log(this.state.orders.length)
         return (
             <>
 
             {this.props.user ? 
             <>
                 <h1>Order History for {this.props.user.name}</h1>
+
+                {this.state.orders.length > 0 ? 
+                <>
+                <h2>Latest purchase...</h2>
+                <Purchases order={this.state.orders[0]}/>
+                </>
+                : <h2>No orders to show</h2>
+                }
+                <hr/>
                 <table>  
                 {this.renderPurchases()}
                 </table>

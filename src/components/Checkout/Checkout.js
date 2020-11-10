@@ -70,6 +70,7 @@ export class Checkout extends Component {
                 this.props.clearGuestUser()
             }
             this.props.clearCart()
+            this.props.redirectToSuccess()
         })
     }
 
