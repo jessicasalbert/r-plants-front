@@ -1,9 +1,8 @@
 import React from 'react'
 import MapView from './MapView'
-import About from './About'
 import Footer from '../Footer/Footer'
 import { Link } from 'react-router-dom'
-import {WelcomeStyle, TopWrapper, BottomWrapper, MapWrapper, StoreButton} from './WelcomeStyle'
+import {WelcomeStyle, TopWrapper, BottomWrapper, MapWrapper, StoreButton, LandingImg} from './WelcomeStyle'
 
 export default function Welcome(props) {
     return (
@@ -22,7 +21,7 @@ export default function Welcome(props) {
 
             <MapWrapper><MapView plants={props.plants} /></MapWrapper>
 
-            <BottomWrapper><About /></BottomWrapper>
+            <BottomWrapper><LandingImg></LandingImg></BottomWrapper>
         </WelcomeStyle>
             <Footer />
             </>
