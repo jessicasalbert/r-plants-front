@@ -17,7 +17,8 @@ class App extends React.Component {
     cart: [],
     user: null,
     plants: null,
-    cartTotal: 0
+    cartTotal: 0, 
+    completedOrderNumber: null
   }
 
   componentDidMount () {
@@ -149,8 +150,11 @@ class App extends React.Component {
     this.props.history.push("/")
   }
 
-  redirectToSuccess = () => {
-    this.props.history.push("/success")
+  redirectToSuccess = (order_number) => {
+    this.setState(() => ({ 
+      completedOrderNumber: order_number,
+      cart: []
+    }), this.props.history.push("/success"))
   }
 
   logoutHandler = () => {
@@ -173,7 +177,7 @@ class App extends React.Component {
           <Route path="/profile" render={() => (<Profile user={this.state.user} /> )}/>
           <Route path="/newplant" render={() => (<NewPlant submitHandler={this.addPlantHandler}/>)}/>
           <Route path="/checkout" render={() => (<Checkout redirectToSuccess={this.redirectToSuccess} clearCart={this.clearCart} clearGuestUser={this.clearGuestUser} cart={this.state.cart} total={this.state.cartTotal} user={this.state.user}/>)}/>
-          <Route path="/success" render={() => (<Success redirectToWelcome={this.redirectToWelcome}/> )}/>
+          <Route path="/success" render={() => (<Success order_number={this.state.completedOrderNumber} redirectToWelcome={this.redirectToWelcome}/> )}/>
           <Route path="/" render={() => (<Welcome plants={this.state.plants}/> )}/>
         </Switch>
       </>

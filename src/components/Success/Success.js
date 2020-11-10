@@ -21,7 +21,8 @@ export class Success extends Component {
     render() {
         return (
             <div>
-                 Success!
+                 <h2>Success!</h2>
+                 <p>Your order is processing: #{this.props.order_number} </p>
                 <p> Redirecting in {this.state.number}...</p>
                  {this.state.number === 0 ?
                  this.props.redirectToWelcome()
