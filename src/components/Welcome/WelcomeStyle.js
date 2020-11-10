@@ -3,7 +3,7 @@ import L from 'leaflet'
 
 
 const WelcomeStyle = styled.div`
-    background-image: url("https://i.ibb.co/1Zc61dx/Final.png");
+    background-image: url("https://i.ibb.co/Gd9hVxM/Final-2.png");
     background-attachment: fixed;
     background-size: contain;
     background-position: top center;

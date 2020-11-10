@@ -20,9 +20,6 @@ export const NavLogo = styled(Link)`
         width: 40px;
         height: 40px;
     }
-    b {
-        
-    }
     white-space: nowrap;
     color: rgba(57, 54, 38, 1);
     position: absolute;

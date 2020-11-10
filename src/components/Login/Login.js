@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import {LoginForm, LoginButton, UserInput} from './LoginStyle'
+import {LoginForm, LoginButton, UserInput, LoginWrapper} from './LoginStyle'
 
 export default class Login extends Component {
     state = {
@@ -18,12 +18,14 @@ export default class Login extends Component {
 
     render() {
         return (
+            <LoginWrapper>
             <LoginForm onSubmit={this.submitHandler}>
-            <h2>Please log in to your account.</h2>
-                <UserInput type="text" name="username" placeholder="Username" value={this.state.username} onChange={this.changeHandler}></UserInput>
-                <UserInput type="password" name="password" placeholder="Password" value={this.state.password} onChange={this.changeHandler}></UserInput>
-                <LoginButton type="submit" value="Log In"><b>Log In</b></LoginButton>
+            <h2>Please sign in</h2>
+                <UserInput type="text" name="username" placeholder="username" value={this.state.username} onChange={this.changeHandler}></UserInput>
+                <UserInput type="password" name="password" placeholder="password" value={this.state.password} onChange={this.changeHandler}></UserInput>
+                <LoginButton type="submit" value="Log In">sign in</LoginButton>
             </LoginForm>
+            </LoginWrapper>
         )
     }
 }

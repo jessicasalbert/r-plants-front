@@ -1,16 +1,37 @@
 import styled from 'styled-components'
 
+const SignUpWrapper = styled.div`
+    position: relative;
+    top: 0;
+    bottom: 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: 0;
+    background-image: url("https://i.ibb.co/1QNbf7L/Card.png");
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100vw;
+    @media screen and (max-width: 700px) {
+        background-size: 100vh;
+        }
+    }
+`
+
 const SignUpForm = styled.form`
     h2 {
         padding-bottom: 20px;
     }
     box-shadow: 8px 8px 8px -6px rgba(0,0,0,.5);
-    margin: auto;
     display: flex;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 7.5rem;
     height: 25rem;
     width: 25rem;
     border-radius: 25px;
@@ -32,6 +53,7 @@ const SignUpButton = styled.button`
     width: 33%;
     margin: 5%;
     padding: 4%;
+    font-size: 1.5rem;
     outline: none;
     border: none;
     cursor: pointer;
@@ -66,4 +88,4 @@ const UserInput = styled.input`
     }
 `
 
-export {SignUpForm, SignUpButton, UserInput }
+export {SignUpForm, SignUpButton, UserInput, SignUpWrapper }
