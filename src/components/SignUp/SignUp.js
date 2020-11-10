@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import {withRouter} from 'react-router-dom'
-import { SignUpForm, UserInput, SignUpButton } from './SignUpStyle'
+import { SignUpForm, UserInput, SignUpButton, SignUpWrapper } from './SignUpStyle'
 
 class SignUp extends Component {
     state = {
@@ -21,14 +21,16 @@ class SignUp extends Component {
 
     render() {
         return (
+            <SignUpWrapper>
                 <SignUpForm onSubmit={this.submitHandler}>
-                    <h2>Welcome to RPlants!</h2>
-                    <UserInput type="text" name="username" placeholder="Username" value={this.state.username} onChange={this.changeHandler} />
-                    <UserInput type="password" name="password" placeholder="Password" value={this.state.password} onChange={this.changeHandler} />
-                    <UserInput type="text" name="email" placeholder="Email" value={this.state.email} onChange={this.changeHandler} />
-                    <UserInput type="text" name="name" placeholder="Full Name" value={this.state.name} onChange={this.changeHandler} />
-                    <SignUpButton type="submit" value="Sign Up" ><b>Sign Up</b></SignUpButton>
+                    <h2>Welcome to rPlants</h2>
+                    <UserInput type="text" name="username" placeholder="username" value={this.state.username} onChange={this.changeHandler} />
+                    <UserInput type="password" name="password" placeholder="password" value={this.state.password} onChange={this.changeHandler} />
+                    <UserInput type="text" name="email" placeholder="email" value={this.state.email} onChange={this.changeHandler} />
+                    <UserInput type="text" name="name" placeholder="full name" value={this.state.name} onChange={this.changeHandler} />
+                    <SignUpButton type="submit" value="sign up" >sign up</SignUpButton>
                 </SignUpForm>
+            </SignUpWrapper>
         )
     }
 }

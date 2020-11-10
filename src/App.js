@@ -163,7 +163,7 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>
+      <>
         <NavBar user={this.state.user} cart={this.state.cart} logoutHandler={this.logoutHandler}/>
         <Switch>
           <Route path="/plants" render={() => (<PlantsContainer addToCart={this.addToCart}/>)}/>
@@ -176,7 +176,7 @@ class App extends React.Component {
           <Route path="/success" render={() => (<Success redirectToWelcome={this.redirectToWelcome}/> )}/>
           <Route path="/" render={() => (<Welcome plants={this.state.plants}/> )}/>
         </Switch>
-      </div>
+      </>
     )
   }
 }
