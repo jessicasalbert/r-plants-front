@@ -115,12 +115,16 @@ const MapWrapper = styled.section`
 `
 
 const LandingImg = styled.section`
-    ${'' /* background-image: url('https://www.fairtradeamerica.org/app/uploads/2020/08/Cocoa_CDI_Rosine-walks-through-plant-nursery_2019_28992-aspect-ratio-1690-635.png');
-    background-attachment: fixed;
-    background-size: contain;
-    background-position: top center;
-    background-repeat: no-repeat;
-    background-size: 100vw; */}
+    background-image: url('https://www.fairtradeamerica.org/app/uploads/2020/08/Cocoa_CDI_Rosine-walks-through-plant-nursery_2019_28992-aspect-ratio-1690-635.png');
+    width: 100vw;
+    height: 500px;
+    display: flex;
+    ${'' /* object-fit: cover; */}
+    opacity: 1;
+    &:hover {
+        right: 0;
+        opacity: 0.7;
+    }
 `
 
 const MapStyle = styled.div`
