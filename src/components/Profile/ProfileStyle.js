@@ -1,17 +1,10 @@
 import styled from 'styled-components'
 
-const CartWrapper = styled.div`
-    h4 {
-        padding-top: 1vh;
-        padding-left: 5vw;
-        padding-bottom: 2vh;
-        font-size: 4rem;
-        font-weight: normal;
-    }
+export const PurchaseWrapper = styled.div`
     position: relative;
     top: 0;
     bottom: 0;
-    ${'' /* height: 100vh; */}
+    height: 100vh;
     z-index: 0;
     background-image: url("https://i.ibb.co/BVLGr4Z/Final-40.png");
     background-attachment: fixed;
@@ -24,14 +17,3 @@ const CartWrapper = styled.div`
         }
     }
 `
-
-const CartStyle = styled.section`
-    min-height: 100vh;
-`
-
-const EmptyCart = styled.h1`
-    min-height: 100vh;
-`
-
-export {CartWrapper, CartStyle, EmptyCart}
-

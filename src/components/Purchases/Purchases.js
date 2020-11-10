@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { PurchasesStyle } from './PurchasesStyle'
+import { PurchaseStyle } from './PurchasesStyle'
 
 export class Purchases extends Component {
 
@@ -40,17 +40,14 @@ export class Purchases extends Component {
     }
     render() {
         return(
-            
-            <PurchasesStyle onClick={this.localRenderItems}>
-                <tr className="order">
-                <td>{this.props.order.order_number} |</td>
-                <td>{this.props.order.total} |</td>
-                <td>{this.props.order.created_at}</td>
-                </tr>
-                {this.state.clicked ? this.mapPurchasesWithHeader() : null }
-
-            </PurchasesStyle>
-            
+                <PurchaseStyle onClick={this.localRenderItems}>
+                    <tr className="order">
+                    <td>{this.props.order.order_number} |</td>
+                    <td>{this.props.order.total} |</td>
+                    <td>{this.props.order.created_at}</td>
+                    </tr>
+                    {this.state.clicked ? this.mapPurchasesWithHeader() : null }
+                </PurchaseStyle>
         )}
 }
 

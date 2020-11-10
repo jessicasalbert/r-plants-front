@@ -115,7 +115,12 @@ const MapWrapper = styled.section`
 `
 
 const LandingImg = styled.section`
-    ${'' /* background-image: url('https://media.timeout.com/images/100442633/image.jpg'); */}
+    ${'' /* background-image: url('https://www.fairtradeamerica.org/app/uploads/2020/08/Cocoa_CDI_Rosine-walks-through-plant-nursery_2019_28992-aspect-ratio-1690-635.png');
+    background-attachment: fixed;
+    background-size: contain;
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: 100vw; */}
 `
 
 const MapStyle = styled.div`

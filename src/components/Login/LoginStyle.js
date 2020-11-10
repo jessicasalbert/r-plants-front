@@ -7,14 +7,14 @@ const LoginWrapper = styled.div`
     height: 100vh;
     width: 100vw;
     z-index: 0;
-    background-image: url("https://i.ibb.co/1QNbf7L/Card.png");
+    background-image: url("https://i.ibb.co/hCkRkjk/Card-40.png");
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100vw;
-    @media screen and (max-width: 700px) {
-        background-size: 100vh;
+    @media screen and (max-width: 926px) {
+        background-size: 150vh;
         }
     }
 `
