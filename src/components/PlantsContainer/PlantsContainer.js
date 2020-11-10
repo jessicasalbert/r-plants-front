@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import Plant from '../Plant/Plant'
 import FilterSearch from '../FilterSearch/FilterSearch'
-import {FilterWrapper, PlantContainerStyle, StoreWrapper} from './PlantContainerStyle'
+import { PlantContainerStyle, StoreWrapper} from './PlantContainerStyle'
 import { Route, Switch } from "react-router-dom"
 import DetailedPlant from '../DetailedPlant/DetailedPlant'
 import Footer from '../Footer/Footer'
@@ -69,9 +69,7 @@ export class PlantsContainer extends Component {
                         <>
                         <StoreWrapper>
                             <h1>Home ~ Houseplants</h1>
-                            <FilterWrapper>
-                                <FilterSearch filter={this.filterClickHandler} search={this.searchHandler}/>
-                            </FilterWrapper>
+                            <FilterSearch filter={this.filterClickHandler} search={this.searchHandler}/>
                             <PlantContainerStyle>
                                 {this.renderPlants()}
                             </PlantContainerStyle>

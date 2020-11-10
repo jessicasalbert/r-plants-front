@@ -23,7 +23,7 @@ const PlantStyle = styled.div`
     }
 `   
 const PlantImage = styled.img`
-background: none;
+    background: none;
     max-height: 100%;
     max-width: 100%;
     display: block;

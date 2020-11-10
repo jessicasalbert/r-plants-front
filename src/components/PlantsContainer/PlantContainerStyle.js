@@ -20,13 +20,6 @@ const PlantContainerStyle = styled.div`
 }
 `
 
-const FilterWrapper = styled.div`
-    justify-content: center;
-    background-color: rgba(255, 255, 255, 0.8);
-    height: 25px;
-    width: 600px;
-`
-
 const StoreWrapper = styled.div`
     position: relative;
     top: 0;
@@ -46,4 +39,4 @@ const StoreWrapper = styled.div`
     }
 `
 
-export {PlantContainerStyle, FilterWrapper, StoreWrapper}
+export {PlantContainerStyle, StoreWrapper}
