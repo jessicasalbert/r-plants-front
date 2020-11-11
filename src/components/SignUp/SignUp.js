@@ -23,7 +23,7 @@ class SignUp extends Component {
         return (
             <SignUpWrapper>
                 <SignUpForm onSubmit={this.submitHandler}>
-                    <h2>Welcome to rPlants</h2>
+                    <p>Welcome to rPlants</p>
                     <UserInput type="text" name="username" placeholder="username" value={this.state.username} onChange={this.changeHandler} />
                     <UserInput type="password" name="password" placeholder="password" value={this.state.password} onChange={this.changeHandler} />
                     <UserInput type="text" name="email" placeholder="email" value={this.state.email} onChange={this.changeHandler} />

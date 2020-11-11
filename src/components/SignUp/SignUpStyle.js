@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 const SignUpWrapper = styled.div`
-    position: relative;
+    position: fixed;
     top: 0;
     bottom: 0;
     height: 100vh;
@@ -20,13 +20,15 @@ const SignUpWrapper = styled.div`
 `
 
 const SignUpForm = styled.form`
-    h2 {
+    p {
+        font-size: 2rem;
         padding-bottom: 20px;
+        color: rgba(57, 54, 38, 1);
     }
     box-shadow: 8px 8px 8px -6px rgba(0,0,0,.5);
     display: flex;
     position: absolute;
-    top: 35%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
     flex-direction: column;
@@ -78,6 +80,9 @@ const SignUpButton = styled.button`
 `
 
 const UserInput = styled.input`
+    outline: none;
+    border: none;
+    border-radius: 6px;
     width: 66%;
     margin: 2%;
     padding: 2%;

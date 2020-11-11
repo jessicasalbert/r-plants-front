@@ -72,13 +72,13 @@ const SelectedLabel = styled.label`
     }
     @media (max-width: 412px) {
         padding: 3px;
-        ${'' /* margin: 0; */}
     }
 `
 
 const UnselectedLabel = styled.label`
     box-shadow: 0px 8px 8px -6px rgba(0,0,0,.5);
     display: inline-block;
+    cursor: pointer;
     outline: none;
     border: none;
     background-color: rgba(147, 141, 123, 0.5);
