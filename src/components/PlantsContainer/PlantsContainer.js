@@ -38,7 +38,7 @@ export class PlantsContainer extends Component {
 
 
     renderPlants = () => {
-        return this.filterPlants().map(plant => <Plant plant={plant} redirectToShop={this.props.redirectToShop} addToCart={this.props.addToCart} key={plant.id}/>)
+        return this.filterPlants().map(plant => <Plant plant={plant} key={plant.id} redirectToShop={this.props.redirectToShop} addToCart={this.props.addToCart} key={plant.id}/>)
     }
 
     searchHandler = (search) => {
