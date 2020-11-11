@@ -76,6 +76,7 @@ export class Checkout extends Component {
                 localStorage.removeItem("token")
                 this.props.clearGuestUser()
             }
+            
             this.props.redirectToSuccess(res.order_number)
         })
     }

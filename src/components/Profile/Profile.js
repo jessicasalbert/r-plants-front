@@ -29,7 +29,7 @@ export class Profile extends Component {
 
 
     renderPurchases = () => {
-        return this.state.orders.slice(1).map( order =>  <Purchases order={order} />)
+        return this.state.orders.slice(1).map( order =>  <Purchases key={order.id} order={order} />)
     }
     
     renderLatestPurchase = () => {

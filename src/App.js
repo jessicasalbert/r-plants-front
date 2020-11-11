@@ -137,13 +137,6 @@ class App extends React.Component {
     this.props.history.push("/plants")
   }
 
-  clearCart = () => {
-    this.setState({
-      cart: [],
-      cartTotal: 0
-    })
-  }
-
   clearGuestUser = () => {
     this.setState({ user: null})
   }
@@ -156,7 +149,8 @@ class App extends React.Component {
   redirectToSuccess = (order_number) => {
     this.setState(() => ({ 
       completedOrderNumber: order_number,
-      cart: []
+      cart: [],
+      cartTotal: 0
     }), this.props.history.push("/success"))
   }
 
@@ -179,7 +173,7 @@ class App extends React.Component {
           <Route path="/login" render={() => (<Login submitHandler={this.loginHandler}/>)}/>
           <Route path="/profile" render={() => (<Profile user={this.state.user} /> )}/>
           <Route path="/newplant" render={() => (<NewPlant submitHandler={this.addPlantHandler}/>)}/>
-          <Route path="/checkout" render={() => (<Checkout redirectToSuccess={this.redirectToSuccess} clearCart={this.clearCart} clearGuestUser={this.clearGuestUser} cart={this.state.cart} total={this.state.cartTotal} user={this.state.user}/>)}/>
+          <Route path="/checkout" render={() => (<Checkout redirectToSuccess={this.redirectToSuccess} clearGuestUser={this.clearGuestUser} cart={this.state.cart} total={this.state.cartTotal} user={this.state.user}/>)}/>
           <Route path="/success" render={() => (<Success order_number={this.state.completedOrderNumber} redirectToWelcome={this.redirectToWelcome}/> )}/>
           <Route path="/" render={() => (<Welcome plants={this.state.plants}/> )}/>
         </Switch>

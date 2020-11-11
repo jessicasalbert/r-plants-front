@@ -38,7 +38,7 @@ export class PlantsContainer extends Component {
 
 
     renderPlants = () => {
-        return this.filterPlants().map(plant => <Plant plant={plant} redirectToShop={this.props.redirectToShop} addToCart={this.props.addToCart} key={plant.id}/>)
+        return this.filterPlants().map(plant => <Plant plant={plant} key={plant.id} redirectToShop={this.props.redirectToShop} addToCart={this.props.addToCart} key={plant.id}/>)
     }
 
     searchHandler = (search) => {
@@ -69,7 +69,7 @@ export class PlantsContainer extends Component {
                         return (
                         <>
                         <StoreWrapper>
-                            <FilterSearch filter={this.filterClickHandler} search={this.searchHandler}/>
+                            <FilterSearch filter={this.filterClickHandler} isFiltered={this.state.filter} search={this.searchHandler}/>
                             <PlantContainerStyle>
                                 {this.renderPlants()}
                             </PlantContainerStyle>

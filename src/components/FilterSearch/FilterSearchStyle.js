@@ -13,7 +13,7 @@ export const FilterWrapper = styled.div`
     margin: auto;
     max-width: 30vw;
     background-color: rgba(255, 255, 255, 0.75);
-    border-radius: 10px;
+    border-radius: 10px;O
     flex-direction: row;
     justify-content: center;
     align-content: center;

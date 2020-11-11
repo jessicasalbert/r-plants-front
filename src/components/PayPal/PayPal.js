@@ -12,7 +12,6 @@ export class PayPal extends Component {
         return (
             // <PayPalScriptProvider options={{ "client-id": "sb" }}>
                 <PPstyle><PayPalButton
-                
                 amount={this.props.amount} 
                 onSuccess={this.props.purchaseHandler}/></PPstyle>
             // </PayPalScriptProvider>
