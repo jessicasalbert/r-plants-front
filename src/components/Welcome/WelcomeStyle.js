@@ -32,6 +32,12 @@ const StoreButton = styled.button`
         opacity: 0.8;
         font-size: 2rem;
     }
+    &:active {
+        letter-spacing: 0.5px;
+        -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+        -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+        box-shadow: 5px 40px -10px rgba(0,0,0,0.57);
+    }
     @media screen and (max-width: 700px) {
         font-size: 20px;
         margin-top: 0px;

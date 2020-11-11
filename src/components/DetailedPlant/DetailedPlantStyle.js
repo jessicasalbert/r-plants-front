@@ -69,6 +69,11 @@ const Details = styled.section`
         padding-top: 10px;
         padding-left: 2px;
     }
+    input[type="radio"] {
+        opacity: 0;
+        position: fixed;
+        width: 0;
+    }
 
 `
 

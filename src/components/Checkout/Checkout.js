@@ -7,7 +7,7 @@ import PayPal from '../PayPal/PayPal'
 // import { CheckoutContainer } from './CheckoutStyle'
 // import StripeCheckout from 'react-stripe-checkout';
 
-import {CartWrapper, CartStyle } from '../Cart/CartStyle'
+import {CartWrapper, CartStyle, Heading } from '../Cart/CartStyle'
 
 
 export class Checkout extends Component {
@@ -126,7 +126,7 @@ export class Checkout extends Component {
         return (
 
             <CartWrapper>
-            <h4>Checkout</h4>
+            <Heading>checkout</Heading>
                 <CartStyle>
                     {this.renderCart()}
                     {/* <h1 >Enter Details</h1>

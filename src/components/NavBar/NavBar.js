@@ -58,14 +58,14 @@ class Navbar extends React.Component {
                 </MenuIcon>
                 {this.state.clicked ? 
                     <NavMenu className="active">
-                    <NavItem><NavLink onClick={this.closeMenu} to="/plants">shop</NavLink></NavItem>
+                    <NavItem><NavLink onClick={this.closeMenu} to="/plants">store</NavLink></NavItem>
                     <NavItem><NavLink onClick={this.closeMenu} to="/profile">profile</NavLink></NavItem>
                     <NavItem><NavLink onClick={this.closeMenuLogOut} to="/">sign out</NavLink></NavItem>
                     <NavItem><NavLinkMobile onClick={this.closeMenu} to="/cart">cart({this.props.cart.length > 0 ? <b className="cart">{this.itemCount()}</b> : 0})</NavLinkMobile></NavItem>
                     </NavMenu>
                 :
                     <NavMenu>
-                    <NavItem><NavLink onClick={this.closeMenu} to="/plants">shop</NavLink></NavItem>
+                    <NavItem><NavLink onClick={this.closeMenu} to="/plants">store</NavLink></NavItem>
                     <NavItem><NavLink onClick={this.closeMenu} to="/profile">profile</NavLink></NavItem>
                     {/* <NavItem><NavLink onClick={this.closeMenu, this.props.logoutHandler} to="/">Log Out</NavLink></NavItem> */}
                     <NavItem><NavLink onClick={this.closeMenu} to="/cart">cart({this.props.cart.length > 0 ? <b className="cart"> {this.itemCount()}</b>  : 0})</NavLink></NavItem>
@@ -83,14 +83,14 @@ class Navbar extends React.Component {
                 </MenuIcon>
                 {this.state.clicked ? 
                     <NavMenu className="active">
-                    <NavItem><NavLink onClick={this.closeMenu} to="/plants">shop</NavLink></NavItem>
+                    <NavItem><NavLink onClick={this.closeMenu} to="/plants">store</NavLink></NavItem>
                     <NavItem><NavLink onClick={this.closeMenu} to="/login">log in</NavLink></NavItem>
                     <NavItem><NavLink onClick={this.closeMenu} to="/signup">sign up</NavLink></NavItem>
                     <NavItem><NavLinkMobile onClick={this.closeMenu} to="/cart">cart({this.props.cart.length > 0 ? <b className="cart">{this.itemCount()}</b> : 0})</NavLinkMobile></NavItem>
                     </NavMenu>
                 : 
                     <NavMenu>
-                    <NavItem><NavLink onClick={this.closeMenu} to="/plants">shop</NavLink></NavItem>
+                    <NavItem><NavLink onClick={this.closeMenu} to="/plants">store</NavLink></NavItem>
                     {/* <NavItem><NavLink onClick={this.closeMenu} to="/login">Log In</NavLink></NavItem> */}
                     <NavItem><NavLink onClick={this.closeMenu} to="/signup">sign up</NavLink></NavItem>
                     <NavItem><NavLink onClick={this.closeMenu} to="/cart">cart({this.props.cart.length > 0 ? <b className="cart"> {this.itemCount()}</b>  : 0})</NavLink></NavItem>
