@@ -1,8 +1,7 @@
 import React, { Component } from 'react'
 import CartItem from '../CartItem/CartItem'
 import Footer from '../Footer/Footer'
-import { Link } from 'react-router-dom'
-import {CartWrapper, CartStyle, EmptyCart, Total} from './CartStyle'
+import {CartWrapper, CartStyle, EmptyCart, Total, SignUpLink, CheckoutLink} from './CartStyle'
 
 
 export class Cart extends Component {
@@ -28,11 +27,11 @@ export class Cart extends Component {
                     <Total>Total: ${this.props.total}</Total>
                     {
                         this.props.user ? 
-                        <Link to="/checkout">Check out</Link>
+                        <CheckoutLink to="/checkout">Proceed to checkout</CheckoutLink>
                         :
                         <>
-                        <Link to="/signup">Sign Up</Link>
-                        <Link to="/checkout">Check out as guest</Link>
+                        <CheckoutLink to="/checkout">Checkout as guest</CheckoutLink>
+                        <SignUpLink to="/signup">Sign Up</SignUpLink>
                         </>
                     }
                     </>

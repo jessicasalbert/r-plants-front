@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { Link } from 'react-router-dom';
 
 const CartWrapper = styled.div`
     h4 {
@@ -48,5 +49,59 @@ const Total = styled.p`
     }
 `
 
-export {CartWrapper, CartStyle, EmptyCart, Total}
+const CheckoutLink = styled(Link)`
+    border-radius: 4px;
+    background: rgba(147, 141, 123, 1);
+    padding: 11px 40px;
+    color: #fff;
+    outline: none;
+    position: relative;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    text-decoration: none;
+    white-space: nowrap;
+    &:hover {
+        transition: all 0.2s ease-in-out;
+        background: rgba(181, 181, 161, 1);
+        color: rgba(57, 54, 38, 1);
+    }
+    &:active {
+        letter-spacing: 0.5px;
+        -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+        -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+        box-shadow: 5px 40px -10px rgba(0,0,0,0.57);
+    }
+    bottom: 27px;
+    margin-left: 5vw;
+`
+
+const SignUpLink = styled(Link)`
+    border-radius: 4px;
+    background: rgba(147, 141, 123, 1);
+    padding: 11px 40px;
+    color: #fff;
+    outline: none;
+    position: relative;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    text-decoration: none;
+    white-space: nowrap;
+    &:hover {
+        transition: all 0.2s ease-in-out;
+        background: rgba(181, 181, 161, 1);
+        color: rgba(57, 54, 38, 1);
+    }
+    &:active {
+        letter-spacing: 0.5px;
+        -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+        -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+        box-shadow: 5px 40px -10px rgba(0,0,0,0.57);
+    }
+    bottom: 27px;
+    margin-left: 1vw;
+`
+
+export {CartWrapper, CartStyle, EmptyCart, Total, CheckoutLink, SignUpLink}
 
