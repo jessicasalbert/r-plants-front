@@ -11,6 +11,10 @@ export class Checkout extends Component {
         guestUserId: null
     }
 
+    componentDidMount() {
+        this.generateGuest()
+    }
+
 
     generateGuest = () => {
         const user = {

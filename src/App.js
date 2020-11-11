@@ -46,7 +46,34 @@ class App extends React.Component {
     .then(res => res.json())
     .then(res => this.setState({plants: res}))
     .catch(console.log)
-  
+  }
+
+  setLocalStorage = (newCart, newTotal) => {
+    if (newCart.length === 0) {
+      localStorage.removeItem("cart")
+    } else {
+      localStorage.setItem("cart", JSON.stringify(this.state.cart))
+    }
+    if (newTotal === 0) {
+      localStorage.removeItem("total")
+    } else {
+      localStorage.setItem("total", JSON.stringify(this.state.cartTotal))
+    }
+  }
+
+  deleteHandler = (id, size, quantity) => {
+    const index = this.state.cart.findIndex( item => item.id === id && item.size === size)
+    const item = this.state.cart[index]
+    const priceToSubtract = parseFloat(item.price[item.size]) * parseFloat(item.quantity)
+    const newTotal = Math.round(((parseFloat(this.state.cartTotal) - priceToSubtract) + Number.EPSILON) * 100) / 100
+    const newCart = this.state.cart
+    newCart.splice(index, 1)
+    this.setState( () => ({
+      cart: newCart,
+      cartTotal: newTotal
+    }), this.setLocalStorage(newCart, newTotal))
+    console.log(newCart)
+    
   }
   
   
@@ -168,7 +195,7 @@ class App extends React.Component {
         <NavBar user={this.state.user} cart={this.state.cart} logoutHandler={this.logoutHandler}/>
         <Switch>
           <Route path="/plants" render={() => (<PlantsContainer addToCart={this.addToCart} redirectToShop={this.redirectToShop}/>)}/>
-          <Route path="/cart" render={() => (<Cart cart={this.state.cart} total={this.state.cartTotal} user={this.state.user} />)}/>
+          <Route path="/cart" render={() => (<Cart deleteHandler={this.deleteHandler} cart={this.state.cart} total={this.state.cartTotal} user={this.state.user} />)}/>
           <Route path="/signup" render={() => (<SignUp submitHandler={this.signupHandler}/>)}/>
           <Route path="/login" render={() => (<Login submitHandler={this.loginHandler}/>)}/>
           <Route path="/profile" render={() => (<Profile user={this.state.user} /> )}/>

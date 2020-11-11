@@ -17,6 +17,29 @@ const CartImage = styled.img`
     margin: 0;
 `
 
+const Delete = styled.button`
+box-shadow: 0px 8px 8px -6px rgba(0,0,0,.5);
+display: inline-block;
+cursor: pointer;
+outline: none;
+border: none;
+background-color: rgba(147, 141, 123, 0.5);
+padding: 5px 10px;
+font-size: 16px;
+border-radius: 4px;
+margin: 5px;
+max-width: 100px;
+@media (max-width: 1023px) {
+    padding: 10px;
+    margin-left: 0;
+}
+@media (max-width: 412px) {
+    padding: 3px;
+    ${'' /* margin: 0; */}
+}
+
+`
+
 const CartText = styled.div`
     display: flex;
     margin: auto;
@@ -48,4 +71,4 @@ const Name = styled.p`
     font-size: 1.8rem;
 `
 
-export {CartCard, CartImage, CartText, Price, Name, Quantity, Size}
+export {CartCard, Delete, CartImage, CartText, Price, Name, Quantity, Size}
