@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Redirect } from 'react-router-dom'
 import Purchases from '../../components/Purchases/Purchases'
-import {PurchaseWrapper, OrderHistory, LastOrderTitle, LastOrder, AllOrders} from './ProfileStyle'
+import {PurchaseWrapper, OrderHistory, LastOrderTitle, LastOrder, AllOrders, PurchaseColumn} from './ProfileStyle'
 
 export class Profile extends Component {
 
@@ -33,7 +33,7 @@ export class Profile extends Component {
     }
     
     renderLatestPurchase = () => {
-        return <Purchases order={this.state.orders[0]}/>
+        return <Purchases className="latest-order" order={this.state.orders[0]}/>
     }
 
     render() {
@@ -43,6 +43,7 @@ export class Profile extends Component {
 
             {this.props.user ? 
             <PurchaseWrapper>
+            <PurchaseColumn>
                 <OrderHistory>Order History for {this.props.user.name}</OrderHistory>
                 {this.state.orders.length > 0 ? 
                 <>
@@ -57,6 +58,7 @@ export class Profile extends Component {
                 <AllOrders>  
                     {this.renderPurchases()}
                 </AllOrders>
+                </PurchaseColumn>
             </PurchaseWrapper>
             :
             <Redirect to="/login"/>}

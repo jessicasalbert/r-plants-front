@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import {Background, Card} from './SuccessStyle'
 
 export class Success extends Component {
 
@@ -11,23 +12,24 @@ export class Success extends Component {
             console.log(this.state.number)
             this.setState({number: this.state.number - 1})
         }, 500);
-      }
+    }
 
     componentWillUnmount() {
     clearInterval(this.interval);
     }
 
-
     render() {
         return (
-            <div>
-                <h2>Success!</h2>
-                <p>Your order is processing: #{this.props.order_number} </p>
-                <p> Redirecting in {this.state.number}...</p>
-                {this.state.number === 0 ?
-                this.props.redirectToWelcome()
-                : null}
-            </div>
+            <Background>
+                <Card>
+                    <h2>Success!</h2>
+                    <p>Your order is processing: #{this.props.order_number} </p>
+                    <p> Redirecting in {this.state.number}...</p>
+                    {this.state.number === 0 ?
+                    this.props.redirectToWelcome()
+                    : null}
+                </Card>
+            </Background>
         )
     }
 }

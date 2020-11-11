@@ -19,6 +19,17 @@ export const PurchaseWrapper = styled.div`
     }
 `
 
+export const PurchaseColumn = styled.section`
+    ${'' /* display: inline-grid; */}
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.5);
+    left: 15vw;
+    transition: 0.3s;
+    max-width: 70vw;
+    min-height: 100vh;
+    align-items: center;
+`
+
 export const OrderHistory = styled.p`
     color:rgba(57, 54, 38, 1);
     padding-top: 1vh;

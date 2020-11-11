@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
 import CartItem from '../CartItem/CartItem'
 import PayPal from '../PayPal/PayPal'
-import { loadStripe } from '@stripe/stripe-js'
-import { Elements } from '@stripe/react-stripe-js'
-import { CardElement } from '@stripe/react-stripe-js'
-import { CheckoutContainer } from './CheckoutStyle'
-import StripeCheckout from 'react-stripe-checkout';
+// import { loadStripe } from '@stripe/stripe-js'
+// import { Elements } from '@stripe/react-stripe-js'
+// import { CardElement } from '@stripe/react-stripe-js'
+// import { CheckoutContainer } from './CheckoutStyle'
+// import StripeCheckout from 'react-stripe-checkout';
 
 import {CartWrapper, CartStyle } from '../Cart/CartStyle'
 
@@ -158,15 +158,3 @@ export class Checkout extends Component {
 }
 
 export default Checkout
-
-
-{/* <h1 onClick={this.clickHandler}>Enter Details</h1>
-{this.state.clicked ? 
-<form>
-    <input type="number" placeholder="Enter CC"/>
-    <input type="text" placeholder="Enter more info"/>
-    
-    <button onClick={this.purchaseHandler}>Purchase</button>
-</form> 
-: null
-} */}

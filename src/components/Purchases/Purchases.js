@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { PurchaseStyle, PurchaseTable } from './PurchasesStyle'
+import { PurchaseStyle, PurchaseTable, TableHeading, TableRow } from './PurchasesStyle'
 
 export class Purchases extends Component {
 
@@ -14,12 +14,12 @@ export class Purchases extends Component {
     mapPurchasesWithHeader = () => {
         return(
             <>
-                <tr>
-                    <th>Item</th>
-                    <th>Quantity</th>
-                    <th>Size</th>
-                    <th>Price</th>
-                </tr>
+                <TableRow>
+                    <TableHeading>Item</TableHeading>
+                    <TableHeading>Quantity</TableHeading>
+                    <TableHeading>Size</TableHeading>
+                    <TableHeading>Price</TableHeading>
+                </TableRow>
                 {this.mapPurchases()}
             </>
         )
