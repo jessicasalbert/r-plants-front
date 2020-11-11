@@ -59,6 +59,7 @@ const Total = styled.p`
 `
 
 const CheckoutLink = styled(Link)`
+    box-shadow: 0px 8px 8px -6px rgba(0,0,0,.5);
     border-radius: 4px;
     background: rgba(147, 141, 123, 1);
     padding: 11px 40px;
@@ -86,6 +87,7 @@ const CheckoutLink = styled(Link)`
 `
 
 const SignUpLink = styled(Link)`
+    box-shadow: 0px 8px 8px -6px rgba(0,0,0,.5);
     border-radius: 4px;
     background: rgba(147, 141, 123, 1);
     padding: 11px 40px;

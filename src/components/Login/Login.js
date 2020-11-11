@@ -20,7 +20,7 @@ export default class Login extends Component {
         return (
             <LoginWrapper>
             <LoginForm onSubmit={this.submitHandler}>
-            <h2>Please sign in</h2>
+            <p>Please sign in</p>
                 <UserInput type="text" name="username" placeholder="username" value={this.state.username} onChange={this.changeHandler}></UserInput>
                 <UserInput type="password" name="password" placeholder="password" value={this.state.password} onChange={this.changeHandler}></UserInput>
                 <LoginButton type="submit" value="Log In">sign in</LoginButton>
