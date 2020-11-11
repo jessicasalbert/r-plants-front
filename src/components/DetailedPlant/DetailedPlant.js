@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Footer from '../Footer/Footer'
+import { Radio, RadioGroup } from "react-custom-radio-buttons";
 import {
     Page, 
     TopDetails, 
@@ -76,9 +77,27 @@ export class DetailedPlant extends Component {
                         <CareType>Price: ${this.state.price}</CareType><br/>
                         
                         <form onSubmit={this.localAddToCart}>
+                            
+                        {/* <RadioGroup name="size" selectedValue={this.state.size} onChange={this.formEdit}>
+                            <Radio value="small" />Small
+                            <Radio value="medium" />Medium
+                            <Radio value="large" />Large
+                        </RadioGroup>
+                            
+                             */}
+                            
+                            
+                            
+                            
+                                                        
                             <label><input onChange={this.formEdit} type="radio" id="small" name="size" value="small" checked={this.state.size === "small"}/>&nbsp;Small</label>
                             <label><input onChange={this.formEdit} type="radio" id="medium" name="size" value="medium" checked={this.state.size === "medium"}/>&nbsp;Medium</label>
                             <label><input onChange={this.formEdit} type="radio" id="large" name="size" value="large" checked = {this.state.size === "large"}/>&nbsp;Large</label><br/><br/>
+                            
+                            
+                            
+                            
+                            
                             <label for="quantity">Quantity:</label>
                                 <select onChange={this.quantityHandler} name="quantity" id="quantity"  value={this.state.quantity}>
                                     <option value="1">1</option>

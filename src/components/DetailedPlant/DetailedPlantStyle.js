@@ -58,6 +58,12 @@ const AddtoCart = styled.button`
 `
 
 const Details = styled.section`
+
+input[type="radio"] {
+    opacity: 0;
+    position: fixed;
+    width: 0;
+  }
     margin-left: 5vw;
     margin-top: 0vh;
     margin-right: auto;
