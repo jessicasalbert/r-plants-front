@@ -4,7 +4,7 @@ const Background = styled.div`
     position: relative;
     top: 0;
     bottom: 0;
-    min-height: 100vh;
+    min-height: 100%;
     width: 100vw;
     z-index: 0;
     background-image: url("https://i.ibb.co/BVLGr4Z/Final-40.png");
@@ -20,7 +20,6 @@ const Background = styled.div`
 `
 
 const Page = styled.section`
-    ${'' /* display: inline-grid; */}
     position: relative;
     background-color: rgba(255, 255, 255, 0.5);
     left: 15vw;
@@ -98,16 +97,17 @@ const Photo = styled.img`
 `
 
 const CareType = styled.p`
+    margin-left: 1vw;
+    color: rgba(57, 54, 38, 1);
     font-size: 1.5rem;
 `
 
 const Description = styled.p`
+    color: rgba(57, 54, 38, 1);
     padding: 2%;
 `
 const BottomDetails = styled.section`
-    margin: 10px;
     padding: 10px;
-    margin-top: 10vh;
 `
 
 const PlantHeading = styled.h1`
@@ -121,6 +121,8 @@ const PlantHeading = styled.h1`
 `
 
 const Heading = styled.h1`
+    color: rgba(57, 54, 38, 1);
+    cursor: pointer;
     font-weight: normal;
     margin-top: 2vh;
     margin-left: 5vw;
@@ -158,7 +160,9 @@ const SubHeading = styled.h2`
 `
 
 const PetFriendly = styled.p`
+    color: rgba(57, 54, 38, 1);
     img {
+        color: rgba(57, 54, 38, 1);
         width: 25px;
         display: inline;
     }
@@ -199,9 +203,6 @@ const BreadCrumbs = styled.p`
         padding-left: 2vw;
     } */}
 `
-
-
-
 
 export {TopDetails, 
         BottomDetails, 

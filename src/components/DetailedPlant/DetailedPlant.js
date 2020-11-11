@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
+import Footer from '../Footer/Footer'
 import {
     Page, 
     TopDetails, 
@@ -15,14 +15,15 @@ import {
     PetFriendly,
     CareCard,
     Background,
-    PlantHeading
+    PlantHeading,
+    CareWrapper
 } from './DetailedPlantStyle'
 
 export class DetailedPlant extends Component {
 
     state = {
         clicked: false,
-        careInstructions: false,
+        careInstructions: true,
         size: "small",
         price: this.props.plant.price.small,
         quantity: 1
@@ -58,7 +59,7 @@ export class DetailedPlant extends Component {
     render() {
         return (
             <>
-            <BreadCrumbs><Link to="/">Home</Link> ⤜ <Link to="/plants">Store</Link> ⤜ <Link>{this.props.plant.name}</Link></BreadCrumbs>
+            {/* <BreadCrumbs><Link to="/">Home</Link> ⤜ <Link to="/plants">Store</Link> ⤜ <Link>{this.props.plant.name}</Link></BreadCrumbs> */}
             <Background>
             <Page>
                 <TopDetails>
@@ -69,7 +70,7 @@ export class DetailedPlant extends Component {
                     
                             {this.props.plant.pet_friendly ? 
                             <PetFriendly>
-                                <img alt="plant friendliness" src="https://www.svgrepo.com/show/133518/pet-friendly.svg"/>&nbsp;&nbsp;Pet-friendly!
+                                <img alt="plant friendliness" src="https://svgsilh.com/svg/155322.svg"/>&nbsp;&nbsp;Pet-friendly!
                             </PetFriendly>
                             : null}<br/>
                         <CareType>Price: ${this.state.price}</CareType><br/>
@@ -96,35 +97,43 @@ export class DetailedPlant extends Component {
                         </form>
                     </Details>
                 </TopDetails>
-                <Heading onClick={this.showCareInstructions}>Care Instructions</Heading>
+                {/* <Heading onClick={this.showCareInstructions}>Care Instructions</Heading> */}
+                {this.state.careInstructions ? <Heading onClick={this.showCareInstructions}>Care Instructions ➖</Heading> : <Heading onClick={this.showCareInstructions}>Care Instructions ➕</Heading>}
                 <BottomDetails>
                     {this.state.careInstructions ? 
                     <>
                     <CareCard>
                         <CareType>Light</CareType>
+                        <hr></hr>
                         <Description>{this.props.plant.light}</Description>
                     </CareCard>
                     <CareCard>
                         <CareType>Water</CareType>
+                        <hr></hr>
                         <Description>{this.props.plant.water}</Description>
                     </CareCard>
                     <CareCard>
-                        <CareType>Fertiizer</CareType>
+                        <CareType>Fertilizer</CareType>
+                        <hr></hr>
                         <Description>{this.props.plant.fertilizer}</Description>
                     </CareCard>
                     <CareCard>
                         <CareType>Humidity</CareType>
+                        <hr></hr>
                         <Description>{this.props.plant.humidity}</Description>
                     </CareCard>
                     <CareCard>
                         <CareType>Temperature</CareType>
+                        <hr></hr>
                         <Description>{this.props.plant.temperature}</Description>
                     </CareCard>
-                    </> : null}
+                    </>
+                    : null}
                 </BottomDetails>
 
             </Page>
             </Background>
+            <Footer />
             </>
         )
     }

@@ -30,8 +30,10 @@ const PlantImage = styled.img`
 }
 `
 
-const Title = styled.h3`
-    font-size: 100%;
+const Title = styled.p`
+    color: rgba(57, 54, 38, 1);
+    margin-top: 1vh;
+    font-size: 1.2rem;
     text-align: center;
 `
 

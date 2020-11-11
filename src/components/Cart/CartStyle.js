@@ -2,6 +2,7 @@ import styled from 'styled-components'
 import { Link } from 'react-router-dom';
 
 const CartWrapper = styled.div`
+    color: rgba(57, 54, 38, 1);
     h4 {
         color:rgba(57, 54, 38, 1);
         padding-top: 1vh;

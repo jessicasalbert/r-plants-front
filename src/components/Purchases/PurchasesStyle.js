@@ -8,6 +8,7 @@ export const PurchaseStyle = styled.section`
 `
 
 export const PurchaseTable = styled.tr`
+    cursor: pointer;
     margin-top: 1vh;
     display: flex;
     font-size: 1.5rem;
