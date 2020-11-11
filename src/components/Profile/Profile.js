@@ -49,7 +49,7 @@ export class Profile extends Component {
                 <OrderHistory>Order History for {this.props.user.name}</OrderHistory>
                 {this.state.orders.length > 0 ? 
                 <>
-                <LastOrderTitle>Your latest purchase was...</LastOrderTitle>
+                <LastOrderTitle>Your latest purchase...</LastOrderTitle>
                 <LastOrder>{this.renderLatestPurchase()}</LastOrder>
                 </>
                 : 

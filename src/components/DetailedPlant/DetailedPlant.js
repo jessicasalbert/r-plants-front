@@ -92,7 +92,7 @@ export class DetailedPlant extends Component {
                             <br/><br/>
                             
                             
-                            <label for="quantity">Quantity:</label>
+                            <label for="quantity" className="quantity">Quantity:</label>
                                 <select onChange={this.quantityHandler} name="quantity" id="quantity"  value={this.state.quantity}>
                                     <option value="1">1</option>
                                     <option value="2">2</option>

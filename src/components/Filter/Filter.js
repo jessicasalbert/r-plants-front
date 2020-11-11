@@ -18,7 +18,7 @@ export class Filter extends Component {
     render() {
         return (
             <FilterStyle onClick={this.props.filter}>
-                Pet-Friendly: <img alt="pet friendliness" src={this.props.isFiltered ? "https://svgsilh.com/svg/155322.svg" : "https://cdn.onlinewebfonts.com/svg/img_411676.png"}/>
+                Pet-Friendly <img alt="pet friendliness" src={this.props.isFiltered ? "https://svgsilh.com/svg/155322.svg" : "https://cdn.onlinewebfonts.com/svg/img_411676.png"}/>
             </FilterStyle>
         )
     }

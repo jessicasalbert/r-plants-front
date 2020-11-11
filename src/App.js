@@ -49,15 +49,16 @@ class App extends React.Component {
   }
 
   setLocalStorage = (newCart, newTotal) => {
+    console.log(newCart, newTotal)
     if (newCart.length === 0) {
       localStorage.removeItem("cart")
     } else {
-      localStorage.setItem("cart", JSON.stringify(this.state.cart))
+      localStorage.setItem("cart", JSON.stringify(newCart))
     }
-    if (newTotal === 0) {
+    if (newTotal === "0") {
       localStorage.removeItem("total")
     } else {
-      localStorage.setItem("total", JSON.stringify(this.state.cartTotal))
+      localStorage.setItem("total", JSON.stringify(newTotal))
     }
   }
 

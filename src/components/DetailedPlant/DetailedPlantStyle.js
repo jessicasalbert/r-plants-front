@@ -108,6 +108,10 @@ const UnselectedLabel = styled.label`
 
 const Details = styled.section`
 
+    .quantity {
+        color: rgba(100, 114, 97, 1)
+    }
+
     input[type="radio"] {
         opacity: 0;
         position: fixed;
