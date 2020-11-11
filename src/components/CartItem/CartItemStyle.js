@@ -18,25 +18,33 @@ const CartImage = styled.img`
 `
 
 const Delete = styled.button`
-box-shadow: 0px 8px 8px -6px rgba(0,0,0,.5);
-display: inline-block;
-cursor: pointer;
-outline: none;
-border: none;
-background-color: rgba(147, 141, 123, 0.5);
-padding: 5px 10px;
-font-size: 16px;
-border-radius: 4px;
-margin: 5px;
-max-width: 100px;
-@media (max-width: 1023px) {
-    padding: 10px;
-    margin-left: 0;
-}
-@media (max-width: 412px) {
-    padding: 3px;
-    ${'' /* margin: 0; */}
-}
+    color: rgba(57, 54, 38, 1);
+    box-shadow: 0px 8px 8px -6px rgba(0,0,0,.5);
+    display: inline-block;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    background-color: rgba(147, 141, 123, 0.5);
+    padding: 5px 10px;
+    font-size: 16px;
+    border-radius: 4px;
+    transition: all 0.2s ease-in-out;
+    margin: 5px;
+    max-width: 100px;
+    &:active {
+        letter-spacing: 0.5px;
+        -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+        -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+        box-shadow: 5px 40px -10px rgba(0,0,0,0.57);
+    }
+    @media (max-width: 1023px) {
+        padding: 10px;
+        margin-left: 0;
+    }
+    @media (max-width: 412px) {
+        padding: 3px;
+        ${'' /* margin: 0; */}
+    }
 
 `
 
