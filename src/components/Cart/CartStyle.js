@@ -1,6 +1,14 @@
 import styled from 'styled-components'
 import { Link } from 'react-router-dom';
 
+const Heading = styled.h1`
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 15vw;
+    opacity: 1;
+    margin-left: 13vw;
+    margin-bottom: 2vh;
+`
+
 const CartWrapper = styled.div`
     color: rgba(57, 54, 38, 1);
     h4 {
@@ -104,5 +112,5 @@ const SignUpLink = styled(Link)`
     margin-left: 1vw;
 `
 
-export {CartWrapper, CartStyle, EmptyCart, Total, CheckoutLink, SignUpLink}
+export {CartWrapper, CartStyle, EmptyCart, Total, CheckoutLink, SignUpLink, Heading}
 

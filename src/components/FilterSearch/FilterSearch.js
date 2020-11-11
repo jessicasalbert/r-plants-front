@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import {SearchStyle, FilterWrapper} from './FilterSearchStyle'
+import {SearchStyle, FilterWrapper, Heading} from './FilterSearchStyle'
 import Filter from '../../components/Filter/Filter'
 import Search from '../../components/Search/Search'
 
@@ -7,11 +7,14 @@ export class FilterSearch extends Component {
 
     render() {
         return (
+            <>
+            <Heading>store</Heading>
             <FilterWrapper>
                 <SearchStyle>
                     <Search search={this.props.search}/><Filter isFiltered={this.props.isFiltered} filter={this.props.filter}/>
                 </SearchStyle>
             </FilterWrapper>
+            </>
         )
     }
 }

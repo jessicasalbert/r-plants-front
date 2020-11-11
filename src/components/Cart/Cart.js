@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import CartItem from '../CartItem/CartItem'
 import Footer from '../Footer/Footer'
-import {CartWrapper, CartStyle, EmptyCart, Total, SignUpLink, CheckoutLink} from './CartStyle'
+import {CartWrapper, CartStyle, EmptyCart, Total, SignUpLink, CheckoutLink, Heading} from './CartStyle'
 
 
 export class Cart extends Component {
@@ -18,7 +18,7 @@ export class Cart extends Component {
         return (
             <>
             <CartWrapper>
-                <h4>Shopping Cart</h4>
+                <Heading>cart</Heading>
                 <CartStyle>
                     {this.props.cart.length > 0 
                     ?
