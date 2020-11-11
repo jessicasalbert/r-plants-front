@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Redirect } from 'react-router-dom'
 import Purchases from '../../components/Purchases/Purchases'
-import {PurchaseWrapper, OrderHistory, LastOrderTitle, LastOrder, AllOrders, PurchaseColumn, PrevOrderTitle} from './ProfileStyle'
+import {PurchaseWrapper, OrderHistory, LastOrderTitle, LastOrder, Heading, PurchaseColumn, PrevOrderTitle} from './ProfileStyle'
 import Footer from '../Footer/Footer'
 
 export class Profile extends Component {
@@ -45,6 +45,7 @@ export class Profile extends Component {
             {this.props.user ? 
             <>
             <PurchaseWrapper>
+            <Heading>profile</Heading>
             <PurchaseColumn>
                 <OrderHistory>Order History for {this.props.user.name}</OrderHistory>
                 {this.state.orders.length > 0 ? 
@@ -57,9 +58,7 @@ export class Profile extends Component {
                 }
                 <hr/>
                 <PrevOrderTitle>Previous orders:</PrevOrderTitle>
-                <AllOrders>  
                     {this.renderPurchases()}
-                </AllOrders>
                 </PurchaseColumn>
             </PurchaseWrapper>
             <Footer />

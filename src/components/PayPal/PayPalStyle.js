@@ -1,8 +1,8 @@
 import styled from 'styled-components'
 
 const PPstyle = styled.div`
-    width: 50px;
-    margin: auto;
+    width: 15vw;
+    margin-left: 5vw;
 `
 
 export default PPstyle

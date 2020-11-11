@@ -9,6 +9,19 @@ const Heading = styled.h1`
     margin-bottom: 2vh;
 `
 
+const TotalButtonWrapper = styled.div`
+    max-width: 80vw;
+    height: auto;
+    display: flex;
+    justify-content: space-evenly;
+    @media screen and (max-width: 1020px) {
+        max-height: 10vh;
+        }
+        @media screen and (max-width: 720px) {
+        max-height: 40px;
+        }
+`
+
 const CartWrapper = styled.div`
     color: rgba(57, 54, 38, 1);
     h4 {
@@ -52,9 +65,9 @@ const EmptyCart = styled.p`
 const Total = styled.p`
     color:rgba(57, 54, 38, 1);
     font-size: 2rem;
-    margin-left: 70vw;
+    ${'' /* margin-left: 70vw; */}
     @media screen and (max-width: 926px) {
-        margin-left: 50vw;
+        ${'' /* margin-left: 50vw; */}
     }
 `
 
@@ -82,8 +95,8 @@ const CheckoutLink = styled(Link)`
         -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
         box-shadow: 5px 40px -10px rgba(0,0,0,0.57);
     }
-    bottom: 27px;
     margin-left: 5vw;
+
 `
 
 const SignUpLink = styled(Link)`
@@ -110,9 +123,7 @@ const SignUpLink = styled(Link)`
         -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
         box-shadow: 5px 40px -10px rgba(0,0,0,0.57);
     }
-    bottom: 27px;
-    margin-left: 1vw;
 `
 
-export {CartWrapper, CartStyle, EmptyCart, Total, CheckoutLink, SignUpLink, Heading}
+export {CartWrapper, CartStyle, EmptyCart, Total, CheckoutLink, SignUpLink, Heading, TotalButtonWrapper}
 

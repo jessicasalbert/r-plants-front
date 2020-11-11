@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import CartItem from '../CartItem/CartItem'
 import Footer from '../Footer/Footer'
-import {CartWrapper, CartStyle, EmptyCart, Total, SignUpLink, CheckoutLink, Heading} from './CartStyle'
+import {CartWrapper, CartStyle, EmptyCart, Total, SignUpLink, CheckoutLink, Heading, TotalButtonWrapper} from './CartStyle'
 
 
 export class Cart extends Component {
@@ -24,15 +24,17 @@ export class Cart extends Component {
                     ?
                     <> 
                     {this.renderCart()}
-                    <Total>Total: ${this.props.total}</Total>
                     {
                         this.props.user ? 
-                        <CheckoutLink to="/checkout">Proceed to checkout</CheckoutLink>
+                        <TotalButtonWrapper>
+                        <CheckoutLink to="/checkout">Proceed to checkout</CheckoutLink><Total>Total: ${this.props.total}</Total>
+                        </TotalButtonWrapper>
                         :
-                        <>
+                        <TotalButtonWrapper>
                         <CheckoutLink to="/checkout">Checkout as guest</CheckoutLink>
                         <SignUpLink to="/signup">Sign Up</SignUpLink>
-                        </>
+                        <Total>Total: ${this.props.total}</Total>
+                        </TotalButtonWrapper>
                     }
                     </>
                     : 

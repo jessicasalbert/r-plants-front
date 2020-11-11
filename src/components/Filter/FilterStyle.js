@@ -1,13 +1,17 @@
 import styled from 'styled-components'
 
 const FilterStyle = styled.p`
-    display: inline-block;
+    color:rgba(57, 54, 38, 1);
+    ${'' /* display: inline-block; */}
     width: 150px;
     margin: auto;
-    img {
-        max-width: 20px;
-        display: flex-end;
-    }
+    margin-left: 2vw;
+    font-size: 1.2rem;
 `
 
-export default FilterStyle
+const AnimalPrint = styled.img`
+    position: absolute;
+    max-width: 25px;
+`
+
+export {FilterStyle, AnimalPrint}
