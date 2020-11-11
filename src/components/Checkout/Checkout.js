@@ -17,9 +17,6 @@ export class Checkout extends Component {
         guestUserId: null
     }
 
-    stripePromise = () => {
-        return loadStripe(process.env.PUBLISHABLE_KEY)
-    }
 
     generateGuest = () => {
         const user = {
@@ -134,7 +131,7 @@ export class Checkout extends Component {
             <h4>Checkout</h4>
                 <CartStyle>
                     {this.renderCart()}
-                    <h1 onClick={this.clickHandler}>Enter Details</h1>
+                    <h1 >Enter Details</h1>
                     {this.state.clicked ? 
                     <form>
                         <input type="number" placeholder="Enter CC"/>
@@ -143,10 +140,16 @@ export class Checkout extends Component {
                     </form> 
                     : null
                     }
-                    <CardElementContainer><StripeCheckout
-                stripeKey="pk_test_51Hm4N8JoLkskNX574EcbxBPK2nXQZQfCyOskJAJFVeXS6lt8rtPgxmDG3XPhZ5m0KHuUqHLkNz8Jq4rRDrNt8scv00l8gmEYJn"
-                token={this.handleToken}
-                /></CardElementContainer>
+                    <div>
+                    <StripeCheckout 
+                    stripeKey="pk_test_51Hm4N8JoLkskNX574EcbxBPK2nXQZQfCyOskJAJFVeXS6lt8rtPgxmDG3XPhZ5m0KHuUqHLkNz8Jq4rRDrNt8scv00l8gmEYJn"
+                    token={this.handleToken}
+                    billingAddress
+                    shippingAddress
+                    amount={this.props.total * 100}
+                    ComponentClass="div"
+                    />
+                    </div>
                 <PayPal />
                 </CartStyle>
             </CartWrapper>
