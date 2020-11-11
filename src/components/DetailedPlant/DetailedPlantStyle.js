@@ -31,6 +31,7 @@ const Page = styled.section`
 
 
 const AddtoCart = styled.button`
+    box-shadow: 0px 8px 8px -6px rgba(0,0,0,.5);
     color: #fff;
     font-size: 1rem;
     text-decoration: none;
@@ -42,18 +43,15 @@ const AddtoCart = styled.button`
     outline: none;
     transition: all 0.4s ease 0s;
     cursor: pointer;
-
+    &:hover {
+        color: rgba(57, 54, 38, 1);
+        background: rgba(181, 181, 161, 1);
+    }
     &:active {
-        background: rgba(57, 54, 38, 1);
         letter-spacing: 0.5px;
         -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
         -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
         box-shadow: 5px 40px -10px rgba(0,0,0,0.57);
-        transition: all 0.4s ease 0s;
-    }
-    &:hover {
-        color: rgba(57, 54, 38, 1);
-        background: rgba(181, 181, 161, 1);
     }
     @media (max-width: 1023px) {
         padding: 10px;
@@ -61,44 +59,50 @@ const AddtoCart = styled.button`
     }
 `
 const SelectedLabel = styled.label`
-    
     display: inline-block;
-    background-color: purple;
-    padding: 10px 20px;
-    font-family: sans-serif, Arial;
+    box-shadow: inset 0px 0px 8px 0px rgba(0,0,0,.5);
+    background-color: rgb(149, 176, 113, 0.75);
+    padding: 5px 10px;
     font-size: 16px;
-    border: 2px solid #444;
+    border: 1px solid rgba(57, 54, 38, 1);
     border-radius: 4px;
-
+    margin: 5px;
     @media (max-width: 1023px) {
         padding: 10px;
-        margin-left: 0;
     }
     @media (max-width: 412px) {
-        padding: 3.5px;
-        margin-left: 0;
+        padding: 3px;
+        ${'' /* margin: 0; */}
     }
-
 `
 
 const UnselectedLabel = styled.label`
-display: inline-block;
-background-color: #ddd;
-padding: 10px 20px;
-font-family: sans-serif, Arial;
-font-size: 16px;
-border: 2px solid #444;
-border-radius: 4px;
+    box-shadow: 0px 8px 8px -6px rgba(0,0,0,.5);
+    display: inline-block;
+    outline: none;
+    border: none;
+    background-color: rgba(147, 141, 123, 0.5);
+    padding: 5px 10px;
+    font-size: 16px;
+    border-radius: 4px;
+    margin: 5px;
     @media (max-width: 1023px) {
         padding: 10px;
         margin-left: 0;
     }
     @media (max-width: 412px) {
-        padding: 3.5px;
-        margin-left: 0;
+        padding: 3px;
+        ${'' /* margin: 0; */}
     }
-    
 `
+
+// color:rgba(57, 54, 38, 1); - dark yellow/brown
+//     color:rgb(149, 176, 113, 1); - lighter green (nav)
+//     color:rgba(100, 114, 97, 1); - forest green
+//     color:rgba(147, 141, 123, 1); - clay/grey
+//     color:rgba(181, 181, 161, 1); - light clay/yellow
+//     color:rgba(239, 234, 225, 1); -  whiteish
+//     color: rgb(248, 148, 25, 1); - orange
 
 
 
@@ -109,11 +113,6 @@ const Details = styled.section`
         position: fixed;
         width: 0;
     }
-        ${'' /* margin-left: 5vw; */}
-        ${'' /* margin-top: 0vh; */}
-        ${'' /* margin-right: auto; */}
-        ${'' /* text-align: center; */}
-        ${'' /* position: relative; */}
 
     @media (max-width: 900px) {
         margin: 0;
