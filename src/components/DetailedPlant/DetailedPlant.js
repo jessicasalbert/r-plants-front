@@ -18,7 +18,8 @@ import {
     PlantHeading,
     CareWrapper,
     UnselectedLabel,
-    SelectedLabel
+    SelectedLabel,
+    Price
 } from './DetailedPlantStyle'
 
 export class DetailedPlant extends Component {
@@ -75,7 +76,7 @@ export class DetailedPlant extends Component {
                                 <img alt="plant friendliness" src="https://svgsilh.com/svg/155322.svg"/>&nbsp;&nbsp;Pet-friendly!
                             </PetFriendly>
                             : null}<br/>
-                        <CareType>Price: ${this.state.price}</CareType><br/>
+                        <Price>Price: ${this.state.price}</Price><br/>
                         
                         <form onSubmit={this.localAddToCart}>
 

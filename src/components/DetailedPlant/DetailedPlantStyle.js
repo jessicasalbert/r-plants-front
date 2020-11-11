@@ -35,8 +35,8 @@ const AddtoCart = styled.button`
     font-size: 1rem;
     text-decoration: none;
     background: rgba(147, 141, 123, 1);
-    padding: 20px;
-    border-radius: 8px;
+    padding: 15px;
+    border-radius: 10px;
     display: inline-block;
     border: none;
     outline: none;
@@ -55,16 +55,30 @@ const AddtoCart = styled.button`
         color: rgba(57, 54, 38, 1);
         background: rgba(181, 181, 161, 1);
     }
+    @media (max-width: 1023px) {
+        padding: 10px;
+        margin-left: 0;
+    }
 `
 const SelectedLabel = styled.label`
     
-display: inline-block;
-background-color: purple;
-padding: 10px 20px;
-font-family: sans-serif, Arial;
-font-size: 16px;
-border: 2px solid #444;
-border-radius: 4px;
+    display: inline-block;
+    background-color: purple;
+    padding: 10px 20px;
+    font-family: sans-serif, Arial;
+    font-size: 16px;
+    border: 2px solid #444;
+    border-radius: 4px;
+
+    @media (max-width: 1023px) {
+        padding: 10px;
+        margin-left: 0;
+    }
+    @media (max-width: 412px) {
+        padding: 3.5px;
+        margin-left: 0;
+    }
+
 `
 
 const UnselectedLabel = styled.label`
@@ -75,6 +89,14 @@ font-family: sans-serif, Arial;
 font-size: 16px;
 border: 2px solid #444;
 border-radius: 4px;
+    @media (max-width: 1023px) {
+        padding: 10px;
+        margin-left: 0;
+    }
+    @media (max-width: 412px) {
+        padding: 3.5px;
+        margin-left: 0;
+    }
     
 `
 
@@ -87,36 +109,74 @@ const Details = styled.section`
         position: fixed;
         width: 0;
     }
-        margin-left: 5vw;
-        margin-top: 0vh;
-        margin-right: auto;
-        text-align: center;
-        position: relative;
-        }
-    
+        ${'' /* margin-left: 5vw; */}
+        ${'' /* margin-top: 0vh; */}
+        ${'' /* margin-right: auto; */}
+        ${'' /* text-align: center; */}
+        ${'' /* position: relative; */}
 
+    @media (max-width: 900px) {
+        margin: 0;
+        align-content: center;
+        width: 100%;
+        height: auto;
+    }
+    @media (max-width: 812px) {
+        align-content: center;
+        max-width: 50vw;
+        height: auto;
+    }
 `
 
 const TopDetails = styled.section`
-    width: 100vw;
+    width: 100%;
     display: flex;
     flex-flow: row wrap;
     flex-direction: row;
     align-content: flex-start;
     margin: auto;
+    @media (max-width: 1023px) {
+        align-content: center;
+        flex-direction: column;
+    }
+    @media (max-width: 800px) {
+        flex-direction: column;
+        align-content: center;
+    }
 
 `
 
 const Photo = styled.img`
     position: relative;
-    margin-top: 5vh;
-    margin-left: 5vh;
-    margin-right: 0;
-    width: 30vw;
+    margin: auto;
+    margin-right: 5%;
+    margin-left: 10%;
+    margin-top: 5%;
+    height: 40vh;
     border-radius: 20px;
     align-content: center;
     &:hover {
         cursor: zoom-in;
+    }
+    @media (max-width: 1024px) {
+        margin: auto;
+        ${'' /* margin-top: 5vh;
+        margin-right: 0;
+        margin-left: 0;
+        margin-bottom: 0;
+        align-content: center;
+        width: 100%;
+        height: auto; */}
+    }
+    @media (max-width: 960px) {
+        align-content: center;
+        width: 100%;
+        height: auto;
+    }
+    @media (max-width: 812px) {
+        align-content: center;
+        max-width: 50vw;
+        height: auto;
     }
 
 `
@@ -125,6 +185,18 @@ const CareType = styled.p`
     margin-left: 1vw;
     color: rgba(57, 54, 38, 1);
     font-size: 1.5rem;
+`
+
+const Price = styled.p`
+    margin-left: 1vw;
+    color: rgba(57, 54, 38, 1);
+    font-size: 1.5rem;
+    @media (max-width: 960px) {
+    margin-top: 0;
+    }
+    @media (max-width: 812px) {
+
+    }
 `
 
 const Description = styled.p`
@@ -143,6 +215,13 @@ const PlantHeading = styled.h1`
     margin-left: 0;
     margin-top: 10vh;
     font-weight: normal;
+    @media (max-width: 1024px) {
+        margin-top: 0;
+        font-size: 3em;
+    }
+    @media (max-width: 812px) {
+        font-size: 2em;
+    }
 `
 
 const Heading = styled.h1`
@@ -163,15 +242,6 @@ const CareCard = styled.section`
     max-width: 80vw;
     max-height: 100%;
 
-    @media (max-width: 900px) {
-        max-width: 26vw;
-        max-height: 100%;
-    }
-    @media (max-width: 800px) {
-        max-width: 50vw;
-        max-height: 100%;
-    }
-
     &:hover {
         box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
     }
@@ -182,6 +252,14 @@ const SubHeading = styled.h2`
     margin-bottom: 2vh;
     color: rgba(100, 114, 97, 1);
     font-size: 2em;
+    @media (max-width: 1024px) {
+        margin-top: 0;
+        margin-bottom: 0;
+        font-size: 1.7em;
+    }
+    @media (max-width: 812px) {
+        font-size: 1.5em;
+    }
 `
 
 const PetFriendly = styled.p`
@@ -244,5 +322,6 @@ export {TopDetails,
         Background,
         PlantHeading,
         SelectedLabel,
-        UnselectedLabel
+        UnselectedLabel,
+        Price
 }
