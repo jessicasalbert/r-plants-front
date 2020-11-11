@@ -58,25 +58,36 @@ const AddtoCart = styled.button`
 `
 const SelectedLabel = styled.label`
     
-display: inline-block;
-background-color: purple;
-padding: 10px 20px;
-font-family: sans-serif, Arial;
-font-size: 16px;
-border: 2px solid #444;
-border-radius: 4px;
+    display: inline-block;
+    background-color: rgb(149, 176, 113, 0.75);
+    padding: 5px 10px;
+    font-family: sans-serif, Arial;
+    font-size: 16px;
+    border: 2px solid rgba(57, 54, 38, 1);
+    border-radius: 4px;
+    margin: 5px
 `
 
 const UnselectedLabel = styled.label`
-display: inline-block;
-background-color: #ddd;
-padding: 10px 20px;
-font-family: sans-serif, Arial;
-font-size: 16px;
-border: 2px solid #444;
-border-radius: 4px;
+    display: inline-block;
+    background-color: rgba(147, 141, 123, 0.5);
+    padding: 5px 10px;
+    font-family: sans-serif, Arial;
+    border: 1px solid rgba(57, 54, 38, 1);
+    font-size: 16px;
+    
+    border-radius: 4px;
+    margin: 5px
     
 `
+
+// color:rgba(57, 54, 38, 1); - dark yellow/brown
+//     color:rgb(149, 176, 113, 1); - lighter green (nav)
+//     color:rgba(100, 114, 97, 1); - forest green
+//     color:rgba(147, 141, 123, 1); - clay/grey
+//     color:rgba(181, 181, 161, 1); - light clay/yellow
+//     color:rgba(239, 234, 225, 1); -  whiteish
+//     color: rgb(248, 148, 25, 1); - orange
 
 
 
@@ -87,12 +98,12 @@ const Details = styled.section`
         position: fixed;
         width: 0;
     }
-        margin-left: 5vw;
-        margin-top: 0vh;
-        margin-right: auto;
-        text-align: center;
-        position: relative;
-        }
+    margin-left: 5vw;
+    margin-top: 0vh;
+    margin-right: auto;
+    text-align: center;
+    position: relative;
+    }
     
 
 `
