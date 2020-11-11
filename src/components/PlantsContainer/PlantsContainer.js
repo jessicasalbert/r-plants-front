@@ -69,7 +69,7 @@ export class PlantsContainer extends Component {
                         return (
                         <>
                         <StoreWrapper>
-                            <FilterSearch filter={this.filterClickHandler} search={this.searchHandler}/>
+                            <FilterSearch filter={this.filterClickHandler} isFiltered={this.state.filter} search={this.searchHandler}/>
                             <PlantContainerStyle>
                                 {this.renderPlants()}
                             </PlantContainerStyle>

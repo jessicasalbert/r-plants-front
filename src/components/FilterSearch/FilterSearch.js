@@ -9,7 +9,7 @@ export class FilterSearch extends Component {
         return (
             <FilterWrapper>
                 <SearchStyle>
-                    <Search search={this.props.search}/><Filter filter={this.props.filter}/>
+                    <Search search={this.props.search}/><Filter isFiltered={this.props.isFiltered} filter={this.props.filter}/>
                 </SearchStyle>
             </FilterWrapper>
         )

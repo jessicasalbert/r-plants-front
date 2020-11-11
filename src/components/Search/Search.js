@@ -20,7 +20,7 @@ export class Search extends Component {
     render() {
         return (
             <>
-                Search<SearchStyling onChange={this.localSearchHandler} type="text" name="search" value={this.state.search}></SearchStyling>
+                <SearchStyling onChange={this.localSearchHandler} placeholder="Search houseplants..." type="text" name="search" value={this.state.search}></SearchStyling>
             </>
         )
     }
