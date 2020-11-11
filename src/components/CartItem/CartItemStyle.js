@@ -17,8 +17,35 @@ const CartImage = styled.img`
     margin: 0;
 `
 
-const CartText = styled.p`
-    text-align: center;
+const CartText = styled.div`
+    display: flex;
+    margin: auto;
+    margin-left: 2.5vw;
+    margin-right: 2.5vw;
+    justify-content: space-between;
+    position: relative;
+    width: 100vw;
+    @media screen and (max-width: 926px) {
+        display: flex;
+        flex-direction: column;
+    }
 `
 
-export {CartCard, CartImage, CartText}
+const Price = styled.p`
+    font-size: 1.2rem;
+    ${'' /* align-self: flex-end; */}
+`
+
+const Quantity = styled.p`
+    font-size: 1.2rem;
+`
+
+const Size = styled.p`
+    font-size: 1.2rem;
+`
+
+const Name = styled.p`
+    font-size: 1.8rem;
+`
+
+export {CartCard, CartImage, CartText, Price, Name, Quantity, Size}

@@ -1,8 +1,7 @@
 import React, { Component } from 'react'
 import CartItem from '../CartItem/CartItem'
 import Footer from '../Footer/Footer'
-import { Link } from 'react-router-dom'
-import {CartWrapper, CartStyle, EmptyCart} from './CartStyle'
+import {CartWrapper, CartStyle, EmptyCart, Total, SignUpLink, CheckoutLink} from './CartStyle'
 
 
 export class Cart extends Component {
@@ -25,20 +24,19 @@ export class Cart extends Component {
                     ?
                     <> 
                     {this.renderCart()}
-                    <h1>Total: ${this.props.total}</h1>
-                    {/* <button onClick={this.purchaseHandler}>Purchase</button> */}
+                    <Total>Total: ${this.props.total}</Total>
                     {
                         this.props.user ? 
-                        <Link to="/checkout">Check out</Link>
+                        <CheckoutLink to="/checkout">Proceed to checkout</CheckoutLink>
                         :
                         <>
-                        <Link to="/signup">Sign Up</Link>
-                        <Link to="/checkout">Check out as guest</Link>
+                        <CheckoutLink to="/checkout">Checkout as guest</CheckoutLink>
+                        <SignUpLink to="/signup">Sign Up</SignUpLink>
                         </>
                     }
                     </>
                     : 
-                    <EmptyCart>No items to display</EmptyCart>}
+                    <><hr></hr><EmptyCart>Your shopping cart is empty!</EmptyCart></>}
                 </CartStyle>
             </CartWrapper>
             <Footer />

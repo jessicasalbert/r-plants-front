@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import {CartCard, CartImage, CartText} from './CartItemStyle'
+import {CartCard, CartImage, CartText, Price, Name, Quantity, Size} from './CartItemStyle'
 
 export class CartItem extends Component {
     state = {
@@ -22,10 +22,10 @@ export class CartItem extends Component {
             <CartCard>
                 <CartImage src={this.props.plant.image}></CartImage>
                 <CartText>
-                    {this.props.plant.name}
-                    <p>Size: {this.props.plant.size[0].toUpperCase() + this.props.plant.size.slice(1)}</p>
-                    <p>Quantity: {this.props.plant.quantity}</p>
-                    <p>Price: ${this.props.plant.price[this.props.plant.size] * this.props.plant.quantity}</p>
+                    <Name>{this.props.plant.name}</Name>
+                    <Size>Size: {this.props.plant.size[0].toUpperCase() + this.props.plant.size.slice(1)}</Size>
+                    <Quantity>Quantity: {this.props.plant.quantity}</Quantity>
+                    <Price>Price: ${this.props.plant.price[this.props.plant.size] * this.props.plant.quantity}</Price>
                 </CartText>
             </CartCard>
         )

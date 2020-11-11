@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
-import {Page, TopDetails, Details, Photo, BottomDetails} from './DetailedPlantStyle'
+import { Link } from 'react-router-dom'
+import {Page, TopDetails, Details, Photo, BottomDetails, BreadCrumbs} from './DetailedPlantStyle'
 
 export class DetailedPlant extends Component {
 
@@ -40,6 +41,8 @@ export class DetailedPlant extends Component {
 
     render() {
         return (
+            <>
+            <BreadCrumbs><Link to="/">Home</Link> ⤜ <Link to="/plants">Store</Link> ⤜ <Link>{this.props.plant.name}</Link></BreadCrumbs>
             <Page>
                 <TopDetails>
                 <Photo>
@@ -103,6 +106,7 @@ export class DetailedPlant extends Component {
                 </BottomDetails>
 
             </Page>
+            </>
         )
     }
 }

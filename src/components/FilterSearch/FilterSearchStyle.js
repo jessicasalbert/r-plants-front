@@ -4,11 +4,11 @@ export const SearchStyle = styled.section`
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: inline;
+    justify-content: space-between;
 `
 
 export const FilterWrapper = styled.div`
-    display: flex;
+    display: relative;
     height: 100%;
     margin: auto;
     max-width: 30vw;
@@ -18,4 +18,7 @@ export const FilterWrapper = styled.div`
     justify-content: center;
     align-content: center;
     padding: 10px;
+    @media (max-width: 900px) {
+        max-width: 60vw;
+    }
 `

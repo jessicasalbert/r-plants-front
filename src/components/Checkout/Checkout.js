@@ -4,7 +4,7 @@ import PayPal from '../PayPal/PayPal'
 import { loadStripe } from '@stripe/stripe-js'
 import { Elements } from '@stripe/react-stripe-js'
 import { CardElement } from '@stripe/react-stripe-js'
-import { CardElementContainer } from './CheckoutStyle'
+import { CheckoutContainer } from './CheckoutStyle'
 import StripeCheckout from 'react-stripe-checkout';
 
 import {CartWrapper, CartStyle } from '../Cart/CartStyle'
@@ -138,7 +138,7 @@ export class Checkout extends Component {
                     </form> 
                     : null
                     }
-                    <div>
+                    <CheckoutContainer>
                     <StripeCheckout 
                     stripeKey="pk_test_51Hm4N8JoLkskNX574EcbxBPK2nXQZQfCyOskJAJFVeXS6lt8rtPgxmDG3XPhZ5m0KHuUqHLkNz8Jq4rRDrNt8scv00l8gmEYJn"
                     token={this.handleToken}
