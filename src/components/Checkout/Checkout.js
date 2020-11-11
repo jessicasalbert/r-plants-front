@@ -45,10 +45,8 @@ export class Checkout extends Component {
         
     }
 
-    purchaseHandler = (e) => {
+    purchaseHandler = () => {
 
-        e.preventDefault()
-    
         const orderNumber = Math.round(Math.random() * 1000000).toString()
         const id = this.props.user? this.props.user.id : this.state.guestUserId
         const body = {
@@ -56,7 +54,6 @@ export class Checkout extends Component {
                     user_id: id,
                     total: this.props.total.toString()
             }
-        console.log(body)
 
         const options = {
             method: "POST",
@@ -131,7 +128,7 @@ export class Checkout extends Component {
             <h4>Checkout</h4>
                 <CartStyle>
                     {this.renderCart()}
-                    <h1 >Enter Details</h1>
+                    {/* <h1 >Enter Details</h1>
                     {this.state.clicked ? 
                     <form>
                         <input type="number" placeholder="Enter CC"/>
@@ -148,9 +145,10 @@ export class Checkout extends Component {
                     shippingAddress
                     amount={this.props.total * 100}
                     ComponentClass="div"
-                    />
-                    <PayPal />
-                    </CheckoutContainer>
+                    /> */}
+                    <PayPal amount={this.props.total} purchaseHandler={this.purchaseHandler}/>
+                    {/* <button onClick={this.purchaseHandler}>Purchase</button> */}
+                    {/* </div> */}
                 </CartStyle>
             </CartWrapper>
 
