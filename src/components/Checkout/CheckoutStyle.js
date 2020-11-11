@@ -6,10 +6,9 @@ const CardElementContainer = styled.div`
     align-items: center;
 
     & .StripeElement {
-    width: 100%;
-    padding: 15px;
+        width: 100%;
+        padding: 15px;
     }
-
 `
 
 export {CardElementContainer}
