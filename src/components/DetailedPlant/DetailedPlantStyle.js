@@ -59,6 +59,7 @@ const AddtoCart = styled.button`
     }
 `
 const SelectedLabel = styled.label`
+    color: rgba(57, 54, 38, 1);
     display: inline-block;
     box-shadow: inset 0px 0px 8px 0px rgba(0,0,0,.5);
     background-color: rgb(149, 176, 113, 0.75);
@@ -76,6 +77,7 @@ const SelectedLabel = styled.label`
 `
 
 const UnselectedLabel = styled.label`
+    color: rgba(57, 54, 38, 1);
     box-shadow: 0px 8px 8px -6px rgba(0,0,0,.5);
     display: inline-block;
     cursor: pointer;
