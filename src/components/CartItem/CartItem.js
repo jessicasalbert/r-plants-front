@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { NavLink } from 'react-router-dom';
 import {CartCard, CartImage, Delete, CartText, Price, Name, Quantity, Size} from './CartItemStyle'
 
 export class CartItem extends Component {
@@ -16,9 +17,9 @@ export class CartItem extends Component {
     render() {
         return (
             <CartCard>
-                <CartImage src={this.props.plant.image}></CartImage>
+                <NavLink to={`/plants/${this.props.plant.id}`}><CartImage src={this.props.plant.image}></CartImage></NavLink>
                 <CartText>
-                    <Name>{this.props.plant.name}</Name>
+                <NavLink to={`/plants/${this.props.plant.id}`}><Name>{this.props.plant.name}</Name></NavLink>
                     <Size>Size: {this.props.plant.size[0].toUpperCase() + this.props.plant.size.slice(1)}</Size>
                     <Quantity>Quantity: {this.props.plant.quantity}</Quantity>
                     <Price>Price: ${this.props.plant.price[this.props.plant.size] * this.props.plant.quantity}</Price>
