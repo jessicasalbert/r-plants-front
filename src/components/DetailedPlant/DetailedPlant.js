@@ -32,6 +32,9 @@ export class DetailedPlant extends Component {
         quantity: 1
     }
 
+    componentDidMount() {
+        this.props.clearFilterSearch()
+    }
 
     localAddToCart = (e) => {
         e.preventDefault()

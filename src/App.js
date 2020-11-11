@@ -76,8 +76,6 @@ class App extends React.Component {
     console.log(newCart)
     
   }
-  
-  
 
   signupHandler = userObj => {
     let options = {

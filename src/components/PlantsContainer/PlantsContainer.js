@@ -14,6 +14,9 @@ export class PlantsContainer extends Component {
         search: ""
     }
 
+    clearFilterSearch = () => {
+        this.setState(() => ({filter: false, search: ""}))
+    }
 
     componentDidMount() {
         fetch(`http://localhost:3000/api/v1/items`)
@@ -59,7 +62,7 @@ export class PlantsContainer extends Component {
                             <>
                             {
                                 this.state.plants.length > 0 ? 
-                                <DetailedPlant key={plant.id} plant={plant} addToCart={this.props.addToCart}/> :
+                                <DetailedPlant clearFilterSearch={this.clearFilterSearch} key={plant.id} plant={plant} addToCart={this.props.addToCart}/> :
                                 <h1>Loading</h1>
                             }
                             </>
