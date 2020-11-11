@@ -1,6 +1,22 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
-import {Page, TopDetails, Details, Photo, BottomDetails, BreadCrumbs} from './DetailedPlantStyle'
+import {
+    Page, 
+    TopDetails, 
+    Details, 
+    Photo, 
+    BottomDetails, 
+    BreadCrumbs, 
+    AddtoCart, 
+    CareType, 
+    Description,
+    Heading,
+    SubHeading,
+    PetFriendly,
+    CareCard,
+    Background,
+    PlantHeading
+} from './DetailedPlantStyle'
 
 export class DetailedPlant extends Component {
 
@@ -43,31 +59,26 @@ export class DetailedPlant extends Component {
         return (
             <>
             <BreadCrumbs><Link to="/">Home</Link> ⤜ <Link to="/plants">Store</Link> ⤜ <Link>{this.props.plant.name}</Link></BreadCrumbs>
+            <Background>
             <Page>
                 <TopDetails>
-                <Photo>
-                    <img alt={this.props.plant.name} onClick={this.imageFlipHandler} src={this.state.clicked ? this.props.plant.image2 : this.props.plant.image}/>
-                </Photo>
-                
+                    <Photo alt={this.props.plant.name} onClick={this.imageFlipHandler} src={this.state.clicked ? this.props.plant.image2 : this.props.plant.image}></Photo>
                     <Details>
-                        
-
-                        <h1>{this.props.plant.name}</h1>
-                        <h2>{this.props.plant.scientific}</h2>
+                        <PlantHeading>{this.props.plant.name}</PlantHeading>
+                        <SubHeading>{this.props.plant.scientific}</SubHeading>
                     
                             {this.props.plant.pet_friendly ? 
-                            <div>
-                                <img alt="plant friendliness" src="https://www.svgrepo.com/show/133518/pet-friendly.svg"/>
-                                <p>Pet-friendly!</p>
-                            </div>
+                            <PetFriendly>
+                                <img alt="plant friendliness" src="https://www.svgrepo.com/show/133518/pet-friendly.svg"/>&nbsp;&nbsp;Pet-friendly!
+                            </PetFriendly>
                             : null}<br/>
-                        <h3>Price: ${this.state.price}</h3><br/>
+                        <CareType>Price: ${this.state.price}</CareType><br/>
                         
                         <form onSubmit={this.localAddToCart}>
-                            <label><input onChange={this.formEdit} type="radio" id="small" name="size" value="small" checked={this.state.size === "small"}/>Small</label>
-                            <label><input onChange={this.formEdit} type="radio" id="medium" name="size" value="medium" checked={this.state.size === "medium"}/>Medium</label>
-                            <label><input onChange={this.formEdit} type="radio" id="large" name="size" value="large" checked = {this.state.size === "large"}/>Large</label><br/><br/>
-                            <label for="quantity">Select a quantity:</label>
+                            <label><input onChange={this.formEdit} type="radio" id="small" name="size" value="small" checked={this.state.size === "small"}/>&nbsp;Small</label>
+                            <label><input onChange={this.formEdit} type="radio" id="medium" name="size" value="medium" checked={this.state.size === "medium"}/>&nbsp;Medium</label>
+                            <label><input onChange={this.formEdit} type="radio" id="large" name="size" value="large" checked = {this.state.size === "large"}/>&nbsp;Large</label><br/><br/>
+                            <label for="quantity">Quantity:</label>
                                 <select onChange={this.quantityHandler} name="quantity" id="quantity"  value={this.state.quantity}>
                                     <option value="1">1</option>
                                     <option value="2">2</option>
@@ -81,31 +92,39 @@ export class DetailedPlant extends Component {
                                     <option value="10">10</option>
                                 </select><br/><br/>
                             
-                            <button><b>Add to cart</b></button>
+                            <AddtoCart>Add to cart</AddtoCart>
                         </form>
-
-
-                        
                     </Details>
                 </TopDetails>
+                <Heading onClick={this.showCareInstructions}>Care Instructions</Heading>
                 <BottomDetails>
-                    <h2 onClick={this.showCareInstructions}>Care Instructions</h2>
                     {this.state.careInstructions ? 
                     <>
-                        <h5>Light</h5>
-                        <p>{this.props.plant.light}</p>
-                        <h5>Water</h5>
-                        <p>{this.props.plant.water}</p>
-                        <h5>Fertiizer</h5>
-                        <p>{this.props.plant.fertilizer}</p>
-                        <h5>Humidity</h5>
-                        <p>{this.props.plant.humidity}</p>
-                        <h5>Temperature</h5>
-                        <p>{this.props.plant.temperature}</p>
+                    <CareCard>
+                        <CareType>Light</CareType>
+                        <Description>{this.props.plant.light}</Description>
+                    </CareCard>
+                    <CareCard>
+                        <CareType>Water</CareType>
+                        <Description>{this.props.plant.water}</Description>
+                    </CareCard>
+                    <CareCard>
+                        <CareType>Fertiizer</CareType>
+                        <Description>{this.props.plant.fertilizer}</Description>
+                    </CareCard>
+                    <CareCard>
+                        <CareType>Humidity</CareType>
+                        <Description>{this.props.plant.humidity}</Description>
+                    </CareCard>
+                    <CareCard>
+                        <CareType>Temperature</CareType>
+                        <Description>{this.props.plant.temperature}</Description>
+                    </CareCard>
                     </> : null}
                 </BottomDetails>
 
             </Page>
+            </Background>
             </>
         )
     }
