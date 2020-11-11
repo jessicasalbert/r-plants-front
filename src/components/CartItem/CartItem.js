@@ -7,15 +7,11 @@ export class CartItem extends Component {
         quantity: 1
     }
 
-    
 
-    updateQuantity = (e) => {
-        let quantity = e.target.value
-        if (quantity > 50) {
-            quantity = 50
-        }
-        this.setState({ quantity: e.target.value})
+    localDeleteHandler = () => {
+        this.props.deleteHandler(this.props.plant.id, this.props.plant.size, this.props.plant.quantity)
     }
+    
 
     render() {
         return (
@@ -26,6 +22,8 @@ export class CartItem extends Component {
                     <Size>Size: {this.props.plant.size[0].toUpperCase() + this.props.plant.size.slice(1)}</Size>
                     <Quantity>Quantity: {this.props.plant.quantity}</Quantity>
                     <Price>Price: ${this.props.plant.price[this.props.plant.size] * this.props.plant.quantity}</Price>
+                    <button onClick={this.localDeleteHandler}> Delete </button>
+                
                 </CartText>
             </CartCard>
         )
