@@ -6,4 +6,4 @@ const CheckoutContainer = styled.section`
     }
 `
 
-export {CardElementContainer}
+export {CheckoutContainer}
