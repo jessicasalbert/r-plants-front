@@ -8,6 +8,7 @@ export const PurchaseStyle = styled.section`
 `
 
 export const PurchaseTable = styled.tr`
+    margin-top: 1vh;
     display: flex;
     font-size: 1.5rem;
 `
@@ -20,8 +21,4 @@ export const TableHeading = styled.th`
 
 export const TableRow = styled.tr`
     background-color: rgba(149,176,113,0.7);
-`
-
-export const PageWrapper = styled.div`
-
 `

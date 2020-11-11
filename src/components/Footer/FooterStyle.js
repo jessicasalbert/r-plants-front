@@ -8,10 +8,10 @@ const FootStyle = styled.footer`
     background-repeat: no-repeat;
     display: flex;
     width: 100%;
-    opacity: 0.8;
+    opacity: 0.7;
 `
 
-const FootText = styled.h3`
+const FootText = styled.p`
     text-align: center;
     position: absolute;
     right: 25%;
