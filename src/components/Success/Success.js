@@ -3,14 +3,14 @@ import React, { Component } from 'react'
 export class Success extends Component {
 
     state = {
-        number: 10
+        number: 5
     }
 
     componentDidMount() {
         this.interval = setInterval(() => {
-          console.log(this.state.number)
-          this.setState({number: this.state.number - 1})
-        }, 1000);
+            console.log(this.state.number)
+            this.setState({number: this.state.number - 1})
+        }, 500);
       }
 
     componentWillUnmount() {
@@ -21,11 +21,11 @@ export class Success extends Component {
     render() {
         return (
             <div>
-                 <h2>Success!</h2>
-                 <p>Your order is processing: #{this.props.order_number} </p>
+                <h2>Success!</h2>
+                <p>Your order is processing: #{this.props.order_number} </p>
                 <p> Redirecting in {this.state.number}...</p>
-                 {this.state.number === 0 ?
-                 this.props.redirectToWelcome()
+                {this.state.number === 0 ?
+                this.props.redirectToWelcome()
                 : null}
             </div>
         )

@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 
 export const PurchaseWrapper = styled.div`
+    color:rgba(57, 54, 38, 1);
     position: relative;
     top: 0;
     bottom: 0;
@@ -16,4 +17,26 @@ export const PurchaseWrapper = styled.div`
         background-size: 100vh;
         }
     }
+`
+
+export const OrderHistory = styled.p`
+    color:rgba(57, 54, 38, 1);
+    padding-top: 1vh;
+    padding-left: 5vw;
+    padding-bottom: 2vh;
+    font-size: 4rem;
+    font-weight: normal;
+`
+
+export const LastOrderTitle = styled.p`
+    font-size: 2rem;
+    padding-left: 5vw;
+    padding-bottom: 2vh;
+`
+
+export const LastOrder = styled.section`
+    margin-bottom: 2vh;
+`
+
+export const AllOrders = styled.p`
 `

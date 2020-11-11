@@ -65,8 +65,8 @@ class Navbar extends React.Component {
                     </NavMenu>
                 :
                     <NavMenu>
-                    <NavItem><NavLink onClick={this.closeMenu} to="/plants">Shop</NavLink></NavItem>
-                    <NavItem><NavLink onClick={this.closeMenu} to="/profile">Profile</NavLink></NavItem>
+                    <NavItem><NavLink onClick={this.closeMenu} to="/plants">shop</NavLink></NavItem>
+                    <NavItem><NavLink onClick={this.closeMenu} to="/profile">profile</NavLink></NavItem>
                     {/* <NavItem><NavLink onClick={this.closeMenu, this.props.logoutHandler} to="/">Log Out</NavLink></NavItem> */}
                     <NavItem><NavLink onClick={this.closeMenu} to="/cart">cart({this.props.cart.length > 0 ? <b className="cart"> {this.itemCount()}</b>  : 0})</NavLink></NavItem>
                     </NavMenu>

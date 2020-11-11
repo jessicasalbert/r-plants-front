@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Redirect } from 'react-router-dom'
 import Purchases from '../../components/Purchases/Purchases'
-import {PurchaseWrapper} from './ProfileStyle'
+import {PurchaseWrapper, OrderHistory, LastOrderTitle, LastOrder, AllOrders} from './ProfileStyle'
 
 export class Profile extends Component {
 
@@ -33,29 +33,30 @@ export class Profile extends Component {
     }
     
     renderLatestPurchase = () => {
-
+        return <Purchases order={this.state.orders[0]}/>
     }
 
     render() {
-        console.log(this.state.orders.length)
+        // console.log(this.state.orders.length)
         return (
             <>
 
             {this.props.user ? 
             <PurchaseWrapper>
-                <h1>Order History for {this.props.user.name}</h1>
-
+                <OrderHistory>Order History for {this.props.user.name}</OrderHistory>
                 {this.state.orders.length > 0 ? 
                 <>
-                <h2>Latest purchase...</h2>
-                <Purchases order={this.state.orders[0]}/>
+                <LastOrderTitle>Your latest purchase was...</LastOrderTitle>
+                <LastOrder>{this.renderLatestPurchase()}</LastOrder>
                 </>
-                : <h2>No orders to show</h2>
+                : 
+                <h2>You haven't made any purchases yet!</h2>
                 }
                 <hr/>
-                <table>  
-                {this.renderPurchases()}
-                </table>
+                <LastOrderTitle>Previous orders:</LastOrderTitle>
+                <AllOrders>  
+                    {this.renderPurchases()}
+                </AllOrders>
             </PurchaseWrapper>
             :
             <Redirect to="/login"/>}

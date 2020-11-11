@@ -2,6 +2,7 @@ import styled from 'styled-components'
 
 const CartWrapper = styled.div`
     h4 {
+        color:rgba(57, 54, 38, 1);
         padding-top: 1vh;
         padding-left: 5vw;
         padding-bottom: 2vh;
@@ -27,13 +28,19 @@ const CartWrapper = styled.div`
 
 const CartStyle = styled.section`
     min-height: 100vh;
+    color:rgba(57, 54, 38, 1);
 `
 
-const EmptyCart = styled.h1`
+const EmptyCart = styled.p`
+    font-size: 2rem;
+    padding-left: 5vw;
+    padding-top: 1vw;
     min-height: 100vh;
+    color:rgba(57, 54, 38, 1);
 `
 
 const Total = styled.p`
+    color:rgba(57, 54, 38, 1);
     font-size: 2rem;
     margin-left: 70vw;
     @media screen and (max-width: 926px) {

@@ -37,7 +37,7 @@ export class Cart extends Component {
                     }
                     </>
                     : 
-                    <EmptyCart>No items to display</EmptyCart>}
+                    <><hr></hr><EmptyCart>Your shopping cart is empty!</EmptyCart></>}
                 </CartStyle>
             </CartWrapper>
             <Footer />
