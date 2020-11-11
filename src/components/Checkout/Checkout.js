@@ -149,8 +149,8 @@ export class Checkout extends Component {
                     amount={this.props.total * 100}
                     ComponentClass="div"
                     />
+                    <PayPal />
                     </div>
-                <PayPal />
                 </CartStyle>
             </CartWrapper>
 
