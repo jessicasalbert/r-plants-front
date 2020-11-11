@@ -56,24 +56,44 @@ const AddtoCart = styled.button`
         background: rgba(181, 181, 161, 1);
     }
 `
+const SelectedLabel = styled.label`
+    
+display: inline-block;
+background-color: purple;
+padding: 10px 20px;
+font-family: sans-serif, Arial;
+font-size: 16px;
+border: 2px solid #444;
+border-radius: 4px;
+`
+
+const UnselectedLabel = styled.label`
+display: inline-block;
+background-color: #ddd;
+padding: 10px 20px;
+font-family: sans-serif, Arial;
+font-size: 16px;
+border: 2px solid #444;
+border-radius: 4px;
+    
+`
+
+
 
 const Details = styled.section`
-    margin-left: 5vw;
-    margin-top: 0vh;
-    margin-right: auto;
-    text-align: center;
-    position: relative;
-    }
-    label {
-        padding-right: 10px;
-        padding-top: 10px;
-        padding-left: 2px;
-    }
+
     input[type="radio"] {
         opacity: 0;
         position: fixed;
         width: 0;
     }
+        margin-left: 5vw;
+        margin-top: 0vh;
+        margin-right: auto;
+        text-align: center;
+        position: relative;
+        }
+    
 
 `
 
@@ -222,5 +242,7 @@ export {TopDetails,
         PetFriendly,
         CareCard,
         Background,
-        PlantHeading
+        PlantHeading,
+        SelectedLabel,
+        UnselectedLabel
 }
