@@ -12,7 +12,9 @@ export class Checkout extends Component {
     }
 
     componentDidMount() {
-        this.generateGuest()
+        if (!this.props.user) {
+            this.generateGuest()
+        }
     }
 
 
