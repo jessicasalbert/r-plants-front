@@ -16,6 +16,7 @@ export const Heading = styled.h1`
 `
 
 export const FilterWrapper = styled.div`
+box-shadow: 8px 8px 8px -6px rgba(0,0,0,.5);
     display: relative;
     height: 100%;
     margin: auto;
