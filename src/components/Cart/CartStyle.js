@@ -33,5 +33,13 @@ const EmptyCart = styled.h1`
     min-height: 100vh;
 `
 
-export {CartWrapper, CartStyle, EmptyCart}
+const Total = styled.p`
+    font-size: 2rem;
+    margin-left: 70vw;
+    @media screen and (max-width: 926px) {
+        margin-left: 50vw;
+    }
+`
+
+export {CartWrapper, CartStyle, EmptyCart, Total}
 

@@ -9,11 +9,14 @@ const PlantContainerStyle = styled.div`
     align-content: flex-start;
     padding: 10px;
     height: 100%;
+    margin-top: 4vh;
     @media (max-width: 900px) {
+        margin-top: 4vh;
         flex-direction: row;
         align-content: flex-start;
     }
     @media (max-width: 800px) {
+        margin-top: 4vh;
         flex-direction: column;
         align-content: center;
     }

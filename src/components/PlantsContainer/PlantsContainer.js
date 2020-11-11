@@ -69,7 +69,6 @@ export class PlantsContainer extends Component {
                         return (
                         <>
                         <StoreWrapper>
-                            <h1>Home ~ Houseplants</h1>
                             <FilterSearch filter={this.filterClickHandler} search={this.searchHandler}/>
                             <PlantContainerStyle>
                                 {this.renderPlants()}
