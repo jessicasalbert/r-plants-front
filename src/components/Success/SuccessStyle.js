@@ -1,34 +1,34 @@
 import styled from 'styled-components'
 
-// export const Background = styled.section`
-//     position: relative;
-//     top: 0;
-//     bottom: 0;
-//     height: 100vh;
-//     width: 100vw;
-//     z-index: 0;
-//     background-image: url("https://i.ibb.co/hCkRkjk/Card-40.png");
-//     background-attachment: fixed;
-//     background-size: cover;
-//     background-position: center;
-//     background-repeat: no-repeat;
-//     background-size: 100vw;
-//     @media screen and (max-width: 926px) {
-//         background-size: 150vh;
-//         }
-//     }
-// `
-
-export const Background = styled.div`
+export const Background = styled.section`
+    position: relative;
+    top: 0;
+    bottom: 0;
     height: 100vh;
-    min-height: 500px;
+    width: 100vw;
+    z-index: 0;
     background-image: url("https://i.ibb.co/hCkRkjk/Card-40.png");
-    background-position: center center;
-    background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-    background-color: #1d3557;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100vw;
+    @media screen and (max-width: 926px) {
+        background-size: 150vh;
+        }
+    }
 `
+
+// export const Background = styled.div`
+//     height: 100vh;
+//     min-height: 500px;
+//     background-image: url("https://i.ibb.co/hCkRkjk/Card-40.png");
+//     background-position: center center;
+//     background-repeat: no-repeat;
+//     background-attachment: fixed;
+//     background-size: cover;
+//     background-color: #1d3557;
+// `
 
 export const Card = styled.div`
     h2 {

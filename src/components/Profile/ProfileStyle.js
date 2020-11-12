@@ -1,34 +1,34 @@
 import styled from 'styled-components'
 
-// export const PurchaseWrapper = styled.div`
-//     color: rgba(57, 54, 38, 1);
-//     position: relative;
-//     top: 0;
-//     bottom: 0;
-//     ${'' /* height: 100vh; */}
-//     z-index: 0;
-//     background-image: url("https://i.ibb.co/BVLGr4Z/Final-40.png");
-//     background-attachment: fixed;
-//     background-size: contain;
-//     background-position: top center;
-//     background-repeat: no-repeat;
-//     background-size: 100vw;
-//     @media screen and (max-width: 700px) {
-//         background-size: 100vh;
-//         }
-//     }
-// `
-
 export const PurchaseWrapper = styled.div`
-    height: 100vh;
-    min-height: 500px;
+    color: rgba(57, 54, 38, 1);
+    position: relative;
+    top: 0;
+    bottom: 0;
+    ${'' /* height: 100vh; */}
+    z-index: 0;
     background-image: url("https://i.ibb.co/BVLGr4Z/Final-40.png");
-    background-position: center center;
-    background-repeat: no-repeat;
     background-attachment: fixed;
-    background-size: cover;
-    background-color: #1d3557;
+    background-size: contain;
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: 100vw;
+    @media screen and (max-width: 700px) {
+        background-size: 100vh;
+        }
+    }
 `
+
+// export const PurchaseWrapper = styled.div`
+//     height: 100vh;
+//     min-height: 500px;
+//     background-image: url("https://i.ibb.co/BVLGr4Z/Final-40.png");
+//     background-position: center center;
+//     background-repeat: no-repeat;
+//     background-attachment: fixed;
+//     background-size: cover;
+//     background-color: #1d3557;
+// `
 
 export const PurchaseColumn = styled.section`
     ${'' /* display: inline-grid; */}

@@ -2,29 +2,29 @@ import styled from 'styled-components'
 import L from 'leaflet'
 
 
-// const WelcomeStyle = styled.div`
-//     background-image: url("https://i.ibb.co/Gd9hVxM/Final-2.png");
-//     background-attachment: fixed;
-//     background-size: contain;
-//     background-position: top center;
-//     background-repeat: no-repeat;
-//     background-size: 100vw;
-//     @media screen and (max-width: 700px) {
-//         background-size: 100vh;
-//         }
-//     }
-// `
-
 const WelcomeStyle = styled.div`
-    height: 100vh;
-    min-height: 500px;
     background-image: url("https://i.ibb.co/Gd9hVxM/Final-2.png");
-    background-position: center center;
-    background-repeat: no-repeat;
     background-attachment: fixed;
-    background-size: cover;
-    background-color: #1d3557;
+    background-size: contain;
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: 100vw;
+    @media screen and (max-width: 700px) {
+        background-size: 100vh;
+        }
+    }
 `
+
+// const WelcomeStyle = styled.div`
+//     height: 100vh;
+//     min-height: 500px;
+//     background-image: url("https://i.ibb.co/Gd9hVxM/Final-2.png");
+//     background-position: center center;
+//     background-repeat: no-repeat;
+//     background-attachment: fixed;
+//     background-size: cover;
+//     background-color: #1d3557;
+// `
 
 const StoreButton = styled.button`
     opacity: 0.8;

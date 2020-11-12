@@ -23,34 +23,34 @@ const PlantContainerStyle = styled.div`
 }
 `
 
-// const StoreWrapper = styled.div`
-//     position: relative;
-//     top: 0;
-//     bottom: 0;
-//     min-height: 100vh;
-//     width: 100vw;
-//     z-index: 0;
-//     background-image: url("https://i.ibb.co/BVLGr4Z/Final-40.png");
-//     background-attachment: fixed;
-//     background-size: cover;
-//     background-position: top center;
-//     background-repeat: no-repeat;
-//     background-size: 100vw;
-//     @media screen and (max-width: 700px) {
-//         background-size: 100vh;
-//         }
-//     }
-// `
-
 const StoreWrapper = styled.div`
-    height: 100vh;
-    min-height: 500px;
+    position: relative;
+    top: 0;
+    bottom: 0;
+    min-height: 100vh;
+    width: 100vw;
+    z-index: 0;
     background-image: url("https://i.ibb.co/BVLGr4Z/Final-40.png");
-    background-position: center center;
-    background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-    background-color: #1d3557;
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: 100vw;
+    @media screen and (max-width: 700px) {
+        background-size: 100vh;
+        }
+    }
 `
+
+// const StoreWrapper = styled.div`
+//     height: 100vh;
+//     min-height: 500px;
+//     background-image: url("https://i.ibb.co/BVLGr4Z/Final-40.png");
+//     background-position: center center;
+//     background-repeat: no-repeat;
+//     background-attachment: fixed;
+//     background-size: cover;
+//     background-color: #1d3557;
+// `
 
 export {PlantContainerStyle, StoreWrapper}
