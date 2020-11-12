@@ -100,12 +100,11 @@ const LoginButton = styled.button`
     box-shadow: 0px 8px 8px -6px rgba(0,0,0,.5);
     border-radius: 4px;
     background: rgba(147, 141, 123, 1);
-    width: 70%;
-    margin: 3%;
-    padding: 2%;
+    width: 66%;
+    margin: 5%;
     color: #fff;
     font-size: 1.5rem;
-    text-align: left;
+    padding: 2%;
     outline: none;
     border: none;
     cursor: pointer;
