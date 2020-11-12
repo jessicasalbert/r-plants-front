@@ -125,7 +125,11 @@ const CheckoutLink = styled(Link)`
     padding: 11px;
     color: #fff;
     outline: none;
+<<<<<<< HEAD
     max-height: 40px;
+=======
+    max-height: 20px;
+>>>>>>> d807052c9102aea9529c6f2cb3761ee7e0bfc166
     position: relative;
     border: none;
     cursor: pointer;

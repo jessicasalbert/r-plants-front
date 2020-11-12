@@ -66,7 +66,7 @@ const Or = styled.div`
 
 const Break = styled.div`
     content: "";
-    width: 15vw;
+    width: 100px;
     background-color: transparent;
     height: 1px;
     margin: auto;
