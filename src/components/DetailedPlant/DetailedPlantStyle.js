@@ -279,44 +279,10 @@ const PetFriendly = styled.p`
     justify-content: center;
 `
 
-const BreadCrumbs = styled.p`
-    position: fixed;
-    font-size: 1.5rem;
-    padding-top: 1vh;
-    padding-left: 10px;
-    position: absolute;
-    ${'' /* @media (max-width: 812px) {
-        position: absolute;
-        padding-top: 50px;
-        padding-left: 2vw;
-    }
-    @media (max-width: 768px) {
-        position: absolute;
-        padding-top: 6vh;
-        padding-left: 2vw;
-    }
-    @media (max-width: 731px) {
-        position: absolute;
-        padding-top: 50px;
-        padding-left: 2vw;
-    }
-    @media (max-width: 411px) {
-        position: absolute;
-        padding-top: 12vh;
-        padding-left: 2vw;
-    }
-    @media (max-width: 375px) {
-        position: absolute;
-        padding-top: 11vh;
-        padding-left: 2vw;
-    } */}
-`
-
 export {TopDetails, 
         BottomDetails, 
         Page, Details, 
         Photo, 
-        BreadCrumbs, 
         AddtoCart, 
         CareType, 
         Description, 

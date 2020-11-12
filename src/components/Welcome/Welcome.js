@@ -21,7 +21,7 @@ export default function Welcome(props) {
 
             <MapWrapper><MapView plants={props.plants} /></MapWrapper>
 
-            <BottomWrapper><LandingImg></LandingImg></BottomWrapper>
+            {/* <BottomWrapper><LandingImg></LandingImg></BottomWrapper> */}
         </WelcomeStyle>
             <Footer />
             </>

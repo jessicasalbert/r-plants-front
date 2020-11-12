@@ -19,7 +19,7 @@ a {
 
 .leaflet-container {
     border-radius: 20px;
-    opacity: 0.9;
+    opacity: 0.8;
     width: 50vw;
     height: 50vh;
     z-index: 0;
@@ -38,7 +38,7 @@ a {
 
 /* div.horses {
     color:rgba(57, 54, 38, 1); - dark yellow/brown
-    color:rgb(149, 176, 113, 1); - lighter green (nav)
+    color:rgba(149, 176, 113, 1); - lighter green (nav)
     color:rgba(100, 114, 97, 1); - forest green
     color:rgba(147, 141, 123, 1); - clay/grey
     color:rgba(181, 181, 161, 1); - light clay/yellow

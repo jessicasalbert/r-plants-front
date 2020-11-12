@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
 import Footer from '../Footer/Footer'
+import {NavLink as Link} from 'react-router-dom'
 import {
     Page, 
     TopDetails, 
     Details, 
     Photo, 
-    BottomDetails, 
-    BreadCrumbs, 
+    BottomDetails,  
     AddtoCart, 
     CareType, 
     Description,
@@ -16,7 +16,6 @@ import {
     CareCard,
     Background,
     PlantHeading,
-    CareWrapper,
     UnselectedLabel,
     SelectedLabel,
     Price
@@ -65,7 +64,6 @@ export class DetailedPlant extends Component {
     render() {
         return (
             <>
-            {/* <BreadCrumbs><Link to="/">Home</Link> ⤜ <Link to="/plants">Store</Link> ⤜ <Link>{this.props.plant.name}</Link></BreadCrumbs> */}
             <Background>
             <Page>
                 <TopDetails>
@@ -82,19 +80,10 @@ export class DetailedPlant extends Component {
                         <Price>Price: ${this.state.price}</Price><br/>
                         
                         <form onSubmit={this.localAddToCart}>
-
-                        {/* <SelectedLabel><input onChange={this.formEdit} type="radio" id="small" name="size" value="small" checked={this.state.size === "small"}/>&nbsp;Small</SelectedLabel> 
-                        <UnselectedLabel><input onChange={this.formEdit} type="radio" id="medium" name="size" value="medium" checked={this.state.size === "medium"}/>&nbsp;Medium</UnselectedLabel> 
-                            
-                             */}
-                            
                             {this.state.size === "small" ? <SelectedLabel><input onChange={this.formEdit} type="radio" id="small" name="size" value="small" checked={this.state.size === "small"}/>&nbsp;Small</SelectedLabel> : <UnselectedLabel><input onChange={this.formEdit} type="radio" id="small" name="size" value="small" checked={this.state.size === "small"}/>&nbsp;Small</UnselectedLabel>}
                             {this.state.size === "medium" ? <SelectedLabel><input onChange={this.formEdit} type="radio" id="medium" name="size" value="medium" checked={this.state.size === "medium"}/>&nbsp;Medium</SelectedLabel> : <UnselectedLabel><input onChange={this.formEdit} type="radio" id="medium" name="size" value="medium" checked={this.state.size === "medium"}/>&nbsp;Medium</UnselectedLabel>}
                             {this.state.size === "large" ? <SelectedLabel><input onChange={this.formEdit} type="radio" id="large" name="size" value="large" checked={this.state.size === "large"}/>&nbsp;Large</SelectedLabel> : <UnselectedLabel><input onChange={this.formEdit} type="radio" id="large" name="size" value="large" checked={this.state.size === "large"}/>&nbsp;Large</UnselectedLabel>}
-                            
                             <br/><br/>
-                            
-                            
                             <label for="quantity" className="quantity">Quantity:</label>
                                 <select onChange={this.quantityHandler} name="quantity" id="quantity"  value={this.state.quantity}>
                                     <option value="1">1</option>

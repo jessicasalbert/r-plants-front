@@ -57,6 +57,11 @@ export const LastOrder = styled.section`
     margin-top: 0;
 `
 
+export const NoPurchases = styled.h1`
+    font-size: 2rem;
+    font-weight: normal;
+`
+
 export const Heading = styled.h1`
     color: rgba(255, 255, 255, 0.7);
     font-size: 15vw;

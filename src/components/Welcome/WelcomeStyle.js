@@ -117,16 +117,20 @@ const TopWrapper = styled.section`
 
 const MapWrapper = styled.section`
     min-height: 50vh;
-    background-color: rgba(100, 114, 97, 0.8);;
+    ${'' /* background-color: rgba(149, 176, 113, 0.3); */}
+    background-color: rgba(100, 114, 97, 0.8);
 `
 
 const LandingImg = styled.section`
-    background-image: url('https://www.fairtradeamerica.org/app/uploads/2020/08/Cocoa_CDI_Rosine-walks-through-plant-nursery_2019_28992-aspect-ratio-1690-635.png');
+    background-image: url('https://media.architecturaldigest.com/photos/5dcde0245ff5e60008e76f52/master/w_1600%2Cc_limit/Osofsky_Oct19-571.jpg');
+    background-repeat: no-repeat;
+    background-position: middle center;
+    background-size: 100vw;
     width: 100vw;
     height: 500px;
     display: flex;
     ${'' /* object-fit: cover; */}
-    opacity: 1;
+    opacity: 0.7;
     &:hover {
         right: 0;
         opacity: 0.7;
