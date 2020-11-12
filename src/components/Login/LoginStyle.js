@@ -10,10 +10,12 @@ const LoginWrapper = styled.div`
     z-index: 0;
     background-image: url("https://i.ibb.co/hCkRkjk/Card-40.png");
     background-attachment: fixed;
-    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: 100vw;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
     @media screen and (max-width: 926px) {
         background-size: 150vh;
         }
