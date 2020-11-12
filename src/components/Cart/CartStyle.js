@@ -14,7 +14,7 @@ const TotalButtonWrapper = styled.div`
     height: auto;
     display: flex;
     justify-content: flex-start;
-    @media screen and (max-width: 1020px) {
+        @media screen and (max-width: 1020px) {
         max-height: 10vh;
         justify-content: center;
         }
@@ -102,9 +102,10 @@ const CheckoutLink = styled(Link)`
     box-shadow: 0px 8px 8px -6px rgba(0,0,0,.5);
     border-radius: 4px;
     background: rgba(147, 141, 123, 1);
-    padding: 11px 40px;
+    padding: 11px;
     color: #fff;
     outline: none;
+    max-height: 40px;
     position: relative;
     border: none;
     cursor: pointer;
@@ -138,7 +139,7 @@ const SignUpLink = styled(Link)`
     box-shadow: 0px 8px 8px -6px rgba(0,0,0,.5);
     border-radius: 4px;
     background: rgba(147, 141, 123, 1);
-    padding: 11px 40px;
+    padding: 11px;
     color: #fff;
     outline: none;
     position: relative;
