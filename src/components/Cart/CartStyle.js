@@ -25,7 +25,21 @@ const TotalButtonWrapper = styled.div`
 `
 
 const CartWrapper = styled.div`
-    color: rgba(57, 54, 38, 1);
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    margin: 0;
+    background: url("https://i.ibb.co/BVLGr4Z/Final-40.png") center center no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    ${'' /* color: rgba(57, 54, 38, 1);
     h4 {
         color:rgba(57, 54, 38, 1);
         padding-top: 1vh;
@@ -47,8 +61,7 @@ const CartWrapper = styled.div`
     background-size: 100vw;
     @media screen and (max-width: 700px) {
         background-size: 100vh;
-        }
-    }
+    } */}
 `
 
 const CartStyle = styled.section`

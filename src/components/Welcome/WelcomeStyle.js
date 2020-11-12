@@ -3,7 +3,7 @@ import L from 'leaflet'
 
 
 const WelcomeStyle = styled.div`
-    background-image: url("https://i.ibb.co/Gd9hVxM/Final-2.png");
+    ${'' /* background-image: url("https://i.ibb.co/Gd9hVxM/Final-2.png");
     background-attachment: fixed;
     background-size: contain;
     background-position: top center;
@@ -11,8 +11,21 @@ const WelcomeStyle = styled.div`
     background-size: 100vw;
     @media screen and (max-width: 700px) {
         background-size: 100vh;
-        }
-    }
+    } */}
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    margin: 0;
+    background: url("https://i.ibb.co/BVLGr4Z/Final-40.png") center center no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 `
 
 const StoreButton = styled.button`

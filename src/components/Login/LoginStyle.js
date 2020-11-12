@@ -1,23 +1,40 @@
 import styled from 'styled-components'
 import {NavLink as Link} from 'react-router-dom'
 
+// const LoginWrapper = styled.div`
+//     position: fixed;
+//     top: 0;
+//     bottom: 0;
+//     height: 100vh;
+//     width: 100vw;
+//     z-index: 0;
+//     background-image: url("https://i.ibb.co/hCkRkjk/Card-40.png");
+//     background-attachment: fixed;
+//     background-size: cover;
+//     background-position: center;
+//     background-repeat: no-repeat;
+//     background-size: 100vw;
+//     @media screen and (max-width: 926px) {
+//         background-size: 150vh;
+//         }
+//     }
+// `
+
 const LoginWrapper = styled.div`
     position: fixed;
-    top: 0;
+    right: 0;
     bottom: 0;
-    height: 100vh;
-    width: 100vw;
-    z-index: 0;
-    background-image: url("https://i.ibb.co/hCkRkjk/Card-40.png");
-    background-attachment: fixed;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    margin: 0;
+    background: url("https://i.ibb.co/hCkRkjk/Card-40.png") center center no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 100vw;
-    @media screen and (max-width: 926px) {
-        background-size: 150vh;
-        }
-    }
 `
 
 const LoginForm = styled.form`
