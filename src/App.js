@@ -31,7 +31,7 @@ class App extends React.Component {
         headers: {
           Authorization: `Bearer ${token}` }
         }
-      fetch("http://rplants-backend.herokuapp.com/api/v1/profile", options)
+      fetch("https://rplants-backend.herokuapp.com/api/v1/profile", options)
       .then(res=>res.json())
       .then(data=> this.setState({ user: data.user}))
     } else {
@@ -42,7 +42,7 @@ class App extends React.Component {
       cartTotal: cartTotal ? cartTotal : 0}
       ))
     
-    fetch(`http://rplants-backend.herokuapp.com/api/v1/items`)
+    fetch(`https://rplants-backend.herokuapp.com/api/v1/items`)
     .then(res => res.json())
     .then(res => this.setState({plants: res}))
     .catch(console.log)
@@ -87,7 +87,7 @@ class App extends React.Component {
       body: JSON.stringify({user: userObj})
     }
 
-    fetch("http://rplants-backend.herokuapp.com/api/v1/users", options)
+    fetch("https://rplants-backend.herokuapp.com/api/v1/users", options)
     .then(resp => resp.json())
     .then(data => {
       this.setState({ user: data.user }, () => this.props.history.push("/"))
@@ -105,7 +105,7 @@ class App extends React.Component {
       },
       body: JSON.stringify({user: userInfo})
     }
-    fetch("http://rplants-backend.herokuapp.com/api/v1/login", options)
+    fetch("https://rplants-backend.herokuapp.com/api/v1/login", options)
     .then(resp => resp.json())
     .then(data => {
       localStorage.setItem("token", data.jwt)
@@ -124,7 +124,7 @@ class App extends React.Component {
         body: JSON.stringify({item: newPlant})
     }
 
-    fetch("http://rplants-backend.herokuapp.com/api/v1/items", options)
+    fetch("https://rplants-backend.herokuapp.com/api/v1/items", options)
     .then(resp => resp.json())
     .then(newest => {
         this.setState({
