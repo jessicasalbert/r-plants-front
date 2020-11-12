@@ -35,7 +35,7 @@ export class Checkout extends Component {
             body: JSON.stringify({user})
         }
 
-        fetch("http://localhost:3000/api/v1/users", options)
+        fetch("http://rplants-backend.herokuapp.com/api/v1/users", options)
         .then(resp => resp.json())
         .then(data => {
             this.setState({ guestUserId: data.user.id })
@@ -64,7 +64,7 @@ export class Checkout extends Component {
             },
             body: JSON.stringify(body)
         }
-        fetch('http://localhost:3000/api/v1/orders', options)
+        fetch('http://rplants-backend.herokuapp.com/api/v1/orders', options)
         .then(res => res.json())
         .then(res => {
             for (const item of this.props.cart) {
@@ -99,7 +99,7 @@ export class Checkout extends Component {
             },
             body: JSON.stringify(body)
         }
-        fetch('http://localhost:3000/api/v1/purchases', options)
+        fetch('http://rplants-backend.herokuapp.com/api/v1/purchases', options)
         .then(res => res.json())
     }
 

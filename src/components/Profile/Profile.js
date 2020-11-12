@@ -19,7 +19,7 @@ export class Profile extends Component {
                 Authorization: `Bearer ${localStorage.getItem("token")}` 
             }
         }
-        fetch(`http://localhost:3000/api/v1/users/${this.props.user.id}`, options)
+        fetch(`http://rplants-backend.herokuapp.com/api/v1/users/${this.props.user.id}`, options)
         .then(res => res.json())
         .then(res => (this.setState({
             orders: res.orders.reverse(),
