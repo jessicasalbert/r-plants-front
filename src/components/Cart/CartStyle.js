@@ -14,7 +14,7 @@ const TotalButtonWrapper = styled.div`
     height: auto;
     display: flex;
     justify-content: flex-start;
-        @media screen and (max-width: 1020px) {
+    @media screen and (max-width: 1020px) {
         max-height: 10vh;
         justify-content: center;
         }
@@ -50,26 +50,6 @@ const CartWrapper = styled.div`
         }
     }
 `
-
-// const CartWrapper = styled.div`
-//     color: rgba(57, 54, 38, 1);
-//     h4 {
-//         color:rgba(57, 54, 38, 1);
-//         padding-top: 1vh;
-//         padding-left: 5vw;
-//         padding-bottom: 2vh;
-//         font-size: 4rem;
-//         font-weight: normal;
-//     }
-//     height: 100vh;
-//     min-height: 500px;
-//     background-image: url("https://i.ibb.co/BVLGr4Z/Final-40.png");
-//     background-position: center center;
-//     background-repeat: no-repeat;
-//     background-attachment: fixed;
-//     background-size: cover;
-//     background-color: #1d3557;
-// `
 
 const CartStyle = styled.section`
     min-height: 100vh;
@@ -122,7 +102,7 @@ const CheckoutLink = styled(Link)`
     box-shadow: 0px 8px 8px -6px rgba(0,0,0,.5);
     border-radius: 4px;
     background: rgba(147, 141, 123, 1);
-    padding: 11px;
+    padding: 11px 40px;
     color: #fff;
     outline: none;
     max-height: 20px;
@@ -159,7 +139,7 @@ const SignUpLink = styled(Link)`
     box-shadow: 0px 8px 8px -6px rgba(0,0,0,.5);
     border-radius: 4px;
     background: rgba(147, 141, 123, 1);
-    padding: 11px;
+    padding: 11px 40px;
     color: #fff;
     outline: none;
     position: relative;

@@ -15,20 +15,9 @@ export const Background = styled.section`
     background-size: 100vw;
     @media screen and (max-width: 926px) {
         background-size: 150vh;
+        }
     }
-
 `
-
-// export const Background = styled.div`
-//     height: 100vh;
-//     min-height: 500px;
-//     background-image: url("https://i.ibb.co/hCkRkjk/Card-40.png");
-//     background-position: center center;
-//     background-repeat: no-repeat;
-//     background-attachment: fixed;
-//     background-size: cover;
-//     background-color: #1d3557;
-// `
 
 export const Card = styled.div`
     h2 {

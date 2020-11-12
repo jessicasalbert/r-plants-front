@@ -9,25 +9,15 @@ const Background = styled.div`
     z-index: 0;
     background-image: url("https://i.ibb.co/BVLGr4Z/Final-40.png");
     background-attachment: fixed;
+    background-size: cover;
     background-position: top center;
     background-repeat: no-repeat;
-    background-size: 100vh;
+    background-size: 100vw;
     @media screen and (max-width: 700px) {
         background-size: 100vh;
         }
-
+    }
 `
-
-// const Background = styled.div`
-//     height: 100vh;
-//     min-height: 500px;
-//     background-image: url("https://i.ibb.co/BVLGr4Z/Final-40.png");
-//     background-position: center center;
-//     background-repeat: no-repeat;
-//     background-attachment: fixed;
-//     background-size: cover;
-//     background-color: #1d3557;
-// `
 
 const Page = styled.section`
     position: relative;

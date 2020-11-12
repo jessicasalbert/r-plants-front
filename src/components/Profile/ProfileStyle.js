@@ -15,20 +15,9 @@ export const PurchaseWrapper = styled.div`
     background-size: 100vw;
     @media screen and (max-width: 700px) {
         background-size: 100vh;
+        }
     }
-
 `
-
-// export const PurchaseWrapper = styled.div`
-//     height: 100vh;
-//     min-height: 500px;
-//     background-image: url("https://i.ibb.co/BVLGr4Z/Final-40.png");
-//     background-position: center center;
-//     background-repeat: no-repeat;
-//     background-attachment: fixed;
-//     background-size: cover;
-//     background-color: #1d3557;
-// `
 
 export const PurchaseColumn = styled.section`
     ${'' /* display: inline-grid; */}

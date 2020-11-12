@@ -72,11 +72,11 @@ export class DetailedPlant extends Component {
                         <PlantHeading>{this.props.plant.name}</PlantHeading>
                         <SubHeading>{this.props.plant.scientific}</SubHeading>
                     
-                            {/* {this.props.plant.pet_friendly ? 
+                            {this.props.plant.pet_friendly ? 
                             <PetFriendly>
                                 <img alt="plant friendliness" src="https://svgsilh.com/svg/155322.svg"/>&nbsp;&nbsp;Pet-friendly!
                             </PetFriendly>
-                            : null}<br/> */}
+                            : null}<br/>
                         <Price>Price: ${this.state.price}</Price><br/>
                         
                         <form onSubmit={this.localAddToCart}>
