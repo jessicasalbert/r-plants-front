@@ -25,7 +25,7 @@ export class DetailedPlant extends Component {
 
     state = {
         clicked: false,
-        careInstructions: true,
+        careInstructions: false,
         size: "small",
         price: this.props.plant.price.small,
         quantity: 1
