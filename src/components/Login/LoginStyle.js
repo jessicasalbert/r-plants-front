@@ -15,7 +15,7 @@ const LoginWrapper = styled.div`
     background-repeat: no-repeat;
     ${'' /* background-size: 100vw; */}
     @media screen and (max-width: 926px) {
-        background-size: 150vh;
+        background-size: 150%;
     }
     
 `
@@ -111,11 +111,13 @@ const LoginButton = styled.button`
     box-shadow: 0px 8px 8px -6px rgba(0,0,0,.5);
     border-radius: 4px;
     background: rgba(147, 141, 123, 1);
-    width: 260px;
+    width: 275px;
     margin: 5%;
+    text-align: left;
     color: #fff;
     font-size: 1.5rem;
     padding: 2%;
+    height: 40.78px;
     outline: none;
     border: none;
     cursor: pointer;

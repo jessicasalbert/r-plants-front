@@ -35,9 +35,9 @@ const StoreWrapper = styled.div`
     background-size: cover;
     background-position: top center;
     background-repeat: no-repeat;
-    background-size: 100vh;
+    ${'' /* background-size: 100vw; */}
     @media screen and (max-width: 700px) {
-        background-size: 100vh;
+        ${'' /* background-size: 100vh; */}
     }
     
 `

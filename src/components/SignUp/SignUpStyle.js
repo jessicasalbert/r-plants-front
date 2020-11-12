@@ -14,7 +14,7 @@ const SignUpWrapper = styled.div`
     background-repeat: no-repeat;
     ${'' /* background-size: 100vw; */}
     @media screen and (max-width: 926px) {
-        background-size: 150vh;
+        background-size: 150%;
     }
 `
 
