@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const PurchaseWrapper = styled.div`
-    ${'' /* color: rgba(57, 54, 38, 1);
+    color: rgba(57, 54, 38, 1);
     position: relative;
     top: 0;
     bottom: 0;
@@ -14,21 +14,7 @@ export const PurchaseWrapper = styled.div`
     background-size: 100vw;
     @media screen and (max-width: 700px) {
         background-size: 100vh;
-    } */}
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    z-index: -100;
-    margin: 0;
-    background: url("https://i.ibb.co/BVLGr4Z/Final-40.png") center center no-repeat;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+    }
 `
 
 export const PurchaseColumn = styled.section`
