@@ -11,7 +11,8 @@ export class FilterSearch extends Component {
             <Heading>store</Heading>
             <FilterWrapper>
                 <SearchStyle>
-                    <Search searchTerm={this.props.searchTerm} search={this.props.search}/><Filter isFiltered={this.props.isFiltered} filter={this.props.filter}/>
+                    <Search searchTerm={this.props.searchTerm} search={this.props.search}/>
+                    {/* <Filter isFiltered={this.props.isFiltered} filter={this.props.filter}/> */}
                 </SearchStyle>
             </FilterWrapper>
             </>

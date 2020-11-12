@@ -13,12 +13,10 @@ const Background = styled.div`
     background-position: top center;
     background-repeat: no-repeat;
     background-size: 100vw;
-    ${'' /* @media screen and (max-width: 700px) {
+    @media screen and (max-width: 700px) {
         background-size: 100vh;
-        } */}
-    @media only screen and (max-device-width: 1366px) {
-        background-attachment: scroll;
-    }
+        }
+
 `
 
 // const Background = styled.div`

@@ -13,11 +13,8 @@ const SignUpWrapper = styled.div`
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100vw;
-    ${'' /* @media screen and (max-width: 926px) {
+    @media screen and (max-width: 926px) {
         background-size: 150vh;
-    } */}
-    @media only screen and (max-device-width: 1366px) {
-        background-attachment: scroll;
     }
 `
 
