@@ -8,10 +8,9 @@ export class Search extends Component {
     }
 
     localSearchHandler = (e) => {
-        console.log(e.target.value)
-        this.setState({
-            search : e.target.value
-        })
+        // this.setState({
+        //     search : e.target.value
+        // })
         
         this.props.search(e.target.value)
     }
@@ -20,7 +19,7 @@ export class Search extends Component {
     render() {
         return (
             <>
-                <SearchStyling onChange={this.localSearchHandler} placeholder="Search houseplants..." type="text" name="search" value={this.state.search}></SearchStyling>
+                <SearchStyling onChange={this.localSearchHandler} placeholder="Search houseplants..." type="text" name="search" value={this.props.searchTerm}></SearchStyling>
             </>
         )
     }

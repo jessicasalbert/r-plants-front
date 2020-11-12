@@ -31,13 +31,11 @@ export class DetailedPlant extends Component {
         price: this.props.plant.price.small,
         quantity: 1
     }
-
-    componentDidMount() {
-        this.props.clearFilterSearch()
-    }
+    
 
     localAddToCart = (e) => {
         e.preventDefault()
+        this.props.clearFilterSearch()
         const newPlant = Object.assign({}, this.props.plant)
         console.log(newPlant)
         this.props.addToCart(newPlant, this.state.size, this.state.quantity)
