@@ -19,7 +19,7 @@ import styled from 'styled-components'
 //     }
 // `
 
-const PurchaseWrapper = styled.div`
+export const PurchaseWrapper = styled.div`
     height: 100vh;
     min-height: 500px;
     background-image: url("https://i.ibb.co/BVLGr4Z/Final-40.png");
