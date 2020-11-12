@@ -14,7 +14,7 @@ export class Cart extends Component {
 
 
     render() {
-        console.log(this.props.user ? this.props.user.id : "none")
+        // console.log(this.props.user ? this.props.user.id : "none")
         return (
             <>
             <CartWrapper>

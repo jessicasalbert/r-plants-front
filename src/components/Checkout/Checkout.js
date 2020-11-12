@@ -116,7 +116,7 @@ export class Checkout extends Component {
     }
 
     handleToken = (token, addresses) => {
-        console.log({token, addresses})
+        // console.log({token, addresses})
     }
 
 

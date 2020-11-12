@@ -62,12 +62,12 @@ const StoreButton = styled.button`
     }
 `
 
-const BottomWrapper = styled.section`
+const BottomWrapper = styled.div`
     background-color: rgba(255, 255, 255, 0.6);
     min-height: 50vh;
 `
 
-const TopWrapper = styled.section`
+const TopWrapper = styled.div`
     background-color: rgba(255, 255, 255, 0.6);
     min-height: 50vh;
     text-align: inline;
@@ -100,13 +100,13 @@ const TopWrapper = styled.section`
         cursor: pointer;
     }
 
-    section.fair-trade {
+    div.fair-trade {
         padding-bottom: 10px;
         padding-top: 10px;
     }
 
     @media screen and (max-width: 700px) {
-        section.fair-trade {
+        div.fair-trade {
             padding-left: 10px;
             padding-top: 10px;
             padding-bottom: 10px;
@@ -114,13 +114,13 @@ const TopWrapper = styled.section`
     }
 `
 
-const MapWrapper = styled.section`
+const MapWrapper = styled.div`
     min-height: 50vh;
     ${'' /* background-color: rgba(149, 176, 113, 0.3); */}
     background-color: rgba(100, 114, 97, 0.8);
 `
 
-const LandingImg = styled.section`
+const LandingImg = styled.div`
     background-image: url('https://media.architecturaldigest.com/photos/5dcde0245ff5e60008e76f52/master/w_1600%2Cc_limit/Osofsky_Oct19-571.jpg');
     background-repeat: no-repeat;
     background-position: middle center;

@@ -36,7 +36,7 @@ export class DetailedPlant extends Component {
         e.preventDefault()
         this.props.clearFilterSearch()
         const newPlant = Object.assign({}, this.props.plant)
-        console.log(newPlant)
+        // console.log(newPlant)
         this.props.addToCart(newPlant, this.state.size, this.state.quantity)
     }
 

@@ -15,7 +15,7 @@ class MapView extends React.Component {
     }
 
     render() {
-        console.log(this.props.plants)
+        // console.log(this.props.plants)
         return (
             <MapStyle>
                 <MapContainer center={[30, -15]} maxZoom={3.5} minZoom={1.75}  zoom={2}>
@@ -36,7 +36,7 @@ class MapView extends React.Component {
                 this.props.plants.map(plant => (
                     <>
                         <Marker icon={iconPlant} key={plant.id} position={[plant.latitude, plant.longitude]}>
-                        <Popup>{plant.name} <br/><img alt={plant.name} src={plant.image}/><br/></Popup></Marker>
+                        <Popup key={plant.id}>{plant.name} <br/><img alt={plant.name} src={plant.image}/><br/></Popup></Marker>
                     </>
                 ))
                 :

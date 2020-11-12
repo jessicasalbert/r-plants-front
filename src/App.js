@@ -49,7 +49,7 @@ class App extends React.Component {
   }
 
   setLocalStorage = (newCart, newTotal) => {
-    console.log(newCart, newTotal)
+    // console.log(newCart, newTotal)
     if (newCart.length === 0) {
       localStorage.removeItem("cart")
     } else {
@@ -73,7 +73,7 @@ class App extends React.Component {
       cart: newCart,
       cartTotal: newTotal
     }), this.setLocalStorage(newCart, newTotal))
-    console.log(newCart)
+    // console.log(newCart)
     
   }
 
@@ -142,9 +142,9 @@ class App extends React.Component {
     this.setState( (prev) => ({
       cartTotal: newTotal
     }))
-    console.log(size)
+    // console.log(size)
     let index = this.state.cart.findIndex( cartItem => (cartItem.size === size && cartItem.id === item.id))
-    console.log(index)
+    // console.log(index)
     if (index === -1) {
       const newCart = [...this.state.cart, item]
       this.setState((prev) => ({

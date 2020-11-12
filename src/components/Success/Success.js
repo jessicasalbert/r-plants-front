@@ -9,7 +9,7 @@ export class Success extends Component {
 
     componentDidMount() {
         this.interval = setInterval(() => {
-            console.log(this.state.number)
+            // console.log(this.state.number)
             this.setState({number: this.state.number - 1})
         }, 1000);
     }
