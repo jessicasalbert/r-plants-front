@@ -84,7 +84,7 @@ const Total = styled.p`
         font-size: 1.5rem;
         margin-left: 35vw;
     }
-    @media screen and (max-width: 1000px) {
+    @media screen and (max-width: 1024px) {
         font-size: 1.5rem;
         margin-left: 25vw;
     }
@@ -92,7 +92,7 @@ const Total = styled.p`
         font-size: 1.5rem;
         margin-left: 20vw;
     }
-    @media screen and (max-width: 800px) {
+    @media screen and (max-width: 600px) {
         font-size: 1.5rem;
         margin-left: 15vw;
     }
