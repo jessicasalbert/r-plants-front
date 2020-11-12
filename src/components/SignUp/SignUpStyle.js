@@ -51,11 +51,12 @@ const SignUpButton = styled.button`
     box-shadow: 0px 8px 8px -6px rgba(0,0,0,.5);
     border-radius: 4px;
     background: rgba(147, 141, 123, 1);
-    color: white;
-    width: 33%;
+    width: 70%;
     margin: 5%;
-    padding: 4%;
+    color: #fff;
+    text-align: left;
     font-size: 1.5rem;
+    padding: 2%;
     outline: none;
     border: none;
     cursor: pointer;
@@ -74,8 +75,8 @@ const SignUpButton = styled.button`
     }
     @media screen and (max-width: 768px) {
         width: 60%;
-        padding: 4%;
-        margin: 5%;
+        padding: 2%;
+        margin: 8%;
     }
 `
 

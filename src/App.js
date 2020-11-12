@@ -35,7 +35,7 @@ class App extends React.Component {
       .then(res=>res.json())
       .then(data=> this.setState({ user: data.user}))
     } else {
-      this.props.history.push("/signup")
+      this.props.history.push("/")
     }
     this.setState( () => (
       { cart: localCart ? localCart : [] ,

@@ -13,12 +13,14 @@ const TotalButtonWrapper = styled.div`
     max-width: 80vw;
     height: auto;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: flex-start;
     @media screen and (max-width: 1020px) {
         max-height: 10vh;
+        justify-content: center;
         }
         @media screen and (max-width: 720px) {
-        max-height: 40px;
+            margin-left: 5vw;
+            max-height: 40px;
         }
 `
 
@@ -65,9 +67,11 @@ const EmptyCart = styled.p`
 const Total = styled.p`
     color:rgba(57, 54, 38, 1);
     font-size: 2rem;
-    ${'' /* margin-left: 70vw; */}
+    position: flex-end;
+    align-self: right;
+    margin-left: 15vw;
     @media screen and (max-width: 926px) {
-        ${'' /* margin-left: 50vw; */}
+        font-size: 1.5rem;
     }
 `
 
@@ -96,6 +100,14 @@ const CheckoutLink = styled(Link)`
         box-shadow: 5px 40px -10px rgba(0,0,0,0.57);
     }
     margin-left: 5vw;
+    @media screen and (max-width: 926px) {
+        margin-left: 10vw;
+        padding: 10px;
+    }
+    @media screen and (max-width: 768px) {
+        margin-left: 5vw;
+        padding: 10px;
+    }
 
 `
 
@@ -107,11 +119,13 @@ const SignUpLink = styled(Link)`
     color: #fff;
     outline: none;
     position: relative;
+    align-self: flex-start;
     border: none;
     cursor: pointer;
     transition: all 0.2s ease-in-out;
     text-decoration: none;
     white-space: nowrap;
+    margin-left: 2vw;
     &:hover {
         transition: all 0.2s ease-in-out;
         background: rgba(181, 181, 161, 1);
@@ -122,6 +136,16 @@ const SignUpLink = styled(Link)`
         -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
         -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
         box-shadow: 5px 40px -10px rgba(0,0,0,0.57);
+    }
+    @media screen and (max-width: 926px) {
+        margin-left: 1vw;
+        margin-right: 15vw;
+        padding: 10px;
+    }
+    @media screen and (max-width: 786px) {
+        margin-left: 2vw;
+        margin-right: 2vw;
+        padding: 10px;
     }
 `
 

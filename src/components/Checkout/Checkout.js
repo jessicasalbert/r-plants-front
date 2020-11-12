@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import CartItem from '../CartItem/CartItem'
 import PayPal from '../PayPal/PayPal'
-
+import {Total, CheckoutContainer} from './CheckoutStyle'
 import {CartWrapper, CartStyle, Heading } from '../Cart/CartStyle'
 
 export class Checkout extends Component {
@@ -126,7 +126,10 @@ export class Checkout extends Component {
             <Heading>checkout</Heading>
                 <CartStyle>
                     {this.renderCart()}
+                    <CheckoutContainer>
                     <PayPal amount={this.props.total} purchaseHandler={this.purchaseHandler}/>
+                    <Total>Total: ${this.props.total}</Total>
+                    </CheckoutContainer>
                 </CartStyle>
             </CartWrapper>
         )

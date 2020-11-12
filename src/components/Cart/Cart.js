@@ -31,8 +31,8 @@ export class Cart extends Component {
                         </TotalButtonWrapper>
                         :
                         <TotalButtonWrapper>
-                        <CheckoutLink to="/checkout">Checkout as guest</CheckoutLink>
-                        <SignUpLink to="/signup">Sign Up</SignUpLink>
+                        <CheckoutLink to="/checkout">Checkout as Guest</CheckoutLink>
+                        <SignUpLink to="/login">Sign In</SignUpLink>
                         <Total>Total: ${this.props.total}</Total>
                         </TotalButtonWrapper>
                     }

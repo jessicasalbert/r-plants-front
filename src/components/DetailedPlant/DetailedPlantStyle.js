@@ -230,12 +230,21 @@ const PlantHeading = styled.h1`
 `
 
 const Heading = styled.h1`
+    img.before {
+        max-width: 50px;
+    }
+    img.after {
+        max-width: 50px;
+    }
     color: rgba(57, 54, 38, 1);
     cursor: pointer;
     font-weight: normal;
     margin-top: 2vh;
     margin-left: 5vw;
     font-size: 2.5rem;
+    @media (max-width: 411px) {
+        font-size: 1.75em;
+    }
 `
 
 const CareCard = styled.section`
@@ -275,8 +284,9 @@ const PetFriendly = styled.p`
         display: inline;
     }
     display: flex;
+    margin-top: 1vh;
     font-size: 1.4rem;
-    justify-content: center;
+    justify-content: left;
 `
 
 export {TopDetails, 
