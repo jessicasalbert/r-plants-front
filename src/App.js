@@ -138,16 +138,20 @@ class App extends React.Component {
   addToCart = (item, size, quantity) => {
     item['size'] = size
     item['quantity'] = quantity
+    const newTotal = Math.round((this.state.cartTotal + ((parseFloat(item.price[size]) * parseFloat(quantity))) + Number.EPSILON) * 100) / 100
     this.setState( (prev) => ({
-      cartTotal: Math.round((prev.cartTotal + ((parseFloat(item.price[size]) * parseFloat(quantity))) + Number.EPSILON) * 100) / 100
+      cartTotal: newTotal
     }))
-    let index = this.state.cart.findIndex( cartItem => cartItem.size === size && cartItem.id === item.id)
+    console.log(size)
+    let index = this.state.cart.findIndex( cartItem => (cartItem.size === size && cartItem.id === item.id))
+    console.log(index)
     if (index === -1) {
+      const newCart = [...this.state.cart, item]
       this.setState((prev) => ({
-        cart: [...prev.cart, item]
+        cart: newCart
       }), () => {
-        localStorage.setItem("cart", JSON.stringify(this.state.cart))
-        localStorage.setItem("total", JSON.stringify(this.state.cartTotal))
+        localStorage.setItem("cart", JSON.stringify(newCart))
+        localStorage.setItem("total", JSON.stringify(newTotal))
       })
     } else {
       const newCart = [...this.state.cart]
@@ -155,8 +159,8 @@ class App extends React.Component {
       this.setState(() => ({
         cart: newCart
       }), () => {
-        localStorage.setItem("cart", JSON.stringify(this.state.cart))
-        localStorage.setItem("total", JSON.stringify(this.state.cartTotal))
+        localStorage.setItem("cart", JSON.stringify(newCart))
+        localStorage.setItem("total", JSON.stringify(newTotal))
         
       })
     }

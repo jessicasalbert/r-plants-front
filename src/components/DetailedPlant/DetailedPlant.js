@@ -38,7 +38,9 @@ export class DetailedPlant extends Component {
 
     localAddToCart = (e) => {
         e.preventDefault()
-        this.props.addToCart(this.props.plant, this.state.size, this.state.quantity)
+        const newPlant = Object.assign({}, this.props.plant)
+        console.log(newPlant)
+        this.props.addToCart(newPlant, this.state.size, this.state.quantity)
     }
 
     imageFlipHandler = () => {
