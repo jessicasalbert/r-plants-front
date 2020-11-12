@@ -55,7 +55,7 @@ const Or = styled.div`
 
 const Break = styled.div`
     content: "";
-    width: 15vw;
+    width: 100px;
     background-color: transparent;
     height: 1px;
     margin: auto;
@@ -68,7 +68,7 @@ const SignUpLink = styled(Link)`
     box-shadow: 0px 8px 8px -6px rgba(0,0,0,.5);
     border-radius: 4px;
     background: rgba(147, 141, 123, 1);
-    width: 66%;
+    width: 260px;
     margin: 5%;
     color: #fff;
     font-size: 1.5rem;
@@ -100,12 +100,12 @@ const LoginButton = styled.button`
     box-shadow: 0px 8px 8px -6px rgba(0,0,0,.5);
     border-radius: 4px;
     background: rgba(147, 141, 123, 1);
-    width: 70%;
-    margin: 3%;
-    padding: 2%;
+    width: 275px;
+    margin: 5%;
+    text-align: left;
     color: #fff;
     font-size: 1.5rem;
-    text-align: left;
+    padding: 2%;
     outline: none;
     border: none;
     cursor: pointer;
