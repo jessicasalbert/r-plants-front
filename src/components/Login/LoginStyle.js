@@ -13,7 +13,7 @@ const LoginWrapper = styled.div`
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: 100vw;
+    ${'' /* background-size: 100vw; */}
     @media screen and (max-width: 926px) {
         background-size: 150vh;
     }

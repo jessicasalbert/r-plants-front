@@ -37,11 +37,11 @@ a {
 }
 
 
-@media only screen and (max-device-width: 1366px) {
+/* @media only screen and (max-device-width: 1366px) {
     body {
         background-attachment: fixed;
     }
-}
+} */
 /* div.horses {
     color:rgba(57, 54, 38, 1); - dark yellow/brown
     color:rgba(149, 176, 113, 1); - lighter green (nav)
