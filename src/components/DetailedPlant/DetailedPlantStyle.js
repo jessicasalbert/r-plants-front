@@ -1,24 +1,33 @@
 import styled from 'styled-components'
 
+// const Background = styled.div`
+//     position: relative;
+//     top: 0;
+//     bottom: 0;
+//     min-height: 100%;
+//     width: 100vw;
+//     z-index: 0;
+//     background-image: url("https://i.ibb.co/BVLGr4Z/Final-40.png");
+//     background-attachment: fixed;
+//     background-size: cover;
+//     background-position: top center;
+//     background-repeat: no-repeat;
+//     background-size: 100vw;
+//     @media screen and (max-width: 700px) {
+//         background-size: 100vh;
+//         }
+//     }
+// `
+
 const Background = styled.div`
-    position: relative;
-    top: 0;
-    bottom: 0;
-    min-height: 100%;
-    width: 100vw;
-    z-index: 0;
+    height: 100vh;
+    min-height: 500px;
     background-image: url("https://i.ibb.co/BVLGr4Z/Final-40.png");
-    background-attachment: fixed;
-    background-position: top center;
+    background-position: center center;
     background-repeat: no-repeat;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
+    background-attachment: fixed;
     background-size: cover;
-    @media screen and (max-width: 700px) {
-        background-size: 100vh;
-        }
-    }
+    background-color: #1d3557;
 `
 
 const Page = styled.section`
