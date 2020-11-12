@@ -64,14 +64,37 @@ const EmptyCart = styled.p`
     color:rgba(57, 54, 38, 1);
 `
 
+// const Total = styled.p`
+//     color:rgba(57, 54, 38, 1);
+//     font-size: 2rem;
+//     position: flex-end;
+//     align-self: right;
+//     margin-left: 15vw;
+//     @media screen and (max-width: 926px) {
+//         font-size: 1.5rem;
+//     }
+// `
+
 const Total = styled.p`
     color:rgba(57, 54, 38, 1);
     font-size: 2rem;
-    position: flex-end;
-    align-self: right;
-    margin-left: 15vw;
-    @media screen and (max-width: 926px) {
+    position: relative;
+    margin-left: 40vw;
+    @media screen and (max-width: 1280px) {
         font-size: 1.5rem;
+        margin-left: 35vw;
+    }
+    @media screen and (max-width: 1000px) {
+        font-size: 1.5rem;
+        margin-left: 25vw;
+    }
+    @media screen and (max-width: 800px) {
+        font-size: 1.5rem;
+        margin-left: 20vw;
+    }
+    @media screen and (max-width: 800px) {
+        font-size: 1.5rem;
+        margin-left: 15vw;
     }
 `
 
@@ -139,12 +162,12 @@ const SignUpLink = styled(Link)`
     }
     @media screen and (max-width: 926px) {
         margin-left: 1vw;
-        margin-right: 15vw;
+        ${'' /* margin-right: 15vw; */}
         padding: 10px;
     }
     @media screen and (max-width: 786px) {
         margin-left: 2vw;
-        margin-right: 2vw;
+        ${'' /* margin-right: 2vw; */}
         padding: 10px;
     }
 `
