@@ -136,4 +136,4 @@ const iconPlant = new L.Icon({
     // className: 'leaflet-div-icon'
 })
 
-export {WelcomeStyle, TopWrapper, BottomWrapper, MapStyle, iconPlant, LandingImg, MapWrapper, StoreButton}
+export {WelcomeStyle, TopWrapper, BottomWrapper, MapStyle, iconPlant, MapWrapper, StoreButton}
