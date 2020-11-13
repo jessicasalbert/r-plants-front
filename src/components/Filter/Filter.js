@@ -19,7 +19,7 @@ export class Filter extends Component {
         return (
             <FilterStyle onClick={this.props.filter}>
 
-                Pet-Friendly:&nbsp;&nbsp;&nbsp;<AnimalPrint alt="pet friendliness" src={this.props.isFiltered ? "https://svgsilh.com/svg/155322.svg" : "https://cdn.onlinewebfonts.com/svg/img_411676.png"}/>
+                Pet-Friendly:&nbsp;&nbsp;&nbsp;<AnimalPrint alt="pet friendliness" src={this.props.isFiltered ? "https://svgsilh.com/svg/155322.svg" : "https://i.ibb.co/1ZZH9Sf/img-411676.webp"}/>
             </FilterStyle>
         )
     }

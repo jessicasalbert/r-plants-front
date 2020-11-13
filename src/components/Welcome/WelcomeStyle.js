@@ -1,9 +1,8 @@
 import styled from 'styled-components'
 import L from 'leaflet'
 
-
 const WelcomeStyle = styled.div`
-    background-image: url("https://i.ibb.co/Gd9hVxM/Final-2.png");
+    background-image: url("https://i.ibb.co/VTzcTFd/Final-2.webp");
     background-attachment: fixed;
     background-size: contain;
     background-position: top center;
@@ -131,7 +130,7 @@ const MapStyle = styled.div`
 `
 
 const iconPlant = new L.Icon({
-    iconUrl: 'https://i.ibb.co/6FHrspB/redresize.png',
+    iconUrl: 'https://i.ibb.co/pKKFYpf/redresize.webp',
     iconSize: [39.6, 45],
     // className: 'leaflet-div-icon'
 })

@@ -7,7 +7,7 @@ const SignUpWrapper = styled.div`
     height: 100vh;
     width: 100vw;
     z-index: 0;
-    background-image: url("https://i.ibb.co/hCkRkjk/Card-40.png");
+    background-image: url("https://i.ibb.co/HPZSSSB/Card-40.webp");
     background-attachment: fixed;
     background-size: cover;
     background-position: center;

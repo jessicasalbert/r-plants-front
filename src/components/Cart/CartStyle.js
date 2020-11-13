@@ -38,7 +38,7 @@ const CartWrapper = styled.div`
     top: 0;
     bottom: 0;
     z-index: 0;
-    background-image: url("https://i.ibb.co/BVLGr4Z/Final-40.png");
+    background-image: url("https://i.ibb.co/K0Ww3rX/Final-40.webp");
     background-attachment: fixed;
     background-size: contain;
     background-position: top center;

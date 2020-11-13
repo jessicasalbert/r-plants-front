@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 const FootStyle = styled.footer`
     height: 300px;
-    background-image: url("https://i.ibb.co/0p5WkQP/Footer.png");
+    background-image: url("https://i.ibb.co/KD1Lg4r/Footer.webp");
     position: relative;
     background-position: top center;
     background-repeat: no-repeat;
