@@ -1,6 +1,17 @@
 {
   "name": "rplants",
   "version": "0.1.0",
+  "description": "A ReactJS / Ruby on Rails e-commerce web application",
+  "author": "Gabriel Hicks and Jessica Salbert",
+  "license": "MIT",
+  "homepage": "http://rplants-frontend.herokuapp.com/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jessicasalbert/rplants-front"
+  },
+  "bugs": {
+    "url": "https://github.com/jessicasalbert/rplants-front/issues"
+  },
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.32",
