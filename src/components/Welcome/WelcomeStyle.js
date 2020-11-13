@@ -120,22 +120,6 @@ const MapWrapper = styled.div`
     background-color: rgba(100, 114, 97, 0.8);
 `
 
-const LandingImg = styled.div`
-    background-image: url('https://media.architecturaldigest.com/photos/5dcde0245ff5e60008e76f52/master/w_1600%2Cc_limit/Osofsky_Oct19-571.jpg');
-    background-repeat: no-repeat;
-    background-position: middle center;
-    background-size: 100vw;
-    width: 100vw;
-    height: 500px;
-    display: flex;
-    ${'' /* object-fit: cover; */}
-    opacity: 0.7;
-    &:hover {
-        right: 0;
-        opacity: 0.7;
-    }
-`
-
 const MapStyle = styled.div`
     box-shadow: 0px 8px 8px -6px rgba(0,0,0,.5);
     position: absolute;

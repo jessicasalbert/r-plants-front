@@ -2,7 +2,7 @@ import React from 'react'
 import MapView from './MapView'
 import Footer from '../Footer/Footer'
 import { Link } from 'react-router-dom'
-import {WelcomeStyle, TopWrapper, BottomWrapper, MapWrapper, StoreButton, LandingImg} from './WelcomeStyle'
+import {WelcomeStyle, TopWrapper, MapWrapper, StoreButton} from './WelcomeStyle'
 
 export default function Welcome(props) {
     return (

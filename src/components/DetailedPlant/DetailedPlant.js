@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import Footer from '../Footer/Footer'
-import {NavLink as Link} from 'react-router-dom'
 import {
     Page, 
     TopDetails, 
