@@ -23,6 +23,14 @@
 * Github: [@jessicasalbert](https://github.com/jessicasalbert)
 * Github: [@gabrielhicks](https://github.com/gabrielhicks)
 
+## To Do
+- [x] Browser responsiveness
+- [ ] Create unit tests
+- [ ] Fix mobile responsiveness
+- [ ] Refactor components to functional when needed
+- [ ] Implement and optimize with Redux
+- [ ] Add inventory
+
 ## 🤝 Contributing
 
 Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/jessicasalbert/rplants-front/issues).
