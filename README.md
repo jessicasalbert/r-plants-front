@@ -21,10 +21,11 @@
 👤 **Gabriel Hicks and Jessica Salbert**
 
 * Github: [@jessicasalbert](https://github.com/jessicasalbert)
+* Github: [@gabrielhicks](https://github.com/gabrielhicks)
 
 ## 🤝 Contributing
 
-Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/jessicasalbert/rplants-front/issues). You can also take a look at the [contributing guide](https://github.com/jessicasalbert/rplants-front/blob/master/CONTRIBUTING.md).
+Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/jessicasalbert/rplants-front/issues).
 
 ## Show your support
 
