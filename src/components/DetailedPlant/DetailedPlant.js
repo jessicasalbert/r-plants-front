@@ -102,7 +102,7 @@ export class DetailedPlant extends Component {
                     </Details>
                 </TopDetails>
                 {/* <Heading onClick={this.showCareInstructions}>Care Instructions</Heading> */}
-                {this.state.careInstructions ? <Heading onClick={this.showCareInstructions}>Care Instructions<img class="after" alt="plant" src="https://i.ibb.co/FqDS5Qq/Icon-plant.webp" /></Heading> : <Heading onClick={this.showCareInstructions}>Care Instructions<img class="before" alt="pot" src="https://i.ibb.co/QDm4h6G/Icon-plant-extra.webp"/></Heading>}
+                {this.state.careInstructions ? <Heading onClick={this.showCareInstructions}>Care Instructions<img class="after" alt="plant" src="https://i.ibb.co/LgQ2LHK/icon.webp" /></Heading> : <Heading onClick={this.showCareInstructions}>Care Instructions<img class="before" alt="pot" src="https://i.ibb.co/CwYYwH8/pot.webp"/></Heading>}
                 <BottomDetails>
                     {this.state.careInstructions ? 
                     <>

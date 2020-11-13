@@ -52,7 +52,7 @@ class Navbar extends React.Component {
             {this.props.user 
             ? 
             <Nav>
-                <NavLogo onClick={this.closeMenu} to="/"><img alt="rPlants logo" src="https://i.ibb.co/FqDS5Qq/Icon-plant.webp"/><img alt="rPlants" src="https://i.ibb.co/Bs6LN5h/Rplants.webp"/></NavLogo>
+                <NavLogo onClick={this.closeMenu} to="/"><img alt="rPlants logo" src="https://i.ibb.co/LgQ2LHK/icon.webp"/><img alt="rPlants" src="https://i.ibb.co/Bs6LN5h/Rplants.webp"/></NavLogo>
                 <MenuIcon onClick={this.clickHandler}>
                     {this.state.clicked ? <Times /> : <Bars />}
                 </MenuIcon>
@@ -77,7 +77,7 @@ class Navbar extends React.Component {
             </Nav>
                 :
             <Nav>
-                <NavLogo onClick={this.closeMenu} to="/"><img alt="rPlants logo" src="https://i.ibb.co/FqDS5Qq/Icon-plant.webp"/><img alt="rPlants" src="https://i.ibb.co/Bs6LN5h/Rplants.webp"/></NavLogo>
+                <NavLogo onClick={this.closeMenu} to="/"><img alt="rPlants logo" src="https://i.ibb.co/LgQ2LHK/icon.webp"/><img alt="rPlants" src="https://i.ibb.co/Bs6LN5h/Rplants.webp"/></NavLogo>
                 <MenuIcon onClick={this.clickHandler}>
                     {this.state.clicked ? <Times /> : <Bars />}
                 </MenuIcon>
