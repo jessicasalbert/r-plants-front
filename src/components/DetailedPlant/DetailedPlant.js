@@ -73,7 +73,7 @@ export class DetailedPlant extends Component {
                     
                             {this.props.plant.pet_friendly ? 
                             <PetFriendly>
-                                <img alt="plant friendliness" src="https://svgsilh.com/svg/155322.svg"/>&nbsp;&nbsp;Pet-friendly!
+                                <img alt="plant friendliness" src="https://i.ibb.co/QkX6rPD/paw.webp"/>&nbsp;&nbsp;Pet-friendly!
                             </PetFriendly>
                             : null}<br/>
                         <Price>Price: ${this.state.price}</Price><br/>
