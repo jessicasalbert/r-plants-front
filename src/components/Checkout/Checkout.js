@@ -130,6 +130,8 @@ export class Checkout extends Component {
                     <PayPal amount={this.props.total} purchaseHandler={this.purchaseHandler}/>
                     <Total>Total: ${this.props.total}</Total>
                     </CheckoutContainer>
+                    <h2>PayPal email: me@rplants.com</h2>
+                    <h2>PayPal password: abcd1234</h2>
                 </CartStyle>
             </CartWrapper>
         )
