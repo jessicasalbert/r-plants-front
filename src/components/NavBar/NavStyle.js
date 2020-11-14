@@ -1,4 +1,5 @@
-import { FaBars, FaTimes } from 'react-icons/fa';
+import FaBars from '@meronex/icons/fa/FaBars';
+import FaTimes from '@meronex/icons/fa/FaTimes';
 import { NavLink as Link } from 'react-router-dom';
 import styled from 'styled-components';
 

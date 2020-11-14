@@ -1,7 +1,9 @@
 import React, { Component } from 'react'
 import {FootStyle, FootText} from './FooterStyle'
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {faLinkedin, faGithub} from "@fortawesome/free-brands-svg-icons";
+import FaLinkedin from '@meronex/icons/fa/FaLinkedin';
+import FaGithub from '@meronex/icons/fa/FaGithub';
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import {faLinkedin, faGithub} from "@fortawesome/free-brands-svg-icons";
 
 export class Footer extends Component {
     render() {
@@ -12,13 +14,13 @@ export class Footer extends Component {
                     Made with ❤️
                     <br></br>
                     by Jessica Salbert <a target="blank_" href="https://www.linkedin.com/in/jessica-salbert/">
-                    <FontAwesomeIcon icon={faLinkedin} size="1x" /></a>
+                    <FaLinkedin /></a>
                     <br></br>
                     and
                     Gabriel Hicks <a target="blank_" href="https://www.linkedin.com/in/gabrieljhicks/">
-                    <FontAwesomeIcon icon={faLinkedin} size="1x" /></a>
+                    <FaLinkedin /></a>
                     <br></br>
-                    Frontend: <a target="blank_" href="https://github.com/jessicasalbert/rplants-front"><FontAwesomeIcon icon={faGithub} size="1x" /></a> Backend: <a target="blank_" href="https://github.com/jessicasalbert/rplants-back"><FontAwesomeIcon icon={faGithub} size="1x" /></a>
+                    Frontend: <a target="blank_" href="https://github.com/jessicasalbert/rplants-front"><FaGithub /></a> Backend: <a target="blank_" href="https://github.com/jessicasalbert/rplants-back"><FaGithub /></a>
                 </FootText>
             </FootStyle>
             </>
