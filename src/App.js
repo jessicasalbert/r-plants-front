@@ -1,16 +1,26 @@
 import './App.css'
-import React from 'react'
+import React, { Suspense, lazy } from 'react';
 import { Route, Switch, withRouter } from "react-router-dom"
-import PlantsContainer from './components/PlantsContainer/PlantsContainer'
-import NavBar from './components/NavBar/NavBar'
-import Cart from './components/Cart/Cart'
-import NewPlant from './components/NewPlant/NewPlant'
-import SignUp from './components/SignUp/SignUp'
-import Login from './components/Login/Login'
-import Profile from './components/Profile/Profile'
 import Welcome from './components/Welcome/Welcome'
-import Checkout from './components/Checkout/Checkout'
-import Success from './components/Success/Success'
+import NavBar from './components/NavBar/NavBar'
+// import Login from './components/Login/Login'
+// import Profile from './components/Profile/Profile'
+// import Checkout from './components/Checkout/Checkout'
+// import Success from './components/Success/Success'
+// import SignUp from './components/SignUp/SignUp'
+// import PlantsContainer from './components/PlantsContainer/PlantsContainer'
+// import Cart from './components/Cart/Cart'
+// import NewPlant from './components/NewPlant/NewPlant'
+const PlantsContainer = lazy(() => import('./components/PlantsContainer/PlantsContainer'));
+// const NavBar = lazy(() => import('./components/NavBar/NavBar'));
+const NewPlant = lazy(() => import('./components/NewPlant/NewPlant'));
+const Cart = lazy(() => import('./components/Cart/Cart'));
+const SignUp = lazy(() => import('./components/SignUp/SignUp'));
+const Login = lazy(() => import('./components/Login/Login'));
+const Profile = lazy(() => import('./components/Profile/Profile'));
+// const Welcome = lazy(() => import('./components/Welcome/Welcome'));
+const Checkout = lazy(() => import('./components/Checkout/Checkout'));
+const Success = lazy(() => import('./components/Success/Success'));
 
 class App extends React.Component {
   state = {
@@ -196,17 +206,19 @@ class App extends React.Component {
     return (
       <>
         <NavBar user={this.state.user} cart={this.state.cart} logoutHandler={this.logoutHandler}/>
+        <Suspense fallback={<div>Loading...</div>}>
         <Switch>
           <Route path="/plants" render={() => (<PlantsContainer addToCart={this.addToCart} redirectToShop={this.redirectToShop}/>)}/>
-          <Route exact path="/cart" render={() => (<Cart deleteHandler={this.deleteHandler} cart={this.state.cart} total={this.state.cartTotal} user={this.state.user} />)}/>
-          <Route exact path="/signup" render={() => (<SignUp submitHandler={this.signupHandler}/>)}/>
-          <Route exact path="/login" render={() => (<Login submitHandler={this.loginHandler}/>)}/>
-          <Route exact path="/profile" render={() => (<Profile user={this.state.user} /> )}/>
-          <Route exact path="/newplant" render={() => (<NewPlant submitHandler={this.addPlantHandler}/>)}/>
-          <Route exact path="/checkout" render={() => (<Checkout redirectToSuccess={this.redirectToSuccess} clearGuestUser={this.clearGuestUser} cart={this.state.cart} total={this.state.cartTotal} user={this.state.user}/>)}/>
-          <Route exact path="/success" render={() => (<Success order_number={this.state.completedOrderNumber} redirectToWelcome={this.redirectToWelcome}/> )}/>
-          <Route exact path="/" render={() => (<Welcome plants={this.state.plants}/> )}/>
+          <Route path="/cart" render={() => (<Cart deleteHandler={this.deleteHandler} cart={this.state.cart} total={this.state.cartTotal} user={this.state.user} />)}/>
+          <Route path="/signup" render={() => (<SignUp submitHandler={this.signupHandler}/>)}/>
+          <Route path="/login" render={() => (<Login submitHandler={this.loginHandler}/>)}/>
+          <Route path="/profile" render={() => (<Profile user={this.state.user} /> )}/>
+          <Route path="/newplant" render={() => (<NewPlant submitHandler={this.addPlantHandler}/>)}/>
+          <Route path="/checkout" render={() => (<Checkout redirectToSuccess={this.redirectToSuccess} clearGuestUser={this.clearGuestUser} cart={this.state.cart} total={this.state.cartTotal} user={this.state.user}/>)}/>
+          <Route path="/success" render={() => (<Success order_number={this.state.completedOrderNumber} redirectToWelcome={this.redirectToWelcome}/> )}/>
+          <Route path="/" render={() => (<Welcome plants={this.state.plants}/> )}/>
         </Switch>
+        </Suspense>
       </>
     )
   }
