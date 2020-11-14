@@ -3,22 +3,12 @@ import React, { Suspense, lazy } from 'react';
 import { Route, Switch, withRouter } from "react-router-dom"
 import Welcome from './components/Welcome/Welcome'
 import NavBar from './components/NavBar/NavBar'
-// import Login from './components/Login/Login'
-// import Profile from './components/Profile/Profile'
-// import Checkout from './components/Checkout/Checkout'
-// import Success from './components/Success/Success'
-// import SignUp from './components/SignUp/SignUp'
-// import PlantsContainer from './components/PlantsContainer/PlantsContainer'
-// import Cart from './components/Cart/Cart'
-// import NewPlant from './components/NewPlant/NewPlant'
 const PlantsContainer = lazy(() => import('./components/PlantsContainer/PlantsContainer'));
-// const NavBar = lazy(() => import('./components/NavBar/NavBar'));
 const NewPlant = lazy(() => import('./components/NewPlant/NewPlant'));
 const Cart = lazy(() => import('./components/Cart/Cart'));
 const SignUp = lazy(() => import('./components/SignUp/SignUp'));
 const Login = lazy(() => import('./components/Login/Login'));
 const Profile = lazy(() => import('./components/Profile/Profile'));
-// const Welcome = lazy(() => import('./components/Welcome/Welcome'));
 const Checkout = lazy(() => import('./components/Checkout/Checkout'));
 const Success = lazy(() => import('./components/Success/Success'));
 

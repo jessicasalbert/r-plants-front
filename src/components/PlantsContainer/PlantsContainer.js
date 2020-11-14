@@ -1,10 +1,14 @@
-import React, { Component } from 'react'
-import Plant from '../Plant/Plant'
-import FilterSearch from '../FilterSearch/FilterSearch'
+import React, { Component, Suspense, lazy } from 'react';
 import { PlantContainerStyle, StoreWrapper} from './PlantContainerStyle'
 import { Route, Switch } from "react-router-dom"
-import DetailedPlant from '../DetailedPlant/DetailedPlant'
-import Footer from '../Footer/Footer'
+// import Plant from '../Plant/Plant'
+// import FilterSearch from '../FilterSearch/FilterSearch'
+// import DetailedPlant from '../DetailedPlant/DetailedPlant'
+// import Footer from '../Footer/Footer'
+const Plant = lazy(() => import('../Plant/Plant'));
+const FilterSearch = lazy(() => import('../FilterSearch/FilterSearch'));
+const DetailedPlant = lazy(() => import('../DetailedPlant/DetailedPlant'));
+const Footer = lazy(() => import('../Footer/Footer'));
 
 export class PlantsContainer extends Component {
 
@@ -51,6 +55,7 @@ export class PlantsContainer extends Component {
     render() {
         return (
             <>
+            <Suspense fallback={<div>Loading...</div>}>
                 <Switch>
                     <Route path="/plants/:id" render={(routerProps) =>  {
                         let id = parseInt(routerProps.match.params.id)
@@ -81,7 +86,8 @@ export class PlantsContainer extends Component {
                         </>
                         )
                     }}/>
-                </Switch>
+                    </Switch>
+                </Suspense>
             </>
         )
     }
