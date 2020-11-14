@@ -198,14 +198,14 @@ class App extends React.Component {
         <NavBar user={this.state.user} cart={this.state.cart} logoutHandler={this.logoutHandler}/>
         <Switch>
           <Route path="/plants" render={() => (<PlantsContainer addToCart={this.addToCart} redirectToShop={this.redirectToShop}/>)}/>
-          <Route path="/cart" render={() => (<Cart deleteHandler={this.deleteHandler} cart={this.state.cart} total={this.state.cartTotal} user={this.state.user} />)}/>
-          <Route path="/signup" render={() => (<SignUp submitHandler={this.signupHandler}/>)}/>
-          <Route path="/login" render={() => (<Login submitHandler={this.loginHandler}/>)}/>
-          <Route path="/profile" render={() => (<Profile user={this.state.user} /> )}/>
-          <Route path="/newplant" render={() => (<NewPlant submitHandler={this.addPlantHandler}/>)}/>
-          <Route path="/checkout" render={() => (<Checkout redirectToSuccess={this.redirectToSuccess} clearGuestUser={this.clearGuestUser} cart={this.state.cart} total={this.state.cartTotal} user={this.state.user}/>)}/>
-          <Route path="/success" render={() => (<Success order_number={this.state.completedOrderNumber} redirectToWelcome={this.redirectToWelcome}/> )}/>
-          <Route path="/" render={() => (<Welcome plants={this.state.plants}/> )}/>
+          <Route exact path="/cart" render={() => (<Cart deleteHandler={this.deleteHandler} cart={this.state.cart} total={this.state.cartTotal} user={this.state.user} />)}/>
+          <Route exact path="/signup" render={() => (<SignUp submitHandler={this.signupHandler}/>)}/>
+          <Route exact path="/login" render={() => (<Login submitHandler={this.loginHandler}/>)}/>
+          <Route exact path="/profile" render={() => (<Profile user={this.state.user} /> )}/>
+          <Route exact path="/newplant" render={() => (<NewPlant submitHandler={this.addPlantHandler}/>)}/>
+          <Route exact path="/checkout" render={() => (<Checkout redirectToSuccess={this.redirectToSuccess} clearGuestUser={this.clearGuestUser} cart={this.state.cart} total={this.state.cartTotal} user={this.state.user}/>)}/>
+          <Route exact path="/success" render={() => (<Success order_number={this.state.completedOrderNumber} redirectToWelcome={this.redirectToWelcome}/> )}/>
+          <Route exact path="/" render={() => (<Welcome plants={this.state.plants}/> )}/>
         </Switch>
       </>
     )
