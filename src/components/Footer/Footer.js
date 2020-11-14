@@ -2,8 +2,6 @@ import React, { Component } from 'react'
 import {FootStyle, FootText} from './FooterStyle'
 import FaLinkedin from '@meronex/icons/fa/FaLinkedin';
 import FaGithub from '@meronex/icons/fa/FaGithub';
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import {faLinkedin, faGithub} from "@fortawesome/free-brands-svg-icons";
 
 export class Footer extends Component {
     render() {
