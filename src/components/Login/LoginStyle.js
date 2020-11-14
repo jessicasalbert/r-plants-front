@@ -90,9 +90,8 @@ const SignUpLink = styled(Link)`
         box-shadow: 5px 40px -10px rgba(0,0,0,0.57);
     }
     @media screen and (max-width: 768px) {
-        width: 60%;
-        padding: 2%;
-        margin: 8%;
+        width: 200px;
+        margin: 4%;
     }
 `
 
@@ -123,9 +122,9 @@ const LoginButton = styled.button`
         box-shadow: 5px 40px -10px rgba(0,0,0,0.57);
     }
     @media screen and (max-width: 768px) {
-        width: 60%;
-        padding: 2%;
-        margin: 8%;
+        width: 212px;
+        height: 40px;
+        margin: 4%;
     }
 `
 
