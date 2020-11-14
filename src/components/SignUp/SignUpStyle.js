@@ -12,10 +12,6 @@ const SignUpWrapper = styled.div`
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: 100vw;
-    @media screen and (max-width: 926px) {
-        background-size: 150vh;
-    }
 `
 
 const SignUpForm = styled.form`
@@ -37,11 +33,13 @@ const SignUpForm = styled.form`
     width: 25rem;
     border-radius: 25px;
     background-color: rgba(255,255,255,0.5);
-    @media screen and (max-width: 768px) {
-        height: 20rem;
-        width: 20rem;
-        h2 {
-        padding-bottom: 15px;
+    @media screen and (max-width: 900px) {
+        height: 16rem;
+        width: 16rem;
+        top: 50%;
+        p {
+            font-size: 1.75rem;
+            margin-bottom: 0;
         }
     }
 `
@@ -72,10 +70,10 @@ const SignUpButton = styled.button`
         -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
         box-shadow: 5px 40px -10px rgba(0,0,0,0.57);
     }
-    @media screen and (max-width: 768px) {
-        width: 60%;
-        padding: 2%;
-        margin: 8%;
+    @media screen and (max-width: 900px) {
+        width: 162px;
+        height: 40px;
+        margin: 4%;
     }
 `
 

@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import { Link } from 'react-router-dom';
 
 const Heading = styled.h1`
-    color: rgba(255, 255, 255, 0.7);
+    color: rgba(255, 255, 255, 1);
     font-size: 15vw;
     opacity: 1;
     margin-left: 13vw;
@@ -34,6 +34,8 @@ const CartWrapper = styled.div`
         font-size: 4rem;
         font-weight: normal;
     }
+    padding-bottom: 10vh;
+    padding-left: 5vw;
     position: relative;
     top: 0;
     bottom: 0;
@@ -44,8 +46,9 @@ const CartWrapper = styled.div`
     background-position: top center;
     background-repeat: no-repeat;
     background-size: 100vw;
-    @media screen and (max-width: 700px) {
-        background-size: 100vh;
+    @media screen and (max-width: 1024px) {
+        background-image: url("https://i.ibb.co/VH4pFYg/background40.webp");
+        background-repeat: repeat;
     }
 `
 

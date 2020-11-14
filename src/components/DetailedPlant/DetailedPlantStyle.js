@@ -13,15 +13,17 @@ const Background = styled.div`
     background-position: top center;
     background-repeat: no-repeat;
     background-size: 100vw;
-    @media screen and (max-width: 700px) {
-        background-size: 100vh;
+    @media screen and (max-width: 1024px) {
+        background-image: url("https://i.ibb.co/VH4pFYg/background40.webp");
+        background-repeat: repeat;
     }
 `
 
 const Page = styled.section`
+    padding-top: 50px;
     position: relative;
     background-color: rgba(255, 255, 255, 0.5);
-    left: 15vw;
+    left: 14vw;
     transition: 0.3s;
     max-width: 70vw;
     min-height: 100vh;

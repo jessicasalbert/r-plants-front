@@ -13,10 +13,6 @@ const LoginWrapper = styled.div`
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: 100vw;
-    @media screen and (max-width: 926px) {
-        background-size: 150vh;
-        }
     }
 `
 
@@ -29,7 +25,7 @@ const LoginForm = styled.form`
     box-shadow: 8px 8px 8px -6px rgba(0,0,0,.5);
     display: flex;
     position: absolute;
-    top: 40%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     flex-direction: column;
@@ -39,11 +35,12 @@ const LoginForm = styled.form`
     width: 25rem;
     border-radius: 25px;
     background-color: rgba(255,255,255,0.5);
-    @media screen and (max-width: 768px) {
-        height: 20rem;
-        width: 20rem;
-        h2 {
-        padding-bottom: 15px;
+    @media screen and (max-width: 900px) {
+        height: 18rem;
+        width: 18rem;
+        p {
+            font-size: 1.75rem;
+            margin-bottom: 0;
         }
     }
 `
@@ -89,8 +86,8 @@ const SignUpLink = styled(Link)`
         -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
         box-shadow: 5px 40px -10px rgba(0,0,0,0.57);
     }
-    @media screen and (max-width: 768px) {
-        width: 200px;
+    @media screen and (max-width: 900px) {
+        width: 150px;
         margin: 4%;
     }
 `
@@ -121,8 +118,8 @@ const LoginButton = styled.button`
         -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
         box-shadow: 5px 40px -10px rgba(0,0,0,0.57);
     }
-    @media screen and (max-width: 768px) {
-        width: 212px;
+    @media screen and (max-width: 900px) {
+        width: 162px;
         height: 40px;
         margin: 4%;
     }

@@ -2,7 +2,6 @@ import styled from 'styled-components'
 
 const PlantContainerStyle = styled.div`
     display: flex;
-    ${'' /* background-color: rgba(0,255,255,1); */}
     flex-flow: row wrap;
     flex-direction: row;
     justify-content: center;
@@ -28,7 +27,7 @@ const StoreWrapper = styled.div`
     top: 0;
     bottom: 0;
     min-height: 100vh;
-    width: 100vw;
+    width: 100%;
     z-index: 0;
     background-image: url("https://i.ibb.co/K0Ww3rX/Final-40.webp");
     background-attachment: fixed;
@@ -36,8 +35,9 @@ const StoreWrapper = styled.div`
     background-position: top center;
     background-repeat: no-repeat;
     background-size: 100vw;
-    @media screen and (max-width: 700px) {
-        background-size: 100vh;
+    @media screen and (max-width: 1024px) {
+        background-image: url("https://i.ibb.co/VH4pFYg/background40.webp");
+        background-repeat: repeat;
     }
 `
 

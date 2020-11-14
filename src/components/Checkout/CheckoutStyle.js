@@ -5,7 +5,7 @@ const CheckoutContainer = styled.section`
 `
 
 const Heading = styled.h1`
-    color: rgba(255, 255, 255, 0.7);
+    color: rgba(255, 255, 255, 1);
     font-size: 15vw;
     opacity: 1;
     margin-left: 13vw;
