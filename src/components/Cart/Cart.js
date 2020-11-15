@@ -1,39 +1,34 @@
-import React, { Component } from 'react'
+import React from 'react'
 import CartItem from '../CartItem/CartItem'
 import Footer from '../Footer/Footer'
 import {CartWrapper, CartStyle, EmptyCart, Total, SignUpLink, CheckoutLink, Heading, TotalButtonWrapper} from './CartStyle'
 
 
-export class Cart extends Component {
+export default function Cart(props) {
 
-
-
-    renderCart = () => {
-        return this.props.cart.map(item => (<CartItem deleteHandler={this.props.deleteHandler} plant={item} key={this.props.cart.indexOf(item)} />))
+    function renderCart() {
+        return props.cart.map(item => (<CartItem deleteHandler={props.deleteHandler} plant={item} key={props.cart.indexOf(item)} />))
     }
 
-
-    render() {
-        // console.log(this.props.user ? this.props.user.id : "none")
         return (
             <>
             <CartWrapper>
                 <Heading>cart</Heading>
                 <CartStyle>
-                    {this.props.cart.length > 0 
+                    {props.cart.length > 0 
                     ?
                     <> 
-                    {this.renderCart()}
+                    {renderCart()}
                     {
-                        this.props.user ? 
+                        props.user ? 
                         <TotalButtonWrapper>
-                        <CheckoutLink to="/checkout">Proceed to checkout</CheckoutLink><Total>Total: ${this.props.total}</Total>
+                        <CheckoutLink to="/checkout">Proceed to checkout</CheckoutLink><Total>Total: ${props.total}</Total>
                         </TotalButtonWrapper>
                         :
                         <TotalButtonWrapper>
                         <CheckoutLink to="/checkout">Checkout as Guest</CheckoutLink>
                         <SignUpLink to="/login">Sign In</SignUpLink>
-                        <Total>Total: ${this.props.total}</Total>
+                        <Total>Total: ${props.total}</Total>
                         </TotalButtonWrapper>
                     }
                     </>
@@ -44,7 +39,4 @@ export class Cart extends Component {
             <Footer />
             </>
         )
-    }
 }
-
-export default Cart

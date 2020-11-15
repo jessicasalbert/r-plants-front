@@ -46,7 +46,6 @@ export class Checkout extends Component {
     }
 
     purchaseHandler = () => {
-
         const orderNumber = Math.round(Math.random() * 1000000).toString()
         const id = this.props.user? this.props.user.id : this.state.guestUserId
         const body = {
@@ -114,11 +113,6 @@ export class Checkout extends Component {
         this.setState( (prev) => ({clicked: !prev.clicked}))
         
     }
-
-    handleToken = (token, addresses) => {
-        // console.log({token, addresses})
-    }
-
 
     render() {
         return (

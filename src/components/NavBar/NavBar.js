@@ -3,7 +3,6 @@ import { Nav, NavLink, Bars, NavMenu, NavBtn, NavBtnLink, NavLogo, NavLinkMobile
 
 class Navbar extends React.Component {
     state = {
-        dropdown: false,
         clicked: false
     }
 
@@ -46,7 +45,6 @@ class Navbar extends React.Component {
 
 
     render() {
-        // console.log(this.state)
         return (
         <>
             {this.props.user 
@@ -67,7 +65,6 @@ class Navbar extends React.Component {
                     <NavMenu>
                     <NavItem><NavLink onClick={this.closeMenu} to="/plants">store</NavLink></NavItem>
                     <NavItem><NavLink onClick={this.closeMenu} to="/profile">profile</NavLink></NavItem>
-                    {/* <NavItem><NavLink onClick={this.closeMenu, this.props.logoutHandler} to="/">Log Out</NavLink></NavItem> */}
                     <NavItem><NavLink onClick={this.closeMenu} to="/cart">cart({this.props.cart.length > 0 ? <b className="cart"> {this.itemCount()}</b>  : 0})</NavLink></NavItem>
                     </NavMenu>
                 }
@@ -90,7 +87,6 @@ class Navbar extends React.Component {
                 : 
                     <NavMenu>
                     <NavItem><NavLink onClick={this.closeMenu} to="/plants">store</NavLink></NavItem>
-                    {/* <NavItem><NavLink onClick={this.closeMenu} to="/login">Log In</NavLink></NavItem> */}
                     <NavItem><NavLink onClick={this.closeMenu} to="/cart">cart({this.props.cart.length > 0 ? <b className="cart"> {this.itemCount()}</b>  : 0})</NavLink></NavItem>
                     </NavMenu>
                 }

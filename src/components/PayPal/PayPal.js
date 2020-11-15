@@ -1,11 +1,8 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { PayPalButton } from 'react-paypal-button-v2'
 import PPstyle from './PayPalStyle'
 
-export class PayPal extends Component {
-    
-    render() {
-
+export default function PayPal(props) {
         let color = {
             color: "silver"
         }
@@ -13,11 +10,9 @@ export class PayPal extends Component {
         return (
                 <PPstyle><PayPalButton
                 style={color}
-                amount={this.props.amount} 
-                onSuccess={this.props.purchaseHandler}
-                /></PPstyle>
+                amount={props.amount} 
+                onSuccess={props.purchaseHandler}
+                />
+                </PPstyle>
         )
-    }
 }
-
-export default PayPal

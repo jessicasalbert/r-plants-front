@@ -23,7 +23,6 @@ export class Profile extends Component {
         .then(res => res.json())
         .then(res => (this.setState({
             orders: res.orders.reverse(),
-            // purchases: res.purchases
         })))
         .catch(console.log)
     }
@@ -38,7 +37,6 @@ export class Profile extends Component {
     }
 
     render() {
-        // console.log(this.state.orders.length)
         return (
             <>
 

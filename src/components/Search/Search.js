@@ -8,13 +8,8 @@ export class Search extends Component {
     }
 
     localSearchHandler = (e) => {
-        // this.setState({
-        //     search : e.target.value
-        // })
-        
         this.props.search(e.target.value)
     }
-        
 
     render() {
         return (

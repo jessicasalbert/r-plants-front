@@ -4,8 +4,6 @@ import worldGeoJSON from 'geojson-world-map';
 import { MapContainer, GeoJSON, Marker, Popup, TileLayer } from 'react-leaflet'
 
 class MapView extends React.Component {
-
-    
     state = {
         active: null
     }
@@ -15,7 +13,6 @@ class MapView extends React.Component {
     }
 
     render() {
-        // console.log(this.props.plants)
         return (
             <MapStyle>
                 <MapContainer center={[30, -15]} maxZoom={3.5} minZoom={1.75}  zoom={2}>
@@ -28,23 +25,19 @@ class MapView extends React.Component {
                             fillOpacity: 0.3,
                         })}/>
                 <TileLayer
-                    url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.svg"
+                    url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                     attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'/>
-                
-                
-                {this.props.plants ?
+                {this.props.plants 
+                ?
                 this.props.plants.map(plant => (
-                    <>
-                        <Marker icon={iconPlant} key={plant.id} position={[plant.latitude, plant.longitude]}>
-                        <Popup key={plant.id}>{plant.name} <br/><img alt={plant.name} src={plant.image}/><br/></Popup></Marker>
-                    </>
+                    <React.Fragment key={plant.id}>
+                        <Marker icon={iconPlant} position={[plant.latitude, plant.longitude]}>
+                        <Popup>{plant.name} <br/><img alt={plant.name} src={plant.image}/><br/></Popup></Marker>
+                    </React.Fragment>
                 ))
                 :
                 <h1>Loading</h1>
             }
-
-
-                
                 </MapContainer>
             </MapStyle>
         )
