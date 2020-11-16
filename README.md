@@ -14,7 +14,7 @@
 
 > A ReactJS / Ruby on Rails e-commerce web application
 
-### 🏠 [Homepage](http://rplants-frontend.herokuapp.com/)
+### 🏠 [Homepage](http://rplants.netlify.app/)
 
 ## Authors
 
